@@ -1,0 +1,100 @@
+{
+  "id": "dialog_wanderer_greeting",
+  "rootNodeId": "start",
+  "speaker": "npc_wanderer",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "npc_wanderer",
+      "text": "Cóż to? Kolejny rozbitkowie z Szarpanych Wrót? Wstawaj, bo cię tu znajdą. Albo gildyjni, albo ci z obozu. Jedni i drudzy chętnie zedrą z ciebie skórę.",
+      "choices": [
+        {
+          "text": "Kim jesteś? Gdzie jestem?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "who_am_i"
+        },
+        {
+          "text": "Co masz na myśli mówiąc 'Szarpane Wrota'?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "explained_szarpani"
+        },
+        {
+          "text": "Dzięki za ostrzeżenie. Muszę iść.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_M_001" }
+          ],
+          "nextNode": "goodbye"
+        }
+      ]
+    },
+    "who_am_i": {
+      "nodeId": "who_am_i",
+      "speaker": "npc_wanderer",
+      "text": "Jestem Wędrowcem. Przynajmniej tak się teraz nazywam. A ty jesteś w Żelaznych Wrotach — odciętej dziurze, gdzie dwie bandy próbują się wzajemnie wykończyć. Gildia i Obóz. Wybierz sobie stronę, albo zginiesz między nimi.",
+      "choices": [
+        {
+          "text": "Gildia? Obóz? O czym ty mówisz?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "explained_factions"
+        },
+        {
+          "text": "Rozumiem. Muszę się rozejrzeć.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_M_001" }
+          ],
+          "nextNode": "goodbye"
+        }
+      ]
+    },
+    "explained_szarpani": {
+      "nodeId": "explained_szarpani",
+      "speaker": "npc_wanderer",
+      "text": "Szarpane Wrota? To wąwóz, przez który tu dotarłeś. Dwie skały i wąska ścieżka. Stąd nazwa. I stąd nikt stąd nie ucieka — nie da się. Albo przejdziesz, albo utkniesz jak reszta z nas.",
+      "choices": [
+        {
+          "text": "Rozumiem. Dzięki za informację.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_M_001" }
+          ],
+          "nextNode": "goodbye"
+        }
+      ]
+    },
+    "explained_factions": {
+      "nodeId": "explained_factions",
+      "speaker": "npc_wanderer",
+      "text": "Gildia Żelaznej Ręki trzyma Kamienny Brzeg. Mury, porządek, hierarchia. Nudna, ale bezpieczna. Obóz pod Dębami to zbieranina Wolnych — silniejsi rządzą, słabsi pracują. Brudno, ale przynajmniej nie nosisz kajdan na nogach.",
+      "choices": [
+        {
+          "text": "Rozumiem. Muszę się rozejrzeć.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_M_001" }
+          ],
+          "nextNode": "goodbye"
+        }
+      ]
+    },
+    "goodbye": {
+      "nodeId": "goodbye",
+      "speaker": "npc_wanderer",
+      "text": "Idź, dokąd chcesz. Tylko pamiętaj — tutaj nikt nie pomoże ci za darmo. Każdy chce czegoś w zamian. Nawet ja.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [
+            { "type": "SetFlag", "flag": "met_wanderer" }
+          ],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

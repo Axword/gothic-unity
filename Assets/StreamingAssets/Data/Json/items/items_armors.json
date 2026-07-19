@@ -1,0 +1,166 @@
+{
+  "items": [
+    {
+      "id": "item_cloth_robe_01",
+      "nameKey": "item_cloth_robe_01_name",
+      "descriptionKey": "item_cloth_robe_01_desc",
+      "itemType": "Armor",
+      "subType": "Cloth",
+      "slot": "Body",
+      "baseValue": 20,
+      "weight": 1.5,
+      "iconPath": "Art/Icons/Armors/cloth_robe",
+      "modelPath": "Art/Models/Armors/cloth_robe",
+      "stackable": false,
+      "armor": {
+        "physical": 2,
+        "magical": 0,
+        "fire": 0,
+        "ice": 0,
+        "lightning": 0
+      },
+      "requirements": {
+        "strength": 0
+      },
+      "durability": {
+        "max": 30,
+        "current": 30
+      }
+    },
+    {
+      "id": "item_leather_armor_01",
+      "nameKey": "item_leather_armor_01_name",
+      "descriptionKey": "item_leather_armor_01_desc",
+      "itemType": "Armor",
+      "subType": "Leather",
+      "slot": "Body",
+      "baseValue": 60,
+      "weight": 4.0,
+      "iconPath": "Art/Icons/Armors/leather_armor",
+      "modelPath": "Art/Models/Armors/leather_armor",
+      "stackable": false,
+      "armor": {
+        "physical": 8,
+        "magical": 0,
+        "fire": 1,
+        "ice": 1,
+        "lightning": 0
+      },
+      "requirements": {
+        "strength": 3
+      },
+      "durability": {
+        "max": 60,
+        "current": 60
+      }
+    },
+    {
+      "id": "item_chainmail_01",
+      "nameKey": "item_chainmail_01_name",
+      "descriptionKey": "item_chainmail_01_desc",
+      "itemType": "Armor",
+      "subType": "Chainmail",
+      "slot": "Body",
+      "baseValue": 150,
+      "weight": 8.0,
+      "iconPath": "Art/Icons/Armors/chainmail",
+      "modelPath": "Art/Models/Armors/chainmail",
+      "stackable": false,
+      "armor": {
+        "physical": 18,
+        "magical": 0,
+        "fire": 2,
+        "ice": 2,
+        "lightning": 1
+      },
+      "requirements": {
+        "strength": 10
+      },
+      "durability": {
+        "max": 120,
+        "current": 120
+      }
+    },
+    {
+      "id": "item_plate_armor_01",
+      "nameKey": "item_plate_armor_01_name",
+      "descriptionKey": "item_plate_armor_01_desc",
+      "itemType": "Armor",
+      "subType": "Plate",
+      "slot": "Body",
+      "baseValue": 300,
+      "weight": 15.0,
+      "iconPath": "Art/Icons/Armors/plate_armor",
+      "modelPath": "Art/Models/Armors/plate_armor",
+      "stackable": false,
+      "armor": {
+        "physical": 35,
+        "magical": 0,
+        "fire": 5,
+        "ice": 5,
+        "lightning": 3
+      },
+      "requirements": {
+        "strength": 18
+      },
+      "durability": {
+        "max": 200,
+        "current": 200
+      }
+    },
+    {
+      "id": "item_guild_armor_01",
+      "nameKey": "item_guild_armor_01_name",
+      "descriptionKey": "item_guild_armor_01_desc",
+      "itemType": "Armor",
+      "subType": "Chainmail",
+      "slot": "Body",
+      "baseValue": 200,
+      "weight": 9.0,
+      "iconPath": "Art/Icons/Armors/guild_armor",
+      "modelPath": "Art/Models/Armors/guild_armor",
+      "stackable": false,
+      "armor": {
+        "physical": 22,
+        "magical": 0,
+        "fire": 3,
+        "ice": 3,
+        "lightning": 2
+      },
+      "requirements": {
+        "strength": 12
+      },
+      "durability": {
+        "max": 150,
+        "current": 150
+      }
+    },
+    {
+      "id": "item_rebel_armor_01",
+      "nameKey": "item_rebel_armor_01_name",
+      "descriptionKey": "item_rebel_armor_01_desc",
+      "itemType": "Armor",
+      "subType": "Leather",
+      "slot": "Body",
+      "baseValue": 120,
+      "weight": 5.0,
+      "iconPath": "Art/Icons/Armors/rebel_armor",
+      "modelPath": "Art/Models/Armors/rebel_armor",
+      "stackable": false,
+      "armor": {
+        "physical": 12,
+        "magical": 0,
+        "fire": 2,
+        "ice": 2,
+        "lightning": 0
+      },
+      "requirements": {
+        "strength": 6
+      },
+      "durability": {
+        "max": 80,
+        "current": 80
+      }
+    }
+  ]
+}

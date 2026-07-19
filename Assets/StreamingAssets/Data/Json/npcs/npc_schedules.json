@@ -1,0 +1,242 @@
+{
+  "schedules": [
+    {
+      "npcId": "npc_aldona",
+      "phases": [
+        {
+          "timeRange": { "start": 6, "end": 8 },
+          "locationId": "location_aldona_chambers",
+          "activity": "Sleep",
+          "animation": "sleep_idle",
+          "conditions": [],
+          "fallback": { "position": { "x": 10, "y": 0, "z": 5 } }
+        },
+        {
+          "timeRange": { "start": 8, "end": 10 },
+          "locationId": "location_aldona_chambers",
+          "activity": "Work",
+          "animation": "reading",
+          "conditions": [],
+          "fallback": { "position": { "x": 10, "y": 0, "z": 5 } }
+        },
+        {
+          "timeRange": { "start": 10, "end": 14 },
+          "locationId": "location_dwor_main",
+          "activity": "Social",
+          "animation": "sitting_talk",
+          "conditions": [],
+          "fallback": { "position": { "x": 0, "y": 0, "z": 0 } }
+        },
+        {
+          "timeRange": { "start": 14, "end": 18 },
+          "locationId": "location_dwor_main",
+          "activity": "Work",
+          "animation": "administrating",
+          "conditions": [],
+          "fallback": { "position": { "x": 0, "y": 0, "z": 0 } }
+        },
+        {
+          "timeRange": { "start": 18, "end": 20 },
+          "locationId": "location_dwor_dining",
+          "activity": "Eat",
+          "animation": "eating",
+          "conditions": [],
+          "fallback": { "position": { "x": -5, "y": 0, "z": 3 } }
+        },
+        {
+          "timeRange": { "start": 20, "end": 22 },
+          "locationId": "location_dwor_main",
+          "activity": "Social",
+          "animation": "standing_talk",
+          "conditions": [],
+          "fallback": { "position": { "x": 0, "y": 0, "z": 0 } }
+        },
+        {
+          "timeRange": { "start": 22, "end": 6 },
+          "locationId": "location_aldona_chambers",
+          "activity": "Sleep",
+          "animation": "sleep_idle",
+          "conditions": [],
+          "fallback": { "position": { "x": 10, "y": 0, "z": 5 } }
+        }
+      ],
+      "overrides": []
+    },
+    {
+      "npcId": "npc_boruk",
+      "phases": [
+        {
+          "timeRange": { "start": 6, "end": 7 },
+          "locationId": "location_barracks",
+          "activity": "Work",
+          "animation": "wake_up",
+          "conditions": [],
+          "fallback": { "position": { "x": 15, "y": 0, "z": 8 } }
+        },
+        {
+          "timeRange": { "start": 7, "end": 12 },
+          "locationId": "location_gate",
+          "activity": "Patrol",
+          "animation": "patrol_walk",
+          "conditions": [],
+          "fallback": { "position": { "x": 20, "y": 0, "z": 0 } }
+        },
+        {
+          "timeRange": { "start": 12, "end": 13 },
+          "locationId": "location_tavern",
+          "activity": "Eat",
+          "animation": "eating",
+          "conditions": [],
+          "fallback": { "position": { "x": -3, "y": 0, "z": 0 } }
+        },
+        {
+          "timeRange": { "start": 13, "end": 18 },
+          "locationId": "location_gate",
+          "activity": "Patrol",
+          "animation": "patrol_walk",
+          "conditions": [],
+          "fallback": { "position": { "x": 20, "y": 0, "z": 0 } }
+        },
+        {
+          "timeRange": { "start": 18, "end": 22 },
+          "locationId": "location_barracks",
+          "activity": "Social",
+          "animation": "standing_talk",
+          "conditions": [],
+          "fallback": { "position": { "x": 15, "y": 0, "z": 8 } }
+        },
+        {
+          "timeRange": { "start": 22, "end": 6 },
+          "locationId": "location_barracks",
+          "activity": "Sleep",
+          "animation": "sleep_idle",
+          "conditions": [],
+          "fallback": { "position": { "x": 15, "y": 0, "z": 8 } }
+        }
+      ],
+      "overrides": []
+    },
+    {
+      "npcId": "npc_mlynarczyk",
+      "phases": [
+        {
+          "timeRange": { "start": 6, "end": 7 },
+          "locationId": "location_forge",
+          "activity": "Work",
+          "animation": "wake_up",
+          "conditions": [],
+          "fallback": { "position": { "x": -5, "y": 0, "z": 3 } }
+        },
+        {
+          "timeRange": { "start": 7, "end": 12 },
+          "locationId": "location_forge",
+          "activity": "Work",
+          "animation": "smithing",
+          "conditions": [],
+          "fallback": { "position": { "x": -5, "y": 0, "z": 3 } }
+        },
+        {
+          "timeRange": { "start": 12, "end": 13 },
+          "locationId": "location_home",
+          "activity": "Eat",
+          "animation": "eating",
+          "conditions": [],
+          "fallback": { "position": { "x": -8, "y": 0, "z": 5 } }
+        },
+        {
+          "timeRange": { "start": 13, "end": 18 },
+          "locationId": "location_forge",
+          "activity": "Work",
+          "animation": "smithing",
+          "conditions": [],
+          "fallback": { "position": { "x": -5, "y": 0, "z": 3 } }
+        },
+        {
+          "timeRange": { "start": 18, "end": 22 },
+          "locationId": "location_home",
+          "activity": "Social",
+          "animation": "sitting",
+          "conditions": [],
+          "fallback": { "position": { "x": -8, "y": 0, "z": 5 } }
+        },
+        {
+          "timeRange": { "start": 22, "end": 6 },
+          "locationId": "location_home",
+          "activity": "Sleep",
+          "animation": "sleep_idle",
+          "conditions": [],
+          "fallback": { "position": { "x": -8, "y": 0, "z": 5 } }
+        }
+      ],
+      "overrides": []
+    },
+    {
+      "npcId": "npc_drwal",
+      "phases": [
+        {
+          "timeRange": { "start": 6, "end": 7 },
+          "locationId": "location_chief_tent",
+          "activity": "Work",
+          "animation": "wake_up",
+          "conditions": [],
+          "fallback": { "position": { "x": 0, "y": 0, "z": 0 } }
+        },
+        {
+          "timeRange": { "start": 7, "end": 12 },
+          "locationId": "location_chief_tent",
+          "activity": "Social",
+          "animation": "talking",
+          "conditions": [],
+          "fallback": { "position": { "x": 0, "y": 0, "z": 0 } }
+        },
+        {
+          "timeRange": { "start": 12, "end": 14 },
+          "locationId": "location_campfire",
+          "activity": "Eat",
+          "animation": "eating",
+          "conditions": [],
+          "fallback": { "position": { "x": 3, "y": 0, "z": 3 } }
+        },
+        {
+          "timeRange": { "start": 14, "end": 18 },
+          "locationId": "location_chief_tent",
+          "activity": "Work",
+          "animation": "administrating",
+          "conditions": [],
+          "fallback": { "position": { "x": 0, "y": 0, "z": 0 } }
+        },
+        {
+          "timeRange": { "start": 18, "end": 22 },
+          "locationId": "location_campfire",
+          "activity": "Social",
+          "animation": "drinking",
+          "conditions": [],
+          "fallback": { "position": { "x": 3, "y": 0, "z": 3 } }
+        },
+        {
+          "timeRange": { "start": 22, "end": 6 },
+          "locationId": "location_chief_tent",
+          "activity": "Sleep",
+          "animation": "sleep_idle",
+          "conditions": [],
+          "fallback": { "position": { "x": 0, "y": 0, "z": 0 } }
+        }
+      ],
+      "overrides": []
+    },
+    {
+      "npcId": "npc_wanderer",
+      "phases": [
+        {
+          "timeRange": { "start": 0, "end": 24 },
+          "locationId": "location_campfire_wanderer",
+          "activity": "Idle",
+          "animation": "sitting",
+          "conditions": [],
+          "fallback": { "position": { "x": 0, "y": 0, "z": 5 } }
+        }
+      ],
+      "overrides": []
+    }
+  ]
+}

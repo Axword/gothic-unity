@@ -1,0 +1,155 @@
+{
+  "id": "dialog_aldona_greeting",
+  "rootNodeId": "start",
+  "speaker": "npc_aldona",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "npc_aldona",
+      "text": "Cóż, nieznajomy. Kim jesteś i czego szukasz w mojej osadzie?",
+      "choices": [
+        {
+          "text": "Jestem podróżnym. Szukam pracy i schronienia.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "traveler"
+        },
+        {
+          "text": "Mam misję od samego króla!",
+          "conditions": [
+            { "type": "HasItem", "itemId": "item_fake_letter" }
+          ],
+          "actions": [
+            { "type": "SetFlag", "flag": "claimed_royal" }
+          ],
+          "nextNode": "royal_claim"
+        },
+        {
+          "text": "Słyszałem, że macie problemy z potworami.",
+          "conditions": [
+            { "type": "QuestActive", "questId": "Q_F_OLD_001" }
+          ],
+          "actions": [],
+          "nextNode": "quest_discussion"
+        },
+        {
+          "text": "Nic. Przepraszam za扰.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "dismissive"
+        }
+      ]
+    },
+    "traveler": {
+      "nodeId": "traveler",
+      "speaker": "npc_aldona",
+      "text": "Praca? Mamy jej pod dostatkiem. Ale zanim cię dopuścimy do czegokolwiek, musisz udowodnić, że nie jesteś pierwszym lepszym rzezimieszkiem ze Szarpanych Wrót.",
+      "choices": [
+        {
+          "text": "Jestem gotowy na próbę.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_F_OLD_001" }
+          ],
+          "nextNode": "quest_given"
+        },
+        {
+          "text": "Najpierw chciałbym się rozejrzeć.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "fine"
+        }
+      ]
+    },
+    "royal_claim": {
+      "nodeId": "royal_claim",
+      "speaker": "npc_aldona",
+      "text": "List? Pokaż mi go. *przygląda się dokumentowi* Hmm... Ciekawe. Mistrz Żelazny nie wspominał o nikim takim. Ale niech będzie — masz szansę. Wykaż się, a uwierzę.",
+      "choices": [
+        {
+          "text": "Na pewno się wykażę.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_F_OLD_001" }
+          ],
+          "nextNode": "quest_given"
+        }
+      ]
+    },
+    "quest_discussion": {
+      "nodeId": "quest_discussion",
+      "speaker": "npc_aldona",
+      "text": "Tak, problemy. Wilki z lasu terroryzują naszych farmerów. Mówią, że trzy sztuki, ale może być więcej. Przynieś mi dowód — skóry. Wtedy porozmawiamy poważnie.",
+      "choices": [
+        {
+          "text": "Zajmę się tym.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "quest_given"
+        },
+        {
+          "text": "Ile zapłacisz?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "payment"
+        }
+      ]
+    },
+    "payment": {
+      "nodeId": "payment",
+      "speaker": "npc_aldona",
+      "text": "Zapłacę? Gildia nie płaci za ochronę. Ale dostaniesz respect — i może coś więcej, jeśli się sprawdzisz. Na razie przynieś skóry. Resztę omówimy później.",
+      "choices": [
+        {
+          "text": "Dobrze. Wezmę się do roboty.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_F_OLD_001" }
+          ],
+          "nextNode": "quest_given"
+        }
+      ]
+    },
+    "quest_given": {
+      "nodeId": "quest_given",
+      "speaker": "npc_aldona",
+      "text": "Idź do farmy Kowalskiego na północ stąd. Zbierz skóry i wracaj. I nie wracaj z pustymi rękami.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [
+            { "type": "SetFlag", "flag": "aldona_quest_active" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "fine": {
+      "nodeId": "fine",
+      "speaker": "npc_aldona",
+      "text": "Rozglądaj się, ale nie zapomnij — w Kamiennym Brzegu obowiązują nasze prawa. Nieutoryzowane zabieranie cudzej własności kończy się... nieprzyjemnie.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "dismissive": {
+      "nodeId": "dismissive",
+      "speaker": "npc_aldona",
+      "text": "Co za marnowanie mojego czasu. Strażnik Boruk zajmie się tobą, jeśli będziesz sprawiał problemy.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

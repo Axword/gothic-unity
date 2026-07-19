@@ -1,0 +1,18 @@
+{
+  "spawns": [
+    {
+      "id": "spawn_wolf_ironwood",
+      "monsterId": "monster_wolf",
+      "locationId": "location_ironwood",
+      "count": 4,
+      "nightOnly": false
+    },
+    {
+      "id": "spawn_swamp_beast_marsh",
+      "monsterId": "monster_swamp_beast",
+      "locationId": "location_black_marsh",
+      "count": 2,
+      "nightOnly": false
+    }
+  ]
+}

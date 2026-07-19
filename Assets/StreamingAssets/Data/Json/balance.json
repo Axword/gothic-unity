@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "xpPerLevel": 100,
+  "hpPerLevel": 15,
+  "learningPointsPerLevel": 1,
+  "damage": {
+    "strengthPerPoint": 1,
+    "dexterityPerPoint": 1
+  }
+}

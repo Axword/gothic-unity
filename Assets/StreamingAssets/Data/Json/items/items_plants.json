@@ -1,0 +1,204 @@
+{
+  "items": [
+    {
+      "id": "item_herb_healing_01",
+      "nameKey": "item_herb_healing_01_name",
+      "descriptionKey": "item_herb_healing_01_desc",
+      "itemType": "Consumable",
+      "subType": "Plant",
+      "baseValue": 5,
+      "weight": 0.1,
+      "iconPath": "Art/Icons/Plants/herb_healing",
+      "stackable": true,
+      "maxStack": 10,
+      "effect": {
+        "type": "Heal",
+        "value": 20,
+        "duration": 0,
+        "cooldown": 5
+      },
+      "harvestable": true,
+      "biome": "Forest"
+    },
+    {
+      "id": "item_herb_mana_01",
+      "nameKey": "item_herb_mana_01_name",
+      "descriptionKey": "item_herb_mana_01_desc",
+      "itemType": "Consumable",
+      "subType": "Plant",
+      "baseValue": 8,
+      "weight": 0.1,
+      "iconPath": "Art/Icons/Plants/herb_mana",
+      "stackable": true,
+      "maxStack": 10,
+      "effect": {
+        "type": "RestoreMana",
+        "value": 25,
+        "duration": 0,
+        "cooldown": 5
+      },
+      "harvestable": true,
+      "biome": "Swamp"
+    },
+    {
+      "id": "item_herb_strength_01",
+      "nameKey": "item_herb_strength_01_name",
+      "descriptionKey": "item_herb_strength_01_desc",
+      "itemType": "Consumable",
+      "subType": "Plant",
+      "baseValue": 12,
+      "weight": 0.1,
+      "iconPath": "Art/Icons/Plants/herb_strength",
+      "stackable": true,
+      "maxStack": 10,
+      "effect": {
+        "type": "Buff",
+        "value": 5,
+        "duration": 60,
+        "cooldown": 30
+      },
+      "harvestable": true,
+      "biome": "Mountain"
+    },
+    {
+      "id": "item_herb_antidote_01",
+      "nameKey": "item_herb_antidote_01_name",
+      "descriptionKey": "item_herb_antidote_01_desc",
+      "itemType": "Consumable",
+      "subType": "Plant",
+      "baseValue": 10,
+      "weight": 0.1,
+      "iconPath": "Art/Icons/Plants/herb_antidote",
+      "stackable": true,
+      "maxStack": 10,
+      "effect": {
+        "type": "CurePoison",
+        "value": 0,
+        "duration": 0,
+        "cooldown": 10
+      },
+      "harvestable": true,
+      "biome": "Swamp"
+    },
+    {
+      "id": "item_herb_nightvision_01",
+      "nameKey": "item_herb_nightvision_01_name",
+      "descriptionKey": "item_herb_nightvision_01_desc",
+      "itemType": "Consumable",
+      "subType": "Plant",
+      "baseValue": 15,
+      "weight": 0.1,
+      "iconPath": "Art/Icons/Plants/herb_nightvision",
+      "stackable": true,
+      "maxStack": 10,
+      "effect": {
+        "type": "Buff",
+        "value": 0,
+        "duration": 120,
+        "cooldown": 60
+      },
+      "harvestable": true,
+      "biome": "Forest"
+    },
+    {
+      "id": "item_herb_stamina_01",
+      "nameKey": "item_herb_stamina_01_name",
+      "descriptionKey": "item_herb_stamina_01_desc",
+      "itemType": "Consumable",
+      "subType": "Plant",
+      "baseValue": 6,
+      "weight": 0.1,
+      "iconPath": "Art/Icons/Plants/herb_stamina",
+      "stackable": true,
+      "maxStack": 10,
+      "effect": {
+        "type": "RestoreStamina",
+        "value": 50,
+        "duration": 0,
+        "cooldown": 5
+      },
+      "harvestable": true,
+      "biome": "Forest"
+    },
+    {
+      "id": "item_mushroom_01",
+      "nameKey": "item_mushroom_01_name",
+      "descriptionKey": "item_mushroom_01_desc",
+      "itemType": "Consumable",
+      "subType": "Plant",
+      "baseValue": 3,
+      "weight": 0.05,
+      "iconPath": "Art/Icons/Plants/mushroom",
+      "stackable": true,
+      "maxStack": 20,
+      "effect": {
+        "type": "Heal",
+        "value": 5,
+        "duration": 0,
+        "cooldown": 5
+      },
+      "harvestable": true,
+      "biome": "Forest"
+    },
+    {
+      "id": "item_poison_mushroom_01",
+      "nameKey": "item_poison_mushroom_01_name",
+      "descriptionKey": "item_poison_mushroom_01_desc",
+      "itemType": "Consumable",
+      "subType": "Plant",
+      "baseValue": 2,
+      "weight": 0.05,
+      "iconPath": "Art/Icons/Plants/poison_mushroom",
+      "stackable": true,
+      "maxStack": 10,
+      "effect": {
+        "type": "Poison",
+        "value": 10,
+        "duration": 30,
+        "cooldown": 0
+      },
+      "harvestable": true,
+      "biome": "Swamp"
+    },
+    {
+      "id": "item_root_strength_01",
+      "nameKey": "item_root_strength_01_name",
+      "descriptionKey": "item_root_strength_01_desc",
+      "itemType": "Consumable",
+      "subType": "Plant",
+      "baseValue": 8,
+      "weight": 0.15,
+      "iconPath": "Art/Icons/Plants/root_strength",
+      "stackable": true,
+      "maxStack": 10,
+      "effect": {
+        "type": "Buff",
+        "value": 3,
+        "duration": 180,
+        "cooldown": 60
+      },
+      "harvestable": true,
+      "biome": "Mountain"
+    },
+    {
+      "id": "item_blueberry_01",
+      "nameKey": "item_blueberry_01_name",
+      "descriptionKey": "item_blueberry_01_desc",
+      "itemType": "Consumable",
+      "subType": "Plant",
+      "baseValue": 2,
+      "weight": 0.02,
+      "iconPath": "Art/Icons/Plants/blueberry",
+      "stackable": true,
+      "maxStack": 30,
+      "effect": {
+        "type": "Heal",
+        "value": 3,
+        "duration": 0,
+        "cooldown": 2
+      },
+      "harvestable": true,
+      "biome": "Forest"
+    }
+  ]
+}

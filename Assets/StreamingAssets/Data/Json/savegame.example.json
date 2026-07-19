@@ -1,0 +1,22 @@
+{
+  "saveVersion": "1.0",
+  "timestamp": "2026-07-19T12:00:00Z",
+  "playtimeSeconds": 0,
+  "player": {
+    "level": 1,
+    "xp": 0,
+    "currentScene": "VerticalSlice",
+    "position": {"x": 0, "y": 1, "z": -4},
+    "stats": {"health": 100, "maxHealth": 100, "mana": 50, "maxMana": 50, "strength": 10, "dexterity": 10, "armor": 0},
+    "learningPoints": 0
+  },
+  "inventory": [],
+  "equipment": {},
+  "activeQuests": [],
+  "completedQuests": [],
+  "failedQuests": [],
+  "flags": [],
+  "reputation": {},
+  "factionChoice": null,
+  "world": {"openedChests": [], "collectedLoot": [], "defeatedEnemies": [], "npcStates": {}}
+}

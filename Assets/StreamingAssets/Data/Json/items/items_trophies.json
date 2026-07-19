@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "id": "item_trophy_wolf_pelt",
+      "nameKey": "item.trophy.wolf_pelt.name",
+      "descriptionKey": "item.trophy.wolf_pelt.description",
+      "itemType": "Material",
+      "baseValue": 18,
+      "weight": 0.5,
+      "iconPath": "icons/items/wolf_pelt.png",
+      "stackable": true,
+      "maxStack": 99
+    },
+    {
+      "id": "item_trophy_bear_claw",
+      "nameKey": "item.trophy.bear_claw.name",
+      "descriptionKey": "item.trophy.bear_claw.description",
+      "itemType": "Material",
+      "baseValue": 35,
+      "weight": 0.2,
+      "iconPath": "icons/items/bear_claw.png",
+      "stackable": true,
+      "maxStack": 99
+    },
+    {
+      "id": "item_trophy_spider_silk",
+      "nameKey": "item.trophy.spider_silk.name",
+      "descriptionKey": "item.trophy.spider_silk.description",
+      "itemType": "Material",
+      "baseValue": 22,
+      "weight": 0.1,
+      "iconPath": "icons/items/spider_silk.png",
+      "stackable": true,
+      "maxStack": 99
+    },
+    {
+      "id": "item_trophy_swamp_scale",
+      "nameKey": "item.trophy.swamp_scale.name",
+      "descriptionKey": "item.trophy.swamp_scale.description",
+      "itemType": "Material",
+      "baseValue": 55,
+      "weight": 0.4,
+      "iconPath": "icons/items/swamp_scale.png",
+      "stackable": true,
+      "maxStack": 99
+    },
+    {
+      "id": "item_trophy_troll_tooth",
+      "nameKey": "item.trophy.troll_tooth.name",
+      "descriptionKey": "item.trophy.troll_tooth.description",
+      "itemType": "Material",
+      "baseValue": 90,
+      "weight": 0.8,
+      "iconPath": "icons/items/troll_tooth.png",
+      "stackable": true,
+      "maxStack": 99
+    },
+    {
+      "id": "item_trophy_bandit_badge",
+      "nameKey": "item.trophy.bandit_badge.name",
+      "descriptionKey": "item.trophy.bandit_badge.description",
+      "itemType": "Material",
+      "baseValue": 12,
+      "weight": 0.1,
+      "iconPath": "icons/items/bandit_badge.png",
+      "stackable": true,
+      "maxStack": 99
+    },
+    {
+      "id": "item_troll_heart",
+      "nameKey": "item.trophy.troll_heart.name",
+      "descriptionKey": "item.trophy.troll_heart.description",
+      "itemType": "Material",
+      "baseValue": 140,
+      "weight": 1.2,
+      "iconPath": "icons/items/troll_heart.png",
+      "stackable": true,
+      "maxStack": 10
+    }
+  ]
+}
