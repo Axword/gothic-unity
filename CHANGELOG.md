@@ -4,6 +4,20 @@ Wszystkie istotne zmiany w projekcie. Format: `YYYY-MM-DD - [TYP] Opis`
 
 ---
 
+## [0.5.1] - 2026-07-19 - Audyt techniczny
+
+### Dodane
+- ✅ Audyt statyczny projektu Unity i macierz wymagań.
+- ✅ `Tools/validate_quests.py` jako regresyjny walidator questów.
+- ✅ Dokumenty: `AUDIT_CHECKLIST.md`, `AUDIT_LOG.md`, `BUGS.md`, `TEST_RESULTS.md`, `RELEASE_READINESS.md`.
+
+### Ustalenia
+- ⚠️ Build/Play Mode oznaczone BLOCKED z powodu braku Unity CLI/Editor.
+- ⚠️ Udokumentowano różnicę między proceduralnym greyboxem a integracją produkcyjnych systemów.
+- ⚠️ Zaktualizowano faktyczne braki zawartości zamiast deklarować ich ukończenie.
+
+---
+
 ## [0.5.0] - 2024-07-19 - Fundamenty projektu
 
 ### Dodane

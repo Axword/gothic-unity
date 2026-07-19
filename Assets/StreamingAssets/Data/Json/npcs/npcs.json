@@ -15,19 +15,40 @@
         "strength": 20,
         "dexterity": 12,
         "armor": 25,
-        "damage": { "min": 15, "max": 25, "type": "Slashing" }
+        "damage": {
+          "min": 15,
+          "max": 25,
+          "type": "Slashing"
+        }
       },
       "equipment": [
-        { "slot": "Weapon", "itemId": "item_steel_sword_01" },
-        { "slot": "Armor", "itemId": "item_chainmail_01" }
+        {
+          "slot": "Weapon",
+          "itemId": "item_steel_sword_01"
+        },
+        {
+          "slot": "Armor",
+          "itemId": "item_chainmail_01"
+        }
       ],
       "inventory": [
-        { "itemId": "gold", "count": 100 }
+        {
+          "itemId": "gold",
+          "count": 100
+        }
       ],
       "initialRelation": 0,
       "scheduleId": "npc_aldona_schedule",
-      "dialogues": ["dialog_aldona_greeting", "dialog_aldona_quest_001", "dialog_aldona_choice"],
-      "quests": ["Q_F_OLD_001", "Q_F_OLD_002", "Q_F_OLD_FINAL"],
+      "dialogues": [
+        "dialog_aldona_greeting",
+        "dialog_aldona_quest_001",
+        "dialog_aldona_choice"
+      ],
+      "quests": [
+        "Q_F_OLD_001",
+        "Q_F_OLD_002",
+        "Q_F_OLD_FINAL"
+      ],
       "trainer": null,
       "reactions": {
         "theft": "AlertAndFight",
@@ -42,8 +63,16 @@
       },
       "location": {
         "scene": "World_KamiennyBrzeg",
-        "position": { "x": 10.0, "y": 0.0, "z": 5.0 },
-        "rotation": { "x": 0.0, "y": 180.0, "z": 0.0 }
+        "position": {
+          "x": 10.0,
+          "y": 0.0,
+          "z": 5.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 180.0,
+          "z": 0.0
+        }
       }
     },
     {
@@ -61,19 +90,37 @@
         "strength": 18,
         "dexterity": 10,
         "armor": 20,
-        "damage": { "min": 12, "max": 18, "type": "Slashing" }
+        "damage": {
+          "min": 12,
+          "max": 18,
+          "type": "Slashing"
+        }
       },
       "equipment": [
-        { "slot": "Weapon", "itemId": "item_guard_sword_01" },
-        { "slot": "Armor", "itemId": "item_chainmail_01" }
+        {
+          "slot": "Weapon",
+          "itemId": "item_guard_sword_01"
+        },
+        {
+          "slot": "Armor",
+          "itemId": "item_chainmail_01"
+        }
       ],
       "inventory": [
-        { "itemId": "gold", "count": 50 }
+        {
+          "itemId": "gold",
+          "count": 50
+        }
       ],
       "initialRelation": 5,
       "scheduleId": "npc_boruk_schedule",
-      "dialogues": ["dialog_boruk_greeting", "dialog_boruk_quest_002"],
-      "quests": ["Q_F_OLD_002"],
+      "dialogues": [
+        "dialog_boruk_greeting",
+        "dialog_boruk_quest_002"
+      ],
+      "quests": [
+        "Q_F_OLD_002"
+      ],
       "trainer": "trainer_combat",
       "reactions": {
         "theft": "AlertAndFight",
@@ -88,8 +135,16 @@
       },
       "location": {
         "scene": "World_KamiennyBrzeg",
-        "position": { "x": 15.0, "y": 0.0, "z": 8.0 },
-        "rotation": { "x": 0.0, "y": 90.0, "z": 0.0 }
+        "position": {
+          "x": 15.0,
+          "y": 0.0,
+          "z": 8.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 90.0,
+          "z": 0.0
+        }
       }
     },
     {
@@ -107,20 +162,42 @@
         "strength": 8,
         "dexterity": 8,
         "armor": 2,
-        "damage": { "min": 3, "max": 5, "type": "Blunt" }
+        "damage": {
+          "min": 3,
+          "max": 5,
+          "type": "Blunt"
+        }
       },
       "equipment": [
-        { "slot": "Weapon", "itemId": "item_old_sword_01" }
+        {
+          "slot": "Weapon",
+          "itemId": "item_old_sword_01"
+        }
       ],
       "inventory": [
-        { "itemId": "gold", "count": 200 },
-        { "itemId": "item_iron_sword_01", "count": 2 },
-        { "itemId": "item_potion_health_small", "count": 5 }
+        {
+          "itemId": "gold",
+          "count": 200
+        },
+        {
+          "itemId": "item_iron_sword_01",
+          "count": 2
+        },
+        {
+          "itemId": "item_potion_health_small",
+          "count": 5
+        }
       ],
       "initialRelation": 10,
       "scheduleId": "npc_mlynarczyk_schedule",
-      "dialogues": ["dialog_mlynarczyk_greeting", "dialog_mlynarczyk_shop", "dialog_mlynarczyk_quest_003"],
-      "quests": ["Q_F_OLD_003"],
+      "dialogues": [
+        "dialog_mlynarczyk_greeting",
+        "dialog_mlynarczyk_shop",
+        "dialog_mlynarczyk_quest_003"
+      ],
+      "quests": [
+        "Q_F_OLD_003"
+      ],
       "trainer": null,
       "reactions": {
         "theft": "Warning",
@@ -135,8 +212,16 @@
       },
       "location": {
         "scene": "World_KamiennyBrzeg",
-        "position": { "x": -5.0, "y": 0.0, "z": 3.0 },
-        "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 }
+        "position": {
+          "x": -5.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
       }
     },
     {
@@ -154,16 +239,28 @@
         "strength": 5,
         "dexterity": 8,
         "armor": 0,
-        "damage": { "min": 2, "max": 3, "type": "Blunt" }
+        "damage": {
+          "min": 2,
+          "max": 3,
+          "type": "Blunt"
+        }
       },
       "equipment": [],
       "inventory": [
-        { "itemId": "gold", "count": 20 }
+        {
+          "itemId": "gold",
+          "count": 20
+        }
       ],
       "initialRelation": 15,
       "scheduleId": "npc_zosia_schedule",
-      "dialogues": ["dialog_zosia_greeting", "dialog_zosia_side_001"],
-      "quests": ["Q_S_001"],
+      "dialogues": [
+        "dialog_zosia_greeting",
+        "dialog_zosia_side_001"
+      ],
+      "quests": [
+        "Q_S_001"
+      ],
       "trainer": null,
       "reactions": {
         "theft": "Warning",
@@ -178,8 +275,16 @@
       },
       "location": {
         "scene": "World_KamiennyBrzeg",
-        "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
-        "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 }
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
       }
     },
     {
@@ -197,18 +302,36 @@
         "strength": 22,
         "dexterity": 14,
         "armor": 15,
-        "damage": { "min": 18, "max": 28, "type": "Slashing" }
+        "damage": {
+          "min": 18,
+          "max": 28,
+          "type": "Slashing"
+        }
       },
       "equipment": [
-        { "slot": "Weapon", "itemId": "item_berdysz_01" }
+        {
+          "slot": "Weapon",
+          "itemId": "item_berdysz_01"
+        }
       ],
       "inventory": [
-        { "itemId": "gold", "count": 80 }
+        {
+          "itemId": "gold",
+          "count": 80
+        }
       ],
       "initialRelation": 0,
       "scheduleId": "npc_drwal_schedule",
-      "dialogues": ["dialog_drwal_greeting", "dialog_drwal_quest_001", "dialog_drwal_choice"],
-      "quests": ["Q_F_NEW_001", "Q_F_NEW_002", "Q_F_NEW_FINAL"],
+      "dialogues": [
+        "dialog_drwal_greeting",
+        "dialog_drwal_quest_001",
+        "dialog_drwal_choice"
+      ],
+      "quests": [
+        "Q_F_NEW_001",
+        "Q_F_NEW_002",
+        "Q_F_NEW_FINAL"
+      ],
       "trainer": null,
       "reactions": {
         "theft": "AlertAndFight",
@@ -223,8 +346,16 @@
       },
       "location": {
         "scene": "World_ObózPodDębami",
-        "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
-        "rotation": { "x": 0.0, "y": 180.0, "z": 0.0 }
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 180.0,
+          "z": 0.0
+        }
       }
     },
     {
@@ -242,19 +373,37 @@
         "strength": 15,
         "dexterity": 16,
         "armor": 10,
-        "damage": { "min": 10, "max": 16, "type": "Piercing" }
+        "damage": {
+          "min": 10,
+          "max": 16,
+          "type": "Piercing"
+        }
       },
       "equipment": [
-        { "slot": "Weapon", "itemId": "item_long_bow_01" }
+        {
+          "slot": "Weapon",
+          "itemId": "item_long_bow_01"
+        }
       ],
       "inventory": [
-        { "itemId": "gold", "count": 40 },
-        { "itemId": "item_arrow", "count": 30 }
+        {
+          "itemId": "gold",
+          "count": 40
+        },
+        {
+          "itemId": "item_arrow",
+          "count": 30
+        }
       ],
       "initialRelation": 5,
       "scheduleId": "npc_grom_schedule",
-      "dialogues": ["dialog_grom_greeting", "dialog_grom_quest_002"],
-      "quests": ["Q_F_NEW_002"],
+      "dialogues": [
+        "dialog_grom_greeting",
+        "dialog_grom_quest_002"
+      ],
+      "quests": [
+        "Q_F_NEW_002"
+      ],
       "trainer": "trainer_bow",
       "reactions": {
         "theft": "AlertAndFight",
@@ -269,8 +418,16 @@
       },
       "location": {
         "scene": "World_ObózPodDębami",
-        "position": { "x": 5.0, "y": 0.0, "z": -3.0 },
-        "rotation": { "x": 0.0, "y": 45.0, "z": 0.0 }
+        "position": {
+          "x": 5.0,
+          "y": 0.0,
+          "z": -3.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 45.0,
+          "z": 0.0
+        }
       }
     },
     {
@@ -288,18 +445,34 @@
         "strength": 6,
         "dexterity": 10,
         "armor": 5,
-        "damage": { "min": 8, "max": 12, "type": "Magic" }
+        "damage": {
+          "min": 8,
+          "max": 12,
+          "type": "Magic"
+        }
       },
       "equipment": [
-        { "slot": "Weapon", "itemId": "item_staff_01" }
+        {
+          "slot": "Weapon",
+          "itemId": "item_staff_01"
+        }
       ],
       "inventory": [
-        { "itemId": "gold", "count": 60 }
+        {
+          "itemId": "gold",
+          "count": 60
+        }
       ],
       "initialRelation": 10,
       "scheduleId": "npc_plomienny_schedule",
-      "dialogues": ["dialog_plomienny_greeting", "dialog_plomienny_magic", "dialog_plomienny_quest_004"],
-      "quests": ["Q_F_NEW_004"],
+      "dialogues": [
+        "dialog_plomienny_greeting",
+        "dialog_plomienny_magic",
+        "dialog_plomienny_quest_004"
+      ],
+      "quests": [
+        "Q_F_NEW_004"
+      ],
       "trainer": "trainer_magic",
       "reactions": {
         "theft": "Warning",
@@ -314,8 +487,16 @@
       },
       "location": {
         "scene": "World_Mokradła",
-        "position": { "x": 20.0, "y": 0.0, "z": 10.0 },
-        "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 }
+        "position": {
+          "x": 20.0,
+          "y": 0.0,
+          "z": 10.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
       }
     },
     {
@@ -333,18 +514,34 @@
         "strength": 7,
         "dexterity": 14,
         "armor": 3,
-        "damage": { "min": 4, "max": 6, "type": "Piercing" }
+        "damage": {
+          "min": 4,
+          "max": 6,
+          "type": "Piercing"
+        }
       },
       "equipment": [
-        { "slot": "Weapon", "itemId": "item_dagger_01" }
+        {
+          "slot": "Weapon",
+          "itemId": "item_dagger_01"
+        }
       ],
       "inventory": [
-        { "itemId": "gold", "count": 150 }
+        {
+          "itemId": "gold",
+          "count": 150
+        }
       ],
       "initialRelation": 5,
       "scheduleId": "npc_kosa_schedule",
-      "dialogues": ["dialog_kosa_greeting", "dialog_kosa_shop", "dialog_kosa_quest_003"],
-      "quests": ["Q_F_NEW_003"],
+      "dialogues": [
+        "dialog_kosa_greeting",
+        "dialog_kosa_shop",
+        "dialog_kosa_quest_003"
+      ],
+      "quests": [
+        "Q_F_NEW_003"
+      ],
       "trainer": "trainer_stealth",
       "reactions": {
         "theft": "AlertAndFight",
@@ -359,8 +556,16 @@
       },
       "location": {
         "scene": "World_ObózPodDębami",
-        "position": { "x": -8.0, "y": 0.0, "z": 2.0 },
-        "rotation": { "x": 0.0, "y": 270.0, "z": 0.0 }
+        "position": {
+          "x": -8.0,
+          "y": 0.0,
+          "z": 2.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 270.0,
+          "z": 0.0
+        }
       }
     },
     {
@@ -378,18 +583,33 @@
         "strength": 8,
         "dexterity": 10,
         "armor": 5,
-        "damage": { "min": 5, "max": 8, "type": "Slashing" }
+        "damage": {
+          "min": 5,
+          "max": 8,
+          "type": "Slashing"
+        }
       },
       "equipment": [
-        { "slot": "Weapon", "itemId": "item_iron_sword_01" }
+        {
+          "slot": "Weapon",
+          "itemId": "item_iron_sword_01"
+        }
       ],
       "inventory": [
-        { "itemId": "gold", "count": 30 }
+        {
+          "itemId": "gold",
+          "count": 30
+        }
       ],
       "initialRelation": 0,
       "scheduleId": "npc_wanderer_schedule",
-      "dialogues": ["dialog_wanderer_greeting", "dialog_wanderer_intro"],
-      "quests": ["Q_M_001"],
+      "dialogues": [
+        "dialog_wanderer_greeting",
+        "dialog_wanderer_intro"
+      ],
+      "quests": [
+        "Q_M_001"
+      ],
       "trainer": null,
       "reactions": {
         "theft": "Warning",
@@ -404,8 +624,2872 @@
       },
       "location": {
         "scene": "World_Przełęcz",
-        "position": { "x": 0.0, "y": 0.0, "z": 5.0 },
-        "rotation": { "x": 0.0, "y": 180.0, "z": 0.0 }
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 5.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 180.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "id": "npc_named_010",
+      "nameKey": "npc.named.010.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.010.title",
+      "level": 1,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_010"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_011",
+      "nameKey": "npc.named.011.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.011.title",
+      "level": 1,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_011"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_012",
+      "nameKey": "npc.named.012.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.012.title",
+      "level": 1,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_012"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_013",
+      "nameKey": "npc.named.013.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.013.title",
+      "level": 1,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_013"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_014",
+      "nameKey": "npc.named.014.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.014.title",
+      "level": 1,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_014"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_015",
+      "nameKey": "npc.named.015.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.015.title",
+      "level": 1,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_015"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_016",
+      "nameKey": "npc.named.016.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.016.title",
+      "level": 2,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_016"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_017",
+      "nameKey": "npc.named.017.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.017.title",
+      "level": 2,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_017"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_018",
+      "nameKey": "npc.named.018.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.018.title",
+      "level": 2,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_018"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_019",
+      "nameKey": "npc.named.019.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.019.title",
+      "level": 2,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_019"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_020",
+      "nameKey": "npc.named.020.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.020.title",
+      "level": 2,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_020"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_021",
+      "nameKey": "npc.named.021.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.021.title",
+      "level": 2,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_021"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_022",
+      "nameKey": "npc.named.022.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.022.title",
+      "level": 2,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_022"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_023",
+      "nameKey": "npc.named.023.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.023.title",
+      "level": 2,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_023"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_024",
+      "nameKey": "npc.named.024.name",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.024.title",
+      "level": 3,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_024"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_025",
+      "nameKey": "npc.named.025.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.025.title",
+      "level": 3,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_025"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_026",
+      "nameKey": "npc.named.026.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.026.title",
+      "level": 3,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_026"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_027",
+      "nameKey": "npc.named.027.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.027.title",
+      "level": 3,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_027"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_028",
+      "nameKey": "npc.named.028.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.028.title",
+      "level": 3,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_028"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_029",
+      "nameKey": "npc.named.029.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.029.title",
+      "level": 3,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_029"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_030",
+      "nameKey": "npc.named.030.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.030.title",
+      "level": 3,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_030"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_031",
+      "nameKey": "npc.named.031.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.031.title",
+      "level": 3,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_031"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_032",
+      "nameKey": "npc.named.032.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.032.title",
+      "level": 4,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_032"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_033",
+      "nameKey": "npc.named.033.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.033.title",
+      "level": 4,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_033"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_034",
+      "nameKey": "npc.named.034.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.034.title",
+      "level": 4,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_034"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_035",
+      "nameKey": "npc.named.035.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.035.title",
+      "level": 4,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_035"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_036",
+      "nameKey": "npc.named.036.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.036.title",
+      "level": 4,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_036"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_037",
+      "nameKey": "npc.named.037.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.037.title",
+      "level": 4,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_037"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_038",
+      "nameKey": "npc.named.038.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.038.title",
+      "level": 4,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_038"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_039",
+      "nameKey": "npc.named.039.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.039.title",
+      "level": 4,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_039"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_040",
+      "nameKey": "npc.named.040.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.040.title",
+      "level": 5,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_040"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_041",
+      "nameKey": "npc.named.041.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.041.title",
+      "level": 5,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_041"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_042",
+      "nameKey": "npc.named.042.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.042.title",
+      "level": 5,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_042"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_043",
+      "nameKey": "npc.named.043.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.043.title",
+      "level": 5,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_043"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_044",
+      "nameKey": "npc.named.044.name",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.044.title",
+      "level": 5,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_044"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_045",
+      "nameKey": "npc.named.045.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.045.title",
+      "level": 5,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_045"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_046",
+      "nameKey": "npc.named.046.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.046.title",
+      "level": 5,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_046"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_047",
+      "nameKey": "npc.named.047.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.047.title",
+      "level": 5,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_047"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_048",
+      "nameKey": "npc.named.048.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.048.title",
+      "level": 6,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_048"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_049",
+      "nameKey": "npc.named.049.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.049.title",
+      "level": 6,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_049"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_050",
+      "nameKey": "npc.named.050.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.050.title",
+      "level": 6,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_050"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_051",
+      "nameKey": "npc.named.051.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.051.title",
+      "level": 6,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_051"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_052",
+      "nameKey": "npc.named.052.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.052.title",
+      "level": 6,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_052"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_053",
+      "nameKey": "npc.named.053.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.053.title",
+      "level": 6,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_053"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_054",
+      "nameKey": "npc.named.054.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.054.title",
+      "level": 6,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_054"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_055",
+      "nameKey": "npc.named.055.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.055.title",
+      "level": 6,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_055"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_056",
+      "nameKey": "npc.named.056.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.056.title",
+      "level": 7,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_056"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_057",
+      "nameKey": "npc.named.057.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.057.title",
+      "level": 7,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_057"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_058",
+      "nameKey": "npc.named.058.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.058.title",
+      "level": 7,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_058"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_059",
+      "nameKey": "npc.named.059.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.059.title",
+      "level": 7,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_059"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_060",
+      "nameKey": "npc.named.060.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.060.title",
+      "level": 7,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_060"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_061",
+      "nameKey": "npc.named.061.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.061.title",
+      "level": 7,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_061"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_062",
+      "nameKey": "npc.named.062.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.062.title",
+      "level": 7,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_062"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_063",
+      "nameKey": "npc.named.063.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.063.title",
+      "level": 7,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_063"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_064",
+      "nameKey": "npc.named.064.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.064.title",
+      "level": 8,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_064"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "npc_named_065",
+      "nameKey": "npc.named.065.name",
+      "role": "Commoner",
+      "faction": "Neutral",
+      "stats": {
+        "health": 80,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 3,
+        "damage": {
+          "min": 4,
+          "max": 8,
+          "type": "Slashing"
+        }
+      },
+      "equipment": [],
+      "inventory": [],
+      "reactions": {
+        "crime": "Warning",
+        "theft": "AlertAndFight"
+      },
+      "dialogueId": null,
+      "questIds": [],
+      "trainer": null,
+      "titleKey": "npc.named.065.title",
+      "level": 8,
+      "isEssential": false,
+      "defaultGreeting": "dialog_generic_greeting",
+      "initialRelation": 0,
+      "scheduleId": null,
+      "dialogues": [],
+      "quests": [],
+      "visual": {
+        "modelPath": "Art/Models/NPCs/named_065"
+      },
+      "location": {
+        "scene": "World_Graybox",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
       }
     }
   ]

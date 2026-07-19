@@ -1,0 +1,118 @@
+{
+  "locations": [
+    {
+      "id": "location_old_settlement",
+      "nameKey": "location.location_old_settlement.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_new_camp",
+      "nameKey": "location.location_new_camp.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_trakt",
+      "nameKey": "location.location_trakt.name",
+      "biome": "Road",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_ironwood",
+      "nameKey": "location.location_ironwood.name",
+      "biome": "Forest",
+      "recommendedLevel": 3
+    },
+    {
+      "id": "location_black_marsh",
+      "nameKey": "location.location_black_marsh.name",
+      "biome": "Swamp",
+      "recommendedLevel": 4
+    },
+    {
+      "id": "location_quarry",
+      "nameKey": "location.location_quarry.name",
+      "biome": "Mountain",
+      "recommendedLevel": 5
+    },
+    {
+      "id": "location_ashen_coast",
+      "nameKey": "location.location_ashen_coast.name",
+      "biome": "Coast",
+      "recommendedLevel": 3
+    },
+    {
+      "id": "location_rift_shrine",
+      "nameKey": "location.location_rift_shrine.name",
+      "biome": "Supernatural",
+      "recommendedLevel": 7
+    },
+    {
+      "id": "location_aldona_chambers",
+      "nameKey": "location.location_aldona_chambers.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_dwor_main",
+      "nameKey": "location.location_dwor_main.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_dwor_dining",
+      "nameKey": "location.location_dwor_dining.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_barracks",
+      "nameKey": "location.location_barracks.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_gate",
+      "nameKey": "location.location_gate.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_tavern",
+      "nameKey": "location.location_tavern.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_forge",
+      "nameKey": "location.location_forge.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_home",
+      "nameKey": "location.location_home.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_chief_tent",
+      "nameKey": "location.location_chief_tent.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_campfire",
+      "nameKey": "location.location_campfire.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    },
+    {
+      "id": "location_campfire_wanderer",
+      "nameKey": "location.location_campfire_wanderer.name",
+      "biome": "Settlement",
+      "recommendedLevel": 1
+    }
+  ]
+}

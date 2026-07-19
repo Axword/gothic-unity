@@ -115,6 +115,8 @@ Q_S_001 - Q_S_010 (dostępne w dowolnym momencie po spełnieniu warunków)
 
 ## 3. Main Quest Line
 
+> **Audyt danych (2026-07-19):** pliki JSON zawierają 19 questów: 4 główne, 12 frakcyjnych (6 Old Order + 6 New Order) i 3 poboczne. Dokumentacja opisuje również Q_M_003, który jest obecny w danych, ale wcześniej nie miał osobnej sekcji poniżej. Walidator `Tools/validate_quests.py` sprawdza kompletność pól, kolejność etapów, typy celów, zależności i odwołania `nextQuest`.
+
 ### Q_M_001: Przebudzenie w Mrozie
 - **Trigger:** Start gry
 - **Opis:** Budzisz się w zimnym wąwozie, nie pamiętasz jak tu trafiłeś. Musisz znaleźć drogę do osady.
@@ -135,6 +137,14 @@ Q_S_001 - Q_S_010 (dostępne w dowolnym momencie po spełnieniu warunków)
   4. Porozmawiaj z kimś w obozie (Talk)
 - **Nagroda:** 100 XP
 - **Odblokowuje:** Q_F_OLD_001 i Q_F_NEW_001
+
+### Q_M_003: Czarne Źródło
+- **Wymagania:** Q_M_002, Level 2, spotkanie z Aldoną i Drwalem.
+- **Opis:** Ślady prowadzą do Czarnego Źródła. Aldona chce, abyś sprawdził, co budzi się pod powierzchnią.
+- **Etapy:**
+  1. Zbadaj Czarne Źródło (Explore)
+  2. Porozmawiaj z Aldoną (Talk)
+- **Nagroda:** 150 XP, 50 złota, 1 punkt umiejętności, reputacja Old Order +5
 
 ### Q_M_010: Wybór Drogi
 - **Trigger:** 3 questy kandydackie jednej frakcji

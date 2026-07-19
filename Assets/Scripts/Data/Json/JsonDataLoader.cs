@@ -74,9 +74,30 @@ namespace ZelaznaDroga.Data.Json
             try
             {
                 string json = File.ReadAllText(fullPath);
-                T obj = JsonConvert.DeserializeObject<T>(json);
+                JToken token = JToken.Parse(json);
+
+                // Most data files use an envelope (for example { "quests": [...] }),
+                // while the runtime APIs intentionally expose the contained list.
+                // Unwrap only when the requested type is a collection so dialogue
+                // documents and other object-shaped data keep their root intact.
+                if (token is JObject root && typeof(T).IsGenericType &&
+                    typeof(T).GetGenericTypeDefinition() == typeof(List<>) )
+                {
+                    string[] candidates = { "items", "npcs", "monsters", "quests", "schedules" };
+                    foreach (string key in candidates)
+                    {
+                        if (root[key] is JArray array)
+                        {
+                            token = array;
+                            break;
+                        }
+                    }
+                }
+
+                T obj = token.ToObject<T>();
                 
                 _loadedFiles.Add(filename);
+                _cache[filename] = token as JObject;
                 return obj;
             }
             catch (Exception ex)
@@ -123,6 +144,12 @@ namespace ZelaznaDroga.Data.Json
 
             try
             {
+                string directory = Path.GetDirectoryName(fullPath);
+                if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
+                {
+                    Directory.CreateDirectory(directory);
+                }
+
                 string json;
                 if (prettyPrint)
                 {
@@ -206,7 +233,7 @@ namespace ZelaznaDroga.Data.Json
         private void ValidateItems(JObject obj, string filename)
         {
             // Check if has items array or object with items
-            if (obj["items"] == null && obj["items"] == null)
+            if (obj["items"] == null)
             {
                 Debug.LogWarning($"[JsonDataLoader] {filename} may not have 'items' root");
             }

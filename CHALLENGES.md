@@ -1,4 +1,11 @@
-# CHALLENGES.md — Wyzwania techniczne i projektowe
+# CHALLENGES.md
+
+## Audyt 2026-07-19
+
+- **Brak silnika w środowisku:** nie wolno zastępować testu Unity twierdzeniem, że kod działa. Statusy builda i Play Mode są BLOCKED.
+- **Dwa poziomy runtime:** demonstracyjny `VerticalSlice*` nie jest jeszcze produkcyjnym `QuestManager`/`DialogueManager`. Wymagana jest integracja, a nie dalsze zwiększanie atrap.
+- **Dane vs dokumentacja:** audyt wykazał faktyczne liczby niższe od celów. Dokumentacja została uzupełniona o jawny stan zamiast ukrywania braków.
+ — Wyzwania techniczne i projektowe
 
 ## 1. Wyzwania główne
 

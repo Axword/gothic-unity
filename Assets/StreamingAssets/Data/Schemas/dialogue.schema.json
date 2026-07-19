@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Dialogue","type":"object","required":["id","rootNodeId","nodes"],"properties":{"id":{"type":"string"},"rootNodeId":{"type":"string"},"nodes":{"type":"object","minProperties":1}}}

@@ -17,7 +17,13 @@
           "id": 1,
           "descriptionKey": "quest_s_001_stage_1",
           "objectives": [
-            { "type": "Collect", "target": "item_mushroom", "count": 5, "itemId": "item_mushroom", "description": "Zbierz 5 grzybów" }
+            {
+              "type": "Collect",
+              "target": "item_mushroom",
+              "count": 5,
+              "itemId": "item_mushroom",
+              "description": "Zbierz 5 grzybów"
+            }
           ],
           "onComplete": {}
         },
@@ -25,10 +31,16 @@
           "id": 2,
           "descriptionKey": "quest_s_001_stage_2",
           "objectives": [
-            { "type": "Talk", "target": "npc_zosia", "description": "Porozmawiaj z Zosią" }
+            {
+              "type": "Talk",
+              "target": "npc_zosia",
+              "description": "Porozmawiaj z Zosią"
+            }
           ],
           "onComplete": {
-            "changeReputation": { "OldOrder": 1 }
+            "changeReputation": {
+              "OldOrder": 1
+            }
           }
         }
       ],
@@ -52,7 +64,9 @@
       "faction": "None",
       "requirements": {
         "level": 2,
-        "quests": ["Q_M_002"],
+        "quests": [
+          "Q_M_002"
+        ],
         "flags": [],
         "items": []
       },
@@ -61,7 +75,11 @@
           "id": 1,
           "descriptionKey": "quest_s_002_stage_1",
           "objectives": [
-            { "type": "Explore", "target": "location_lost_items", "description": "Szukaj zguby w lesie" }
+            {
+              "type": "Explore",
+              "target": "location_lost_items",
+              "description": "Szukaj zguby w lesie"
+            }
           ],
           "onComplete": {}
         },
@@ -69,7 +87,13 @@
           "id": 2,
           "descriptionKey": "quest_s_002_stage_2",
           "objectives": [
-            { "type": "Collect", "target": "item_locket", "count": 1, "itemId": "item_locket", "description": "Znajdź medalion" }
+            {
+              "type": "Collect",
+              "target": "item_locket",
+              "count": 1,
+              "itemId": "item_locket",
+              "description": "Znajdź medalion"
+            }
           ],
           "onComplete": {}
         },
@@ -77,7 +101,11 @@
           "id": 3,
           "descriptionKey": "quest_s_002_stage_3",
           "objectives": [
-            { "type": "Talk", "target": "npc_owner", "description": "Zwróć właścicielowi" }
+            {
+              "type": "Talk",
+              "target": "npc_owner",
+              "description": "Zwróć właścicielowi"
+            }
           ],
           "onComplete": {}
         }
@@ -111,7 +139,11 @@
           "id": 1,
           "descriptionKey": "quest_s_003_stage_1",
           "objectives": [
-            { "type": "Explore", "target": "location_farm_attacked", "description": "Zbadaj farmę" }
+            {
+              "type": "Explore",
+              "target": "location_farm_attacked",
+              "description": "Zbadaj farmę"
+            }
           ],
           "onComplete": {}
         },
@@ -119,7 +151,12 @@
           "id": 2,
           "descriptionKey": "quest_s_003_stage_2",
           "objectives": [
-            { "type": "Kill", "target": "monster_swamp_beast", "count": 1, "description": "Zabij Błotną Bestię" }
+            {
+              "type": "Kill",
+              "target": "monster_swamp_beast",
+              "count": 1,
+              "description": "Zabij Błotną Bestię"
+            }
           ],
           "onComplete": {}
         }
@@ -127,7 +164,415 @@
       "rewards": {
         "xp": 200,
         "gold": 100,
-        "items": ["item_swamp_scale"],
+        "items": [
+          "item_swamp_scale"
+        ],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": null,
+      "nextQuest": null
+    },
+    {
+      "id": "Q_S_004",
+      "titleKey": "quest.Q_S_004.title",
+      "descriptionKey": "quest.Q_S_004.description",
+      "type": "Side",
+      "faction": "None",
+      "requirements": {
+        "level": 1,
+        "quests": [],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest.Q_S_004.stage.1",
+          "objectives": [
+            {
+              "type": "Explore",
+              "target": "location_side_004",
+              "count": 1,
+              "description": "Zbadaj miejsce 4"
+            }
+          ],
+          "onComplete": {
+            "addFlags": [
+              "completed_Q_S_004"
+            ]
+          },
+          "onFail": {}
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest.Q_S_004.stage.2",
+          "objectives": [
+            {
+              "type": "Talk",
+              "target": "npc_neutral_004",
+              "count": 1,
+              "description": "Złóż raport"
+            }
+          ],
+          "onComplete": {},
+          "onFail": {}
+        }
+      ],
+      "rewards": {
+        "xp": 90,
+        "gold": 40,
+        "items": [],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": null,
+      "nextQuest": null
+    },
+    {
+      "id": "Q_S_005",
+      "titleKey": "quest.Q_S_005.title",
+      "descriptionKey": "quest.Q_S_005.description",
+      "type": "Side",
+      "faction": "None",
+      "requirements": {
+        "level": 2,
+        "quests": [],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest.Q_S_005.stage.1",
+          "objectives": [
+            {
+              "type": "Explore",
+              "target": "location_side_005",
+              "count": 1,
+              "description": "Zbadaj miejsce 5"
+            }
+          ],
+          "onComplete": {
+            "addFlags": [
+              "completed_Q_S_005"
+            ]
+          },
+          "onFail": {}
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest.Q_S_005.stage.2",
+          "objectives": [
+            {
+              "type": "Talk",
+              "target": "npc_neutral_005",
+              "count": 1,
+              "description": "Złóż raport"
+            }
+          ],
+          "onComplete": {},
+          "onFail": {}
+        }
+      ],
+      "rewards": {
+        "xp": 100,
+        "gold": 45,
+        "items": [],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": null,
+      "nextQuest": null
+    },
+    {
+      "id": "Q_S_006",
+      "titleKey": "quest.Q_S_006.title",
+      "descriptionKey": "quest.Q_S_006.description",
+      "type": "Side",
+      "faction": "None",
+      "requirements": {
+        "level": 3,
+        "quests": [],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest.Q_S_006.stage.1",
+          "objectives": [
+            {
+              "type": "Explore",
+              "target": "location_side_006",
+              "count": 1,
+              "description": "Zbadaj miejsce 6"
+            }
+          ],
+          "onComplete": {
+            "addFlags": [
+              "completed_Q_S_006"
+            ]
+          },
+          "onFail": {}
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest.Q_S_006.stage.2",
+          "objectives": [
+            {
+              "type": "Talk",
+              "target": "npc_neutral_006",
+              "count": 1,
+              "description": "Złóż raport"
+            }
+          ],
+          "onComplete": {},
+          "onFail": {}
+        }
+      ],
+      "rewards": {
+        "xp": 110,
+        "gold": 50,
+        "items": [],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": null,
+      "nextQuest": null
+    },
+    {
+      "id": "Q_S_007",
+      "titleKey": "quest.Q_S_007.title",
+      "descriptionKey": "quest.Q_S_007.description",
+      "type": "Side",
+      "faction": "None",
+      "requirements": {
+        "level": 4,
+        "quests": [],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest.Q_S_007.stage.1",
+          "objectives": [
+            {
+              "type": "Explore",
+              "target": "location_side_007",
+              "count": 1,
+              "description": "Zbadaj miejsce 7"
+            }
+          ],
+          "onComplete": {
+            "addFlags": [
+              "completed_Q_S_007"
+            ]
+          },
+          "onFail": {}
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest.Q_S_007.stage.2",
+          "objectives": [
+            {
+              "type": "Talk",
+              "target": "npc_neutral_007",
+              "count": 1,
+              "description": "Złóż raport"
+            }
+          ],
+          "onComplete": {},
+          "onFail": {}
+        }
+      ],
+      "rewards": {
+        "xp": 120,
+        "gold": 55,
+        "items": [],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": null,
+      "nextQuest": null
+    },
+    {
+      "id": "Q_S_008",
+      "titleKey": "quest.Q_S_008.title",
+      "descriptionKey": "quest.Q_S_008.description",
+      "type": "Side",
+      "faction": "None",
+      "requirements": {
+        "level": 1,
+        "quests": [],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest.Q_S_008.stage.1",
+          "objectives": [
+            {
+              "type": "Explore",
+              "target": "location_side_008",
+              "count": 1,
+              "description": "Zbadaj miejsce 8"
+            }
+          ],
+          "onComplete": {
+            "addFlags": [
+              "completed_Q_S_008"
+            ]
+          },
+          "onFail": {}
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest.Q_S_008.stage.2",
+          "objectives": [
+            {
+              "type": "Talk",
+              "target": "npc_neutral_008",
+              "count": 1,
+              "description": "Złóż raport"
+            }
+          ],
+          "onComplete": {},
+          "onFail": {}
+        }
+      ],
+      "rewards": {
+        "xp": 130,
+        "gold": 60,
+        "items": [],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": null,
+      "nextQuest": null
+    },
+    {
+      "id": "Q_S_009",
+      "titleKey": "quest.Q_S_009.title",
+      "descriptionKey": "quest.Q_S_009.description",
+      "type": "Side",
+      "faction": "None",
+      "requirements": {
+        "level": 2,
+        "quests": [],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest.Q_S_009.stage.1",
+          "objectives": [
+            {
+              "type": "Explore",
+              "target": "location_side_009",
+              "count": 1,
+              "description": "Zbadaj miejsce 9"
+            }
+          ],
+          "onComplete": {
+            "addFlags": [
+              "completed_Q_S_009"
+            ]
+          },
+          "onFail": {}
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest.Q_S_009.stage.2",
+          "objectives": [
+            {
+              "type": "Talk",
+              "target": "npc_neutral_009",
+              "count": 1,
+              "description": "Złóż raport"
+            }
+          ],
+          "onComplete": {},
+          "onFail": {}
+        }
+      ],
+      "rewards": {
+        "xp": 140,
+        "gold": 65,
+        "items": [],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": null,
+      "nextQuest": null
+    },
+    {
+      "id": "Q_S_010",
+      "titleKey": "quest.Q_S_010.title",
+      "descriptionKey": "quest.Q_S_010.description",
+      "type": "Side",
+      "faction": "None",
+      "requirements": {
+        "level": 3,
+        "quests": [],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest.Q_S_010.stage.1",
+          "objectives": [
+            {
+              "type": "Explore",
+              "target": "location_side_010",
+              "count": 1,
+              "description": "Zbadaj miejsce 10"
+            }
+          ],
+          "onComplete": {
+            "addFlags": [
+              "completed_Q_S_010"
+            ]
+          },
+          "onFail": {}
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest.Q_S_010.stage.2",
+          "objectives": [
+            {
+              "type": "Talk",
+              "target": "npc_neutral_010",
+              "count": 1,
+              "description": "Złóż raport"
+            }
+          ],
+          "onComplete": {},
+          "onFail": {}
+        }
+      ],
+      "rewards": {
+        "xp": 150,
+        "gold": 70,
+        "items": [],
         "flags": [],
         "skillPoints": 0,
         "reputation": {}

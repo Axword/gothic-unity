@@ -144,6 +144,116 @@
         "max": 160,
         "current": 160
       }
+    },
+    {
+      "id": "item_bow_06",
+      "nameKey": "item.bow.06.name",
+      "descriptionKey": "item.bow.06.description",
+      "itemType": "Weapon",
+      "subType": "Bow",
+      "baseValue": 135,
+      "weight": 1.4,
+      "iconPath": "icons/items/bow_06.png",
+      "modelPath": "models/weapons/bow_06.fbx",
+      "damage": {
+        "min": 13,
+        "max": 18,
+        "type": "Piercing"
+      },
+      "requirements": {
+        "dexterity": 20
+      },
+      "attackSpeed": 0.8,
+      "range": 30.0,
+      "ammoType": "item_arrow"
+    },
+    {
+      "id": "item_bow_07",
+      "nameKey": "item.bow.07.name",
+      "descriptionKey": "item.bow.07.description",
+      "itemType": "Weapon",
+      "subType": "Bow",
+      "baseValue": 150,
+      "weight": 1.4,
+      "iconPath": "icons/items/bow_07.png",
+      "modelPath": "models/weapons/bow_07.fbx",
+      "damage": {
+        "min": 14,
+        "max": 19,
+        "type": "Piercing"
+      },
+      "requirements": {
+        "dexterity": 22
+      },
+      "attackSpeed": 0.8,
+      "range": 30.0,
+      "ammoType": "item_arrow"
+    },
+    {
+      "id": "item_bow_08",
+      "nameKey": "item.bow.08.name",
+      "descriptionKey": "item.bow.08.description",
+      "itemType": "Weapon",
+      "subType": "Bow",
+      "baseValue": 165,
+      "weight": 1.4,
+      "iconPath": "icons/items/bow_08.png",
+      "modelPath": "models/weapons/bow_08.fbx",
+      "damage": {
+        "min": 15,
+        "max": 20,
+        "type": "Piercing"
+      },
+      "requirements": {
+        "dexterity": 24
+      },
+      "attackSpeed": 0.8,
+      "range": 30.0,
+      "ammoType": "item_arrow"
+    },
+    {
+      "id": "item_bow_09",
+      "nameKey": "item.bow.09.name",
+      "descriptionKey": "item.bow.09.description",
+      "itemType": "Weapon",
+      "subType": "Bow",
+      "baseValue": 180,
+      "weight": 1.4,
+      "iconPath": "icons/items/bow_09.png",
+      "modelPath": "models/weapons/bow_09.fbx",
+      "damage": {
+        "min": 16,
+        "max": 21,
+        "type": "Piercing"
+      },
+      "requirements": {
+        "dexterity": 26
+      },
+      "attackSpeed": 0.8,
+      "range": 30.0,
+      "ammoType": "item_arrow"
+    },
+    {
+      "id": "item_bow_10",
+      "nameKey": "item.bow.10.name",
+      "descriptionKey": "item.bow.10.description",
+      "itemType": "Weapon",
+      "subType": "Bow",
+      "baseValue": 195,
+      "weight": 1.4,
+      "iconPath": "icons/items/bow_10.png",
+      "modelPath": "models/weapons/bow_10.fbx",
+      "damage": {
+        "min": 17,
+        "max": 22,
+        "type": "Piercing"
+      },
+      "requirements": {
+        "dexterity": 28
+      },
+      "attackSpeed": 0.8,
+      "range": 30.0,
+      "ammoType": "item_arrow"
     }
   ]
 }

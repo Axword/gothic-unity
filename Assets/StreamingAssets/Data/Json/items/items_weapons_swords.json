@@ -22,7 +22,9 @@
       },
       "attackSpeed": 1.0,
       "reach": 1.5,
-      "comboLevels": [1],
+      "comboLevels": [
+        1
+      ],
       "durability": {
         "max": 50,
         "current": 50
@@ -50,7 +52,10 @@
       },
       "attackSpeed": 1.1,
       "reach": 1.8,
-      "comboLevels": [1, 2],
+      "comboLevels": [
+        1,
+        2
+      ],
       "durability": {
         "max": 100,
         "current": 100
@@ -78,7 +83,11 @@
       },
       "attackSpeed": 1.2,
       "reach": 2.0,
-      "comboLevels": [1, 2, 3],
+      "comboLevels": [
+        1,
+        2,
+        3
+      ],
       "durability": {
         "max": 150,
         "current": 150
@@ -106,7 +115,11 @@
       },
       "attackSpeed": 1.3,
       "reach": 2.2,
-      "comboLevels": [1, 2, 3],
+      "comboLevels": [
+        1,
+        2,
+        3
+      ],
       "durability": {
         "max": 180,
         "current": 180
@@ -134,7 +147,9 @@
       },
       "attackSpeed": 0.9,
       "reach": 1.4,
-      "comboLevels": [1],
+      "comboLevels": [
+        1
+      ],
       "durability": {
         "max": 30,
         "current": 30
@@ -162,7 +177,10 @@
       },
       "attackSpeed": 1.15,
       "reach": 1.9,
-      "comboLevels": [1, 2],
+      "comboLevels": [
+        1,
+        2
+      ],
       "durability": {
         "max": 120,
         "current": 120
@@ -190,7 +208,10 @@
       },
       "attackSpeed": 0.8,
       "reach": 2.5,
-      "comboLevels": [1, 2],
+      "comboLevels": [
+        1,
+        2
+      ],
       "durability": {
         "max": 200,
         "current": 200
@@ -218,11 +239,291 @@
       },
       "attackSpeed": 1.5,
       "reach": 1.8,
-      "comboLevels": [1, 2, 3],
+      "comboLevels": [
+        1,
+        2,
+        3
+      ],
       "durability": {
         "max": 80,
         "current": 80
       }
+    },
+    {
+      "id": "item_sword_09",
+      "nameKey": "item.sword.09.name",
+      "descriptionKey": "item.sword.09.description",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 143,
+      "weight": 2.92,
+      "iconPath": "icons/items/sword_09.png",
+      "modelPath": "models/weapons/sword_09.fbx",
+      "damage": {
+        "min": 17,
+        "max": 22,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 26,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "stackable": false
+    },
+    {
+      "id": "item_sword_10",
+      "nameKey": "item.sword.10.name",
+      "descriptionKey": "item.sword.10.description",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 155,
+      "weight": 3.0,
+      "iconPath": "icons/items/sword_10.png",
+      "modelPath": "models/weapons/sword_10.fbx",
+      "damage": {
+        "min": 18,
+        "max": 23,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 28,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "stackable": false
+    },
+    {
+      "id": "item_sword_11",
+      "nameKey": "item.sword.11.name",
+      "descriptionKey": "item.sword.11.description",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 167,
+      "weight": 3.08,
+      "iconPath": "icons/items/sword_11.png",
+      "modelPath": "models/weapons/sword_11.fbx",
+      "damage": {
+        "min": 19,
+        "max": 24,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 30,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "stackable": false
+    },
+    {
+      "id": "item_sword_12",
+      "nameKey": "item.sword.12.name",
+      "descriptionKey": "item.sword.12.description",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 179,
+      "weight": 3.16,
+      "iconPath": "icons/items/sword_12.png",
+      "modelPath": "models/weapons/sword_12.fbx",
+      "damage": {
+        "min": 20,
+        "max": 25,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 32,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "stackable": false
+    },
+    {
+      "id": "item_sword_13",
+      "nameKey": "item.sword.13.name",
+      "descriptionKey": "item.sword.13.description",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 191,
+      "weight": 3.24,
+      "iconPath": "icons/items/sword_13.png",
+      "modelPath": "models/weapons/sword_13.fbx",
+      "damage": {
+        "min": 21,
+        "max": 26,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 34,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "stackable": false
+    },
+    {
+      "id": "item_sword_14",
+      "nameKey": "item.sword.14.name",
+      "descriptionKey": "item.sword.14.description",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 203,
+      "weight": 3.3200000000000003,
+      "iconPath": "icons/items/sword_14.png",
+      "modelPath": "models/weapons/sword_14.fbx",
+      "damage": {
+        "min": 22,
+        "max": 27,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 36,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "stackable": false
+    },
+    {
+      "id": "item_sword_15",
+      "nameKey": "item.sword.15.name",
+      "descriptionKey": "item.sword.15.description",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 215,
+      "weight": 3.4000000000000004,
+      "iconPath": "icons/items/sword_15.png",
+      "modelPath": "models/weapons/sword_15.fbx",
+      "damage": {
+        "min": 23,
+        "max": 28,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 38,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "stackable": false
+    },
+    {
+      "id": "item_sword_16",
+      "nameKey": "item.sword.16.name",
+      "descriptionKey": "item.sword.16.description",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 227,
+      "weight": 3.4800000000000004,
+      "iconPath": "icons/items/sword_16.png",
+      "modelPath": "models/weapons/sword_16.fbx",
+      "damage": {
+        "min": 24,
+        "max": 29,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 40,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "stackable": false
+    },
+    {
+      "id": "item_sword_17",
+      "nameKey": "item.sword.17.name",
+      "descriptionKey": "item.sword.17.description",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 239,
+      "weight": 3.5600000000000005,
+      "iconPath": "icons/items/sword_17.png",
+      "modelPath": "models/weapons/sword_17.fbx",
+      "damage": {
+        "min": 25,
+        "max": 30,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 42,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "stackable": false
+    },
+    {
+      "id": "item_sword_18",
+      "nameKey": "item.sword.18.name",
+      "descriptionKey": "item.sword.18.description",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 251,
+      "weight": 3.64,
+      "iconPath": "icons/items/sword_18.png",
+      "modelPath": "models/weapons/sword_18.fbx",
+      "damage": {
+        "min": 26,
+        "max": 31,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 44,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "stackable": false
+    },
+    {
+      "id": "item_sword_19",
+      "nameKey": "item.sword.19.name",
+      "descriptionKey": "item.sword.19.description",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 263,
+      "weight": 3.72,
+      "iconPath": "icons/items/sword_19.png",
+      "modelPath": "models/weapons/sword_19.fbx",
+      "damage": {
+        "min": 27,
+        "max": 32,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 46,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "stackable": false
+    },
+    {
+      "id": "item_sword_20",
+      "nameKey": "item.sword.20.name",
+      "descriptionKey": "item.sword.20.description",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 275,
+      "weight": 3.8000000000000003,
+      "iconPath": "icons/items/sword_20.png",
+      "modelPath": "models/weapons/sword_20.fbx",
+      "damage": {
+        "min": 28,
+        "max": 33,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 48,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "stackable": false
     }
   ]
 }

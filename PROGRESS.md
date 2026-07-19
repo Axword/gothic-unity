@@ -82,9 +82,17 @@
 
 ---
 
+## Audyt techniczny 2026-07-19
+
+- ⚠️ Walidacja questów: PASS — 19 questów, 59 etapów, 59 celów (`Tools/validate_quests.py`).
+- ⚠️ Build Unity, Play Mode i smoke test: BLOCKED — Unity CLI/Editor nie jest dostępny w środowisku.
+- ❌ Nie należy traktować proceduralnego vertical slice jako integracji produkcyjnych systemów.
+- ❌ Braki zawartości: 8/20 mieczy, 5/10 łuków, 9/~65 NPC, 3/10 questów pobocznych.
+- Dokumenty audytu: `AUDIT_CHECKLIST.md`, `AUDIT_LOG.md`, `BUGS.md`, `TEST_RESULTS.md`, `RELEASE_READINESS.md`.
+
 ## Następny krok
 
-**Priorytet:** Implementacja Vertical Slice
+**Priorytet:** Integracja vertical slice z produkcyjnymi systemami i uruchomienie projektu w Unity
 1. Stworzenie sceny testowej z terenem
 2. Podłączenie PlayerController do sceny
 3. Utworzenie przykładowego NPC z dialogiem
