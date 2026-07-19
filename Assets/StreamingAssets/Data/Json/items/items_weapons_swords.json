@@ -1,0 +1,228 @@
+{
+  "items": [
+    {
+      "id": "item_old_sword_01",
+      "nameKey": "item_old_sword_01_name",
+      "descriptionKey": "item_old_sword_01_desc",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 15,
+      "weight": 3.0,
+      "iconPath": "Art/Icons/Weapons/old_sword",
+      "modelPath": "Art/Models/Weapons/old_sword",
+      "stackable": false,
+      "damage": {
+        "min": 8,
+        "max": 12,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 5,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.0,
+      "reach": 1.5,
+      "comboLevels": [1],
+      "durability": {
+        "max": 50,
+        "current": 50
+      }
+    },
+    {
+      "id": "item_iron_sword_01",
+      "nameKey": "item_iron_sword_01_name",
+      "descriptionKey": "item_iron_sword_01_desc",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 45,
+      "weight": 4.0,
+      "iconPath": "Art/Icons/Weapons/iron_sword",
+      "modelPath": "Art/Models/Weapons/iron_sword",
+      "stackable": false,
+      "damage": {
+        "min": 15,
+        "max": 22,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 8,
+        "dexterity": 0
+      },
+      "attackSpeed": 1.1,
+      "reach": 1.8,
+      "comboLevels": [1, 2],
+      "durability": {
+        "max": 100,
+        "current": 100
+      }
+    },
+    {
+      "id": "item_steel_sword_01",
+      "nameKey": "item_steel_sword_01_name",
+      "descriptionKey": "item_steel_sword_01_desc",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 120,
+      "weight": 5.0,
+      "iconPath": "Art/Icons/Weapons/steel_sword",
+      "modelPath": "Art/Models/Weapons/steel_sword",
+      "stackable": false,
+      "damage": {
+        "min": 25,
+        "max": 35,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 12,
+        "dexterity": 2
+      },
+      "attackSpeed": 1.2,
+      "reach": 2.0,
+      "comboLevels": [1, 2, 3],
+      "durability": {
+        "max": 150,
+        "current": 150
+      }
+    },
+    {
+      "id": "item_steel_sword_02",
+      "nameKey": "item_steel_sword_02_name",
+      "descriptionKey": "item_steel_sword_02_desc",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 150,
+      "weight": 5.5,
+      "iconPath": "Art/Icons/Weapons/steel_sword_02",
+      "modelPath": "Art/Models/Weapons/steel_sword_02",
+      "stackable": false,
+      "damage": {
+        "min": 30,
+        "max": 42,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 14,
+        "dexterity": 3
+      },
+      "attackSpeed": 1.3,
+      "reach": 2.2,
+      "comboLevels": [1, 2, 3],
+      "durability": {
+        "max": 180,
+        "current": 180
+      }
+    },
+    {
+      "id": "item_rusty_sword_01",
+      "nameKey": "item_rusty_sword_01_name",
+      "descriptionKey": "item_rusty_sword_01_desc",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 5,
+      "weight": 2.5,
+      "iconPath": "Art/Icons/Weapons/rusty_sword",
+      "modelPath": "Art/Models/Weapons/rusty_sword",
+      "stackable": false,
+      "damage": {
+        "min": 5,
+        "max": 8,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 3,
+        "dexterity": 0
+      },
+      "attackSpeed": 0.9,
+      "reach": 1.4,
+      "comboLevels": [1],
+      "durability": {
+        "max": 30,
+        "current": 30
+      }
+    },
+    {
+      "id": "item_guard_sword_01",
+      "nameKey": "item_guard_sword_01_name",
+      "descriptionKey": "item_guard_sword_01_desc",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 80,
+      "weight": 4.5,
+      "iconPath": "Art/Icons/Weapons/guard_sword",
+      "modelPath": "Art/Models/Weapons/guard_sword",
+      "stackable": false,
+      "damage": {
+        "min": 20,
+        "max": 28,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 10,
+        "dexterity": 1
+      },
+      "attackSpeed": 1.15,
+      "reach": 1.9,
+      "comboLevels": [1, 2],
+      "durability": {
+        "max": 120,
+        "current": 120
+      }
+    },
+    {
+      "id": "item_berdysz_01",
+      "nameKey": "item_berdysz_01_name",
+      "descriptionKey": "item_berdysz_01_desc",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 200,
+      "weight": 8.0,
+      "iconPath": "Art/Icons/Weapons/berdysz",
+      "modelPath": "Art/Models/Weapons/berdysz",
+      "stackable": false,
+      "damage": {
+        "min": 40,
+        "max": 55,
+        "type": "Slashing"
+      },
+      "requirements": {
+        "strength": 18,
+        "dexterity": 0
+      },
+      "attackSpeed": 0.8,
+      "reach": 2.5,
+      "comboLevels": [1, 2],
+      "durability": {
+        "max": 200,
+        "current": 200
+      }
+    },
+    {
+      "id": "item_rapier_01",
+      "nameKey": "item_rapier_01_name",
+      "descriptionKey": "item_rapier_01_desc",
+      "itemType": "Weapon",
+      "subType": "Sword",
+      "baseValue": 130,
+      "weight": 2.0,
+      "iconPath": "Art/Icons/Weapons/rapier",
+      "modelPath": "Art/Models/Weapons/rapier",
+      "stackable": false,
+      "damage": {
+        "min": 12,
+        "max": 18,
+        "type": "Piercing"
+      },
+      "requirements": {
+        "strength": 5,
+        "dexterity": 12
+      },
+      "attackSpeed": 1.5,
+      "reach": 1.8,
+      "comboLevels": [1, 2, 3],
+      "durability": {
+        "max": 80,
+        "current": 80
+      }
+    }
+  ]
+}

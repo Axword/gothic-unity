@@ -1,0 +1,278 @@
+{
+  "monsters": [
+    {
+      "id": "monster_wolf",
+      "nameKey": "monster_wolf_name",
+      "descriptionKey": "monster_wolf_desc",
+      "type": "Animal",
+      "biome": ["Forest", "Mountain"],
+      "behavior": "Pack",
+      "stats": {
+        "health": 40,
+        "strength": 8,
+        "dexterity": 14,
+        "armor": 2,
+        "damage": { "min": 8, "max": 12, "type": "Slashing" },
+        "attackSpeed": 1.3,
+        "moveSpeed": 6.0
+      },
+      "lootTable": [
+        { "itemId": "item_meat", "minCount": 1, "maxCount": 2, "probability": 0.5 },
+        { "itemId": "gold", "minCount": 1, "maxCount": 5, "probability": 0.3 }
+      ],
+      "trophyItem": "item_wolf_pelt",
+      "trophyCount": 1,
+      "skinReward": {
+        "itemId": "item_wolf_pelt",
+        "minCount": 1,
+        "maxCount": 2,
+        "requiresSkill": "skinNpe",
+        "skillLevel": 1
+      },
+      "detection": {
+        "sight": 15.0,
+        "hearing": 20.0,
+        "alertRange": 5.0,
+        "chaseRange": 30.0
+      },
+      "rewards": {
+        "xp": 50,
+        "gold": 5
+      },
+      "isHostile": true,
+      "isNocturnal": false,
+      "isBoss": false,
+      "visual": {
+        "modelPath": "Art/Models/Creatures/Wolf",
+        "scale": 1.0,
+        "iconPath": "Art/Icons/Creatures/wolf"
+      }
+    },
+    {
+      "id": "monster_bear",
+      "nameKey": "monster_bear_name",
+      "descriptionKey": "monster_bear_desc",
+      "type": "Animal",
+      "biome": ["Forest", "Mountain"],
+      "behavior": "Territorial",
+      "stats": {
+        "health": 200,
+        "strength": 25,
+        "dexterity": 6,
+        "armor": 8,
+        "damage": { "min": 25, "max": 40, "type": "Blunt" },
+        "attackSpeed": 0.7,
+        "moveSpeed": 4.0
+      },
+      "lootTable": [
+        { "itemId": "item_meat", "minCount": 3, "maxCount": 5, "probability": 0.8 },
+        { "itemId": "item_bear_pelt", "minCount": 1, "maxCount": 1, "probability": 1.0 }
+      ],
+      "trophyItem": "item_bear_pelt",
+      "trophyCount": 1,
+      "skinReward": {
+        "itemId": "item_bear_pelt",
+        "minCount": 1,
+        "maxCount": 1,
+        "requiresSkill": "skinNpe",
+        "skillLevel": 2
+      },
+      "detection": {
+        "sight": 12.0,
+        "hearing": 10.0,
+        "alertRange": 8.0,
+        "chaseRange": 40.0
+      },
+      "rewards": {
+        "xp": 250,
+        "gold": 30
+      },
+      "isHostile": true,
+      "isNocturnal": false,
+      "isBoss": false,
+      "visual": {
+        "modelPath": "Art/Models/Creatures/Bear",
+        "scale": 1.5,
+        "iconPath": "Art/Icons/Creatures/bear"
+      }
+    },
+    {
+      "id": "monster_bandit",
+      "nameKey": "monster_bandit_name",
+      "descriptionKey": "monster_bandit_desc",
+      "type": "Human",
+      "biome": ["Forest", "Road"],
+      "behavior": "Aggressive",
+      "stats": {
+        "health": 80,
+        "strength": 12,
+        "dexterity": 10,
+        "armor": 5,
+        "damage": { "min": 10, "max": 16, "type": "Slashing" },
+        "attackSpeed": 1.0,
+        "moveSpeed": 4.5
+      },
+      "lootTable": [
+        { "itemId": "gold", "minCount": 10, "maxCount": 30, "probability": 0.9 },
+        { "itemId": "item_iron_sword_01", "minCount": 1, "maxCount": 1, "probability": 0.2 }
+      ],
+      "trophyItem": null,
+      "trophyCount": 0,
+      "skinReward": null,
+      "detection": {
+        "sight": 18.0,
+        "hearing": 15.0,
+        "alertRange": 5.0,
+        "chaseRange": 35.0
+      },
+      "rewards": {
+        "xp": 100,
+        "gold": 20
+      },
+      "isHostile": true,
+      "isNocturnal": false,
+      "isBoss": false,
+      "visual": {
+        "modelPath": "Art/Models/Creatures/Bandit",
+        "scale": 1.0,
+        "iconPath": "Art/Icons/Creatures/bandit"
+      }
+    },
+    {
+      "id": "monster_troll",
+      "nameKey": "monster_troll_name",
+      "descriptionKey": "monster_troll_desc",
+      "type": "Monster",
+      "biome": ["Mountain", "Cave"],
+      "behavior": "Territorial",
+      "stats": {
+        "health": 400,
+        "strength": 35,
+        "dexterity": 4,
+        "armor": 15,
+        "damage": { "min": 35, "max": 55, "type": "Blunt" },
+        "attackSpeed": 0.6,
+        "moveSpeed": 2.5
+      },
+      "lootTable": [
+        { "itemId": "gold", "minCount": 100, "maxCount": 200, "probability": 1.0 }
+      ],
+      "trophyItem": "item_troll_heart",
+      "trophyCount": 1,
+      "skinReward": null,
+      "detection": {
+        "sight": 20.0,
+        "hearing": 15.0,
+        "alertRange": 8.0,
+        "chaseRange": 50.0
+      },
+      "rewards": {
+        "xp": 500,
+        "gold": 150
+      },
+      "isHostile": true,
+      "isNocturnal": false,
+      "isBoss": true,
+      "respawnTime": 3600,
+      "visual": {
+        "modelPath": "Art/Models/Creatures/Troll",
+        "scale": 2.5,
+        "iconPath": "Art/Icons/Creatures/troll"
+      }
+    },
+    {
+      "id": "monster_swamp_beast",
+      "nameKey": "monster_swamp_beast_name",
+      "descriptionKey": "monster_swamp_beast_desc",
+      "type": "Monster",
+      "biome": ["Swamp"],
+      "behavior": "Aggressive",
+      "stats": {
+        "health": 120,
+        "strength": 18,
+        "dexterity": 8,
+        "armor": 6,
+        "damage": { "min": 15, "max": 22, "type": "Piercing" },
+        "attackSpeed": 1.1,
+        "moveSpeed": 3.5
+      },
+      "lootTable": [
+        { "itemId": "item_swamp_herb", "minCount": 1, "maxCount": 3, "probability": 0.6 }
+      ],
+      "trophyItem": "item_swamp_scale",
+      "trophyCount": 1,
+      "skinReward": {
+        "itemId": "item_swamp_scale",
+        "minCount": 2,
+        "maxCount": 4,
+        "requiresSkill": "skinNpe",
+        "skillLevel": 2
+      },
+      "detection": {
+        "sight": 10.0,
+        "hearing": 25.0,
+        "alertRange": 6.0,
+        "chaseRange": 25.0
+      },
+      "rewards": {
+        "xp": 150,
+        "gold": 25
+      },
+      "isHostile": true,
+      "isNocturnal": true,
+      "isBoss": false,
+      "visual": {
+        "modelPath": "Art/Models/Creatures/SwampBeast",
+        "scale": 1.2,
+        "iconPath": "Art/Icons/Creatures/swamp_beast"
+      }
+    },
+    {
+      "id": "monster_giant_spider",
+      "nameKey": "monster_giant_spider_name",
+      "descriptionKey": "monster_giant_spider_desc",
+      "type": "Monster",
+      "biome": ["Forest", "Cave"],
+      "behavior": "Pack",
+      "stats": {
+        "health": 35,
+        "strength": 6,
+        "dexterity": 12,
+        "armor": 1,
+        "damage": { "min": 5, "max": 8, "type": "Piercing" },
+        "attackSpeed": 1.5,
+        "moveSpeed": 5.0
+      },
+      "lootTable": [
+        { "itemId": "item_spider_silk", "minCount": 2, "maxCount": 5, "probability": 0.7 }
+      ],
+      "trophyItem": "item_spider_fang",
+      "trophyCount": 1,
+      "skinReward": {
+        "itemId": "item_spider_fang",
+        "minCount": 1,
+        "maxCount": 3,
+        "requiresSkill": "skinNpe",
+        "skillLevel": 1
+      },
+      "detection": {
+        "sight": 20.0,
+        "hearing": 8.0,
+        "alertRange": 4.0,
+        "chaseRange": 20.0
+      },
+      "rewards": {
+        "xp": 40,
+        "gold": 3
+      },
+      "isHostile": true,
+      "isNocturnal": false,
+      "isBoss": false,
+      "visual": {
+        "modelPath": "Art/Models/Creatures/GiantSpider",
+        "scale": 0.8,
+        "iconPath": "Art/Icons/Creatures/spider"
+      }
+    }
+  ]
+}

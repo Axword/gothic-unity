@@ -1,0 +1,412 @@
+{
+  "npcs": [
+    {
+      "id": "npc_aldona",
+      "nameKey": "npc_aldona_name",
+      "titleKey": "npc_aldona_title",
+      "role": "Leader",
+      "faction": "OldOrder",
+      "level": 15,
+      "isEssential": true,
+      "defaultGreeting": "dialog_aldona_greeting",
+      "stats": {
+        "health": 200,
+        "mana": 50,
+        "strength": 20,
+        "dexterity": 12,
+        "armor": 25,
+        "damage": { "min": 15, "max": 25, "type": "Slashing" }
+      },
+      "equipment": [
+        { "slot": "Weapon", "itemId": "item_steel_sword_01" },
+        { "slot": "Armor", "itemId": "item_chainmail_01" }
+      ],
+      "inventory": [
+        { "itemId": "gold", "count": 100 }
+      ],
+      "initialRelation": 0,
+      "scheduleId": "npc_aldona_schedule",
+      "dialogues": ["dialog_aldona_greeting", "dialog_aldona_quest_001", "dialog_aldona_choice"],
+      "quests": ["Q_F_OLD_001", "Q_F_OLD_002", "Q_F_OLD_FINAL"],
+      "trainer": null,
+      "reactions": {
+        "theft": "AlertAndFight",
+        "trespass": "Warning",
+        "attack": "FleeAndAlert"
+      },
+      "visual": {
+        "modelPath": "Art/Models/NPCs/Aldona",
+        "skinTone": "#D4A574",
+        "hairColor": "#4A3728",
+        "clothesColor": "#8B0000"
+      },
+      "location": {
+        "scene": "World_KamiennyBrzeg",
+        "position": { "x": 10.0, "y": 0.0, "z": 5.0 },
+        "rotation": { "x": 0.0, "y": 180.0, "z": 0.0 }
+      }
+    },
+    {
+      "id": "npc_boruk",
+      "nameKey": "npc_boruk_name",
+      "titleKey": "npc_boruk_title",
+      "role": "Guard",
+      "faction": "OldOrder",
+      "level": 10,
+      "isEssential": true,
+      "defaultGreeting": "dialog_boruk_greeting",
+      "stats": {
+        "health": 150,
+        "mana": 20,
+        "strength": 18,
+        "dexterity": 10,
+        "armor": 20,
+        "damage": { "min": 12, "max": 18, "type": "Slashing" }
+      },
+      "equipment": [
+        { "slot": "Weapon", "itemId": "item_guard_sword_01" },
+        { "slot": "Armor", "itemId": "item_chainmail_01" }
+      ],
+      "inventory": [
+        { "itemId": "gold", "count": 50 }
+      ],
+      "initialRelation": 5,
+      "scheduleId": "npc_boruk_schedule",
+      "dialogues": ["dialog_boruk_greeting", "dialog_boruk_quest_002"],
+      "quests": ["Q_F_OLD_002"],
+      "trainer": "trainer_combat",
+      "reactions": {
+        "theft": "AlertAndFight",
+        "trespass": "Warning",
+        "attack": "AlertAndFight"
+      },
+      "visual": {
+        "modelPath": "Art/Models/NPCs/Boruk",
+        "skinTone": "#C4A484",
+        "hairColor": "#2A1A08",
+        "clothesColor": "#4A4A4A"
+      },
+      "location": {
+        "scene": "World_KamiennyBrzeg",
+        "position": { "x": 15.0, "y": 0.0, "z": 8.0 },
+        "rotation": { "x": 0.0, "y": 90.0, "z": 0.0 }
+      }
+    },
+    {
+      "id": "npc_mlynarczyk",
+      "nameKey": "npc_mlynarczyk_name",
+      "titleKey": "npc_mlynarczyk_title",
+      "role": "Merchant",
+      "faction": "OldOrder",
+      "level": 5,
+      "isEssential": false,
+      "defaultGreeting": "dialog_mlynarczyk_greeting",
+      "stats": {
+        "health": 60,
+        "mana": 10,
+        "strength": 8,
+        "dexterity": 8,
+        "armor": 2,
+        "damage": { "min": 3, "max": 5, "type": "Blunt" }
+      },
+      "equipment": [
+        { "slot": "Weapon", "itemId": "item_old_sword_01" }
+      ],
+      "inventory": [
+        { "itemId": "gold", "count": 200 },
+        { "itemId": "item_iron_sword_01", "count": 2 },
+        { "itemId": "item_potion_health_small", "count": 5 }
+      ],
+      "initialRelation": 10,
+      "scheduleId": "npc_mlynarczyk_schedule",
+      "dialogues": ["dialog_mlynarczyk_greeting", "dialog_mlynarczyk_shop", "dialog_mlynarczyk_quest_003"],
+      "quests": ["Q_F_OLD_003"],
+      "trainer": null,
+      "reactions": {
+        "theft": "Warning",
+        "trespass": "Ignore",
+        "attack": "FleeAndAlert"
+      },
+      "visual": {
+        "modelPath": "Art/Models/NPCs/Mlynarczyk",
+        "skinTone": "#E4C4A4",
+        "hairColor": "#8A7A6A",
+        "clothesColor": "#6A5A4A"
+      },
+      "location": {
+        "scene": "World_KamiennyBrzeg",
+        "position": { "x": -5.0, "y": 0.0, "z": 3.0 },
+        "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 }
+      }
+    },
+    {
+      "id": "npc_zosia",
+      "nameKey": "npc_zosia_name",
+      "titleKey": "npc_zosia_title",
+      "role": "Commoner",
+      "faction": "OldOrder",
+      "level": 2,
+      "isEssential": false,
+      "defaultGreeting": "dialog_zosia_greeting",
+      "stats": {
+        "health": 40,
+        "mana": 10,
+        "strength": 5,
+        "dexterity": 8,
+        "armor": 0,
+        "damage": { "min": 2, "max": 3, "type": "Blunt" }
+      },
+      "equipment": [],
+      "inventory": [
+        { "itemId": "gold", "count": 20 }
+      ],
+      "initialRelation": 15,
+      "scheduleId": "npc_zosia_schedule",
+      "dialogues": ["dialog_zosia_greeting", "dialog_zosia_side_001"],
+      "quests": ["Q_S_001"],
+      "trainer": null,
+      "reactions": {
+        "theft": "Warning",
+        "trespass": "Ignore",
+        "attack": "FleeAndAlert"
+      },
+      "visual": {
+        "modelPath": "Art/Models/NPCs/Zosia",
+        "skinTone": "#F4E4D4",
+        "hairColor": "#8A6A4A",
+        "clothesColor": "#AA8A6A"
+      },
+      "location": {
+        "scene": "World_KamiennyBrzeg",
+        "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
+        "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 }
+      }
+    },
+    {
+      "id": "npc_drwal",
+      "nameKey": "npc_drwal_name",
+      "titleKey": "npc_drwal_title",
+      "role": "Leader",
+      "faction": "NewOrder",
+      "level": 12,
+      "isEssential": true,
+      "defaultGreeting": "dialog_drwal_greeting",
+      "stats": {
+        "health": 180,
+        "mana": 30,
+        "strength": 22,
+        "dexterity": 14,
+        "armor": 15,
+        "damage": { "min": 18, "max": 28, "type": "Slashing" }
+      },
+      "equipment": [
+        { "slot": "Weapon", "itemId": "item_berdysz_01" }
+      ],
+      "inventory": [
+        { "itemId": "gold", "count": 80 }
+      ],
+      "initialRelation": 0,
+      "scheduleId": "npc_drwal_schedule",
+      "dialogues": ["dialog_drwal_greeting", "dialog_drwal_quest_001", "dialog_drwal_choice"],
+      "quests": ["Q_F_NEW_001", "Q_F_NEW_002", "Q_F_NEW_FINAL"],
+      "trainer": null,
+      "reactions": {
+        "theft": "AlertAndFight",
+        "trespass": "Warning",
+        "attack": "AlertAndFight"
+      },
+      "visual": {
+        "modelPath": "Art/Models/NPCs/Drwal",
+        "skinTone": "#C49474",
+        "hairColor": "#3A2A18",
+        "clothesColor": "#5A4A3A"
+      },
+      "location": {
+        "scene": "World_ObózPodDębami",
+        "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
+        "rotation": { "x": 0.0, "y": 180.0, "z": 0.0 }
+      }
+    },
+    {
+      "id": "npc_grom",
+      "nameKey": "npc_grom_name",
+      "titleKey": "npc_grom_title",
+      "role": "Guard",
+      "faction": "NewOrder",
+      "level": 8,
+      "isEssential": true,
+      "defaultGreeting": "dialog_grom_greeting",
+      "stats": {
+        "health": 120,
+        "mana": 20,
+        "strength": 15,
+        "dexterity": 16,
+        "armor": 10,
+        "damage": { "min": 10, "max": 16, "type": "Piercing" }
+      },
+      "equipment": [
+        { "slot": "Weapon", "itemId": "item_long_bow_01" }
+      ],
+      "inventory": [
+        { "itemId": "gold", "count": 40 },
+        { "itemId": "item_arrow", "count": 30 }
+      ],
+      "initialRelation": 5,
+      "scheduleId": "npc_grom_schedule",
+      "dialogues": ["dialog_grom_greeting", "dialog_grom_quest_002"],
+      "quests": ["Q_F_NEW_002"],
+      "trainer": "trainer_bow",
+      "reactions": {
+        "theft": "AlertAndFight",
+        "trespass": "Warning",
+        "attack": "AlertAndFight"
+      },
+      "visual": {
+        "modelPath": "Art/Models/NPCs/Grom",
+        "skinTone": "#B48464",
+        "hairColor": "#1A0A00",
+        "clothesColor": "#4A3A2A"
+      },
+      "location": {
+        "scene": "World_ObózPodDębami",
+        "position": { "x": 5.0, "y": 0.0, "z": -3.0 },
+        "rotation": { "x": 0.0, "y": 45.0, "z": 0.0 }
+      }
+    },
+    {
+      "id": "npc_plomienny",
+      "nameKey": "npc_plomienny_name",
+      "titleKey": "npc_plomienny_title",
+      "role": "Trainer",
+      "faction": "NewOrder",
+      "level": 10,
+      "isEssential": false,
+      "defaultGreeting": "dialog_plomienny_greeting",
+      "stats": {
+        "health": 80,
+        "mana": 100,
+        "strength": 6,
+        "dexterity": 10,
+        "armor": 5,
+        "damage": { "min": 8, "max": 12, "type": "Magic" }
+      },
+      "equipment": [
+        { "slot": "Weapon", "itemId": "item_staff_01" }
+      ],
+      "inventory": [
+        { "itemId": "gold", "count": 60 }
+      ],
+      "initialRelation": 10,
+      "scheduleId": "npc_plomienny_schedule",
+      "dialogues": ["dialog_plomienny_greeting", "dialog_plomienny_magic", "dialog_plomienny_quest_004"],
+      "quests": ["Q_F_NEW_004"],
+      "trainer": "trainer_magic",
+      "reactions": {
+        "theft": "Warning",
+        "trespass": "Warning",
+        "attack": "FleeAndAlert"
+      },
+      "visual": {
+        "modelPath": "Art/Models/NPCs/Plomienny",
+        "skinTone": "#D4C4B4",
+        "hairColor": "#CC5500",
+        "clothesColor": "#3A1A0A"
+      },
+      "location": {
+        "scene": "World_Mokradła",
+        "position": { "x": 20.0, "y": 0.0, "z": 10.0 },
+        "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 }
+      }
+    },
+    {
+      "id": "npc_kosa",
+      "nameKey": "npc_kosa_name",
+      "titleKey": "npc_kosa_title",
+      "role": "Merchant",
+      "faction": "NewOrder",
+      "level": 5,
+      "isEssential": false,
+      "defaultGreeting": "dialog_kosa_greeting",
+      "stats": {
+        "health": 50,
+        "mana": 15,
+        "strength": 7,
+        "dexterity": 14,
+        "armor": 3,
+        "damage": { "min": 4, "max": 6, "type": "Piercing" }
+      },
+      "equipment": [
+        { "slot": "Weapon", "itemId": "item_dagger_01" }
+      ],
+      "inventory": [
+        { "itemId": "gold", "count": 150 }
+      ],
+      "initialRelation": 5,
+      "scheduleId": "npc_kosa_schedule",
+      "dialogues": ["dialog_kosa_greeting", "dialog_kosa_shop", "dialog_kosa_quest_003"],
+      "quests": ["Q_F_NEW_003"],
+      "trainer": "trainer_stealth",
+      "reactions": {
+        "theft": "AlertAndFight",
+        "trespass": "Ignore",
+        "attack": "FleeAndAlert"
+      },
+      "visual": {
+        "modelPath": "Art/Models/NPCs/Kosa",
+        "skinTone": "#C4B4A4",
+        "hairColor": "#2A2A2A",
+        "clothesColor": "#2A2A3A"
+      },
+      "location": {
+        "scene": "World_ObózPodDębami",
+        "position": { "x": -8.0, "y": 0.0, "z": 2.0 },
+        "rotation": { "x": 0.0, "y": 270.0, "z": 0.0 }
+      }
+    },
+    {
+      "id": "npc_wanderer",
+      "nameKey": "npc_wanderer_name",
+      "titleKey": "npc_wanderer_title",
+      "role": "Traveler",
+      "faction": "Neutral",
+      "level": 3,
+      "isEssential": true,
+      "defaultGreeting": "dialog_wanderer_greeting",
+      "stats": {
+        "health": 60,
+        "mana": 20,
+        "strength": 8,
+        "dexterity": 10,
+        "armor": 5,
+        "damage": { "min": 5, "max": 8, "type": "Slashing" }
+      },
+      "equipment": [
+        { "slot": "Weapon", "itemId": "item_iron_sword_01" }
+      ],
+      "inventory": [
+        { "itemId": "gold", "count": 30 }
+      ],
+      "initialRelation": 0,
+      "scheduleId": "npc_wanderer_schedule",
+      "dialogues": ["dialog_wanderer_greeting", "dialog_wanderer_intro"],
+      "quests": ["Q_M_001"],
+      "trainer": null,
+      "reactions": {
+        "theft": "Warning",
+        "trespass": "Ignore",
+        "attack": "AlertAndFight"
+      },
+      "visual": {
+        "modelPath": "Art/Models/NPCs/Wanderer",
+        "skinTone": "#D4C4B4",
+        "hairColor": "#6A5A4A",
+        "clothesColor": "#5A4A3A"
+      },
+      "location": {
+        "scene": "World_Przełęcz",
+        "position": { "x": 0.0, "y": 0.0, "z": 5.0 },
+        "rotation": { "x": 0.0, "y": 180.0, "z": 0.0 }
+      }
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "quests": [
+    {
+      "id": "Q_M_001",
+      "titleKey": "quest_m_001_title",
+      "descriptionKey": "quest_m_001_desc",
+      "type": "Main",
+      "faction": "None",
+      "requirements": {
+        "level": 0,
+        "quests": [],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_m_001_stage_1",
+          "objectives": [
+            { "type": "Explore", "target": "location_entrance", "description": "Rozglądnij się w wąwozie" }
+          ],
+          "onComplete": {
+            "addFlags": ["explored_entrance"],
+            "giveItems": []
+          }
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest_m_001_stage_2",
+          "objectives": [
+            { "type": "Explore", "target": "location_trakt", "description": "Znajdź wejście do krainy" }
+          ],
+          "onComplete": {
+            "addFlags": ["found_trakt"],
+            "giveItems": []
+          }
+        },
+        {
+          "id": 3,
+          "descriptionKey": "quest_m_001_stage_3",
+          "objectives": [
+            { "type": "Talk", "target": "npc_wanderer", "description": "Spotkaj Wędrowca" }
+          ],
+          "onComplete": {
+            "addFlags": ["met_wanderer"]
+          }
+        }
+      ],
+      "rewards": {
+        "xp": 50,
+        "gold": 10,
+        "items": ["item_old_sword_01"],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": null,
+      "nextQuest": "Q_M_002"
+    },
+    {
+      "id": "Q_M_002",
+      "titleKey": "quest_m_002_title",
+      "descriptionKey": "quest_m_002_desc",
+      "type": "Main",
+      "faction": "None",
+      "requirements": {
+        "level": 1,
+        "quests": ["Q_M_001"],
+        "flags": ["met_wanderer"],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_m_002_stage_1",
+          "objectives": [
+            { "type": "Explore", "target": "location_kamienny_brzeg", "description": "Udaj się do Kamiennego Brzegu" }
+          ],
+          "onComplete": {
+            "addFlags": ["visited_old_order"]
+          }
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest_m_002_stage_2",
+          "objectives": [
+            { "type": "Talk", "target": "npc_aldona", "description": "Porozmawiaj z Mistrzynią Aldoną" }
+          ],
+          "onComplete": {
+            "addFlags": ["met_aldona"]
+          }
+        },
+        {
+          "id": 3,
+          "descriptionKey": "quest_m_002_stage_3",
+          "objectives": [
+            { "type": "Explore", "target": "location_oboz", "description": "Udaj się do Obóz pod Dębami" }
+          ],
+          "onComplete": {
+            "addFlags": ["visited_new_order"]
+          }
+        },
+        {
+          "id": 4,
+          "descriptionKey": "quest_m_002_stage_4",
+          "objectives": [
+            { "type": "Talk", "target": "npc_drwal", "description": "Porozmawiaj z Wodzem Drwalem" }
+          ],
+          "onComplete": {
+            "addFlags": ["met_drwal"]
+          }
+        }
+      ],
+      "rewards": {
+        "xp": 100,
+        "gold": 25,
+        "items": ["item_potion_health_small"],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": "Q_M_001",
+      "nextQuest": "Q_M_003"
+    },
+    {
+      "id": "Q_M_003",
+      "titleKey": "quest_m_003_title",
+      "descriptionKey": "quest_m_003_desc",
+      "type": "Main",
+      "faction": "None",
+      "requirements": {
+        "level": 2,
+        "quests": ["Q_M_002"],
+        "flags": ["met_aldona", "met_drwal"],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_m_003_stage_1",
+          "objectives": [
+            { "type": "Explore", "target": "location_czarne_zrodlo", "description": "Zbadaj Czarne Źródło" }
+          ],
+          "onComplete": {
+            "addFlags": ["discovered_threat"]
+          }
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest_m_003_stage_2",
+          "objectives": [
+            { "type": "Talk", "target": "npc_aldona", "description": "Zgłoś odkrycie Aldonie" }
+          ],
+          "onComplete": {
+            "addFlags": ["reported_to_aldona"]
+          }
+        }
+      ],
+      "rewards": {
+        "xp": 150,
+        "gold": 50,
+        "items": [],
+        "flags": [],
+        "skillPoints": 1,
+        "reputation": { "OldOrder": 5 }
+      },
+      "failConditions": [],
+      "parentQuest": "Q_M_002",
+      "nextQuest": "Q_M_010"
+    },
+    {
+      "id": "Q_M_010",
+      "titleKey": "quest_m_010_title",
+      "descriptionKey": "quest_m_010_desc",
+      "type": "Main",
+      "faction": "None",
+      "requirements": {
+        "level": 3,
+        "quests": ["Q_M_003"],
+        "flags": [],
+        "items": [],
+        "skills": {}
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_m_010_stage_1",
+          "objectives": [
+            { "type": "Interact", "target": "choice_faction", "description": "Wybierz swoją ścieżkę", "optional": false }
+          ],
+          "onComplete": {
+            "addFlags": ["made_choice"]
+          }
+        }
+      ],
+      "rewards": {
+        "xp": 200,
+        "gold": 100,
+        "items": [],
+        "flags": [],
+        "skillPoints": 2,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": "Q_M_003",
+      "nextQuest": null
+    }
+  ]
+}
