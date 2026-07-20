@@ -61,9 +61,13 @@ namespace ZelaznaDroga.Gameplay.Progression
             RecalculateStats();
         }
         private void Start()
+        {
             ComponentLocator.Register<IPlayerStats>(new PlayerStatsInterface(this));
+        }
         private void OnDestroy()
+        {
             ComponentLocator.Unregister<IPlayerStats>(new PlayerStatsInterface(this));
+        }
         #region Public Methods
         /// <summary>
         /// Modifies health by delta (positive for heal, negative for damage).
