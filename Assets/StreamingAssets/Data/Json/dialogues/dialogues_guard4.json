@@ -1,0 +1,29 @@
+{
+  "id": "dialog_guard4_greeting",
+  "rootNodeId": "start",
+  "speaker": "Strażnik Marek",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Strażnik Marek",
+      "text": "Stój! Dokumenty albo powód wizyty. Albo idź stąd.",
+      "choices": [
+        {"text": "Jestem z Aldoną.", "conditions": [], "actions": [], "nextNode": "aldona"},
+        {"text": "Szukam Boruka.", "conditions": [], "actions": [], "nextNode": "boruk"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "aldona": {
+      "nodeId": "aldona",
+      "speaker": "Strażnik Marek",
+      "text": "W takim razie idź prosto. I nie sprawiaj problemów.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "boruk": {
+      "nodeId": "boruk",
+      "speaker": "Strażnik Marek",
+      "text": "Boruk jest na patrolu. Wróci wieczorem.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

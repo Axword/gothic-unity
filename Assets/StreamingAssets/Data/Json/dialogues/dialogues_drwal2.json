@@ -1,0 +1,22 @@
+{
+  "id": "dialog_drwal_quest_001",
+  "rootNodeId": "start",
+  "speaker": "Drwal",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Drwal",
+      "text": "Chcesz dołączyć do Wolnych? Najpierw pokaż, że nie jesteś tchórzem. Zabij jednego z ich strażników.",
+      "choices": [
+        {"text": "Zrobię to.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_NEW_001"}], "nextNode": "go"},
+        {"text": "To za dużo.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "go": {
+      "nodeId": "go",
+      "speaker": "Drwal",
+      "text": "Dobrze. Wracaj z dowodem. Wtedy pogadamy o twojej przyszłości.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "dialog_boruk_greeting",
+  "rootNodeId": "start",
+  "speaker": "npc_boruk",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Boruk",
+      "text": "Stój! Co tu robisz? Nie wyglądasz na miejscowego.",
+      "choices": [
+        {"text": "Szukam pracy u Gildii.", "conditions": [], "actions": [{"type": "StartQuest", "questId": "Q_F_OLD_002"}], "nextNode": "offer_training"},
+        {"text": "Chcę się nauczyć walczyć.", "conditions": [], "actions": [], "nextNode": "training"},
+        {"text": "Idę swoją drogą.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "offer_training": {
+      "nodeId": "offer_training",
+      "speaker": "Boruk",
+      "text": "Jeśli chcesz się przydać, idź na północ i zabij kilka wilków. Potem wracaj — dam ci kilka wskazówek.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "training": {
+      "nodeId": "training",
+      "speaker": "Boruk",
+      "text": "Trening? Za 5 punktów nauki mogę ci pokazać podstawy. Ale najpierw udowodnij, że jesteś wart mojego czasu.",
+      "choices": [
+        {"text": "Zgadzam się na trening.", "conditions": [], "actions": [{"type": "UnlockTrainer", "trainerId": "trainer_combat"}], "nextNode": null},
+        {"text": "Może później.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    }
+  }
+}

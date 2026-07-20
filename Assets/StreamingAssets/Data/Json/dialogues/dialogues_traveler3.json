@@ -1,0 +1,76 @@
+{
+  "id": "dialog_traveler3",
+  "rootNodeId": "start",
+  "speaker": "Wędrowiec",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Wędrowiec",
+      "text": "Długa droga. Nogi bolą, a portfel lekki. Masz coś do picia albo do zjedzenia?",
+      "choices": [
+        {
+          "text": "Mogę dać trochę złota.",
+          "conditions": [
+            { "type": "HasGold", "amount": 10 }
+          ],
+          "actions": [
+            { "type": "SpendGold", "amount": 10 },
+            { "type": "SetFlag", "flag": "helped_traveler" }
+          ],
+          "nextNode": "thanks"
+        },
+        {
+          "text": "Nie mam nic.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "poor"
+        },
+        {
+          "text": "Co słychać na drogach?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "news"
+        }
+      ]
+    },
+    "thanks": {
+      "nodeId": "thanks",
+      "speaker": "Wędrowiec",
+      "text": "Dziękuję, bracie. Nie zapomnę. Jeśli kiedyś będziesz w potrzebie — pytaj o Wędrowca.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "poor": {
+      "nodeId": "poor",
+      "speaker": "Wędrowiec",
+      "text": "No cóż. Wszyscy jesteśmy biedni w tych czasach. Uważaj na siebie.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "news": {
+      "nodeId": "news",
+      "speaker": "Wędrowiec",
+      "text": "Bandyci na przełęczy. Wilki w lesie. I te dwie frakcje co się kłócą o każdy kamień. Nic nowego.",
+      "choices": [
+        {
+          "text": "Dzięki za info.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "dialog_cook_greeting",
+  "rootNodeId": "start",
+  "speaker": "Kucharz",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Kucharz",
+      "text": "Coś zjeść? Mam gulasz z zeszłego tygodnia. Albo zupa z ziół.",
+      "choices": [
+        {
+          "text": "Dam coś do jedzenia.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "food"
+        },
+        {
+          "text": "Potrzebuję przepisów.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "recipe"
+        },
+        {
+          "text": "Masz robotę dla mnie?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "quest"
+        }
+      ]
+    },
+    "food": {
+      "nodeId": "food",
+      "speaker": "Kucharz",
+      "text": "Weź to. Za darmo, bo wyglądasz na głodnego.",
+      "choices": [
+        {
+          "text": "Dziękuję.",
+          "conditions": [],
+          "actions": [
+            { "type": "GiveItem", "itemId": "item_potion_health_small", "count": 1 }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "recipe": {
+      "nodeId": "recipe",
+      "speaker": "Kucharz",
+      "text": "Przepis na miksturę? Przynieś mi trzy rośliny lecznicze, a ci powiem.",
+      "choices": [
+        {
+          "text": "Zgoda.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_007" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "quest": {
+      "nodeId": "quest",
+      "speaker": "Kucharz",
+      "text": "Idź do lasu i przynieś mi świeże zioła. Zapłacę dobrze.",
+      "choices": [
+        {
+          "text": "Biorę zlecenie.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_007" }
+          ],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

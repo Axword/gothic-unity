@@ -1,0 +1,30 @@
+{
+  "spells": [
+    {
+      "id": "spell_fireball",
+      "nameKey": "spell_fireball_name",
+      "descriptionKey": "spell_fireball_desc",
+      "spellType": "Damage",
+      "manaCost": 15,
+      "castTime": 0.8,
+      "cooldown": 3.0,
+      "range": 15,
+      "damage": {"min": 18, "max": 26, "type": "Fire"},
+      "vfxPath": "VFX/Fireball",
+      "learnQuestId": "Q_F_NEW_004"
+    },
+    {
+      "id": "spell_icebolt",
+      "nameKey": "spell_icebolt_name",
+      "descriptionKey": "spell_icebolt_desc",
+      "spellType": "Damage",
+      "manaCost": 12,
+      "castTime": 0.6,
+      "cooldown": 2.5,
+      "range": 18,
+      "damage": {"min": 12, "max": 20, "type": "Ice"},
+      "vfxPath": "VFX/Icebolt",
+      "learnQuestId": "Q_F_NEW_004"
+    }
+  ]
+}

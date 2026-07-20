@@ -1,0 +1,78 @@
+{
+  "id": "dialog_miner_greeting",
+  "rootNodeId": "start",
+  "speaker": "Górnik",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Górnik",
+      "text": "Ciężka robota. Ręce bolą od kilofa. Czego chcesz?",
+      "choices": [
+        {
+          "text": "Szukasz pomocy w kopalni?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "work"
+        },
+        {
+          "text": "Masz sztabki na sprzedaż?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "sell"
+        },
+        {
+          "text": "Co słychać w dole?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "rumors"
+        }
+      ]
+    },
+    "work": {
+      "nodeId": "work",
+      "speaker": "Górnik",
+      "text": "Pomoc? Przynieś mi dwie sztabki żelaza z powierzchni. Zapłacę.",
+      "choices": [
+        {
+          "text": "Zgoda.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_004" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "sell": {
+      "nodeId": "sell",
+      "speaker": "Górnik",
+      "text": "Mam trochę. Ale nie oddam tanio. Dziesięć sztuk za jedną sztabkę.",
+      "choices": [
+        {
+          "text": "Biorę dwie.",
+          "conditions": [
+            { "type": "HasGold", "amount": 20 }
+          ],
+          "actions": [
+            { "type": "SpendGold", "amount": 20 },
+            { "type": "GiveItem", "itemId": "item_iron_ingot", "count": 2 }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "rumors": {
+      "nodeId": "rumors",
+      "speaker": "Górnik",
+      "text": "Mówią, że w głębi coś się rusza. Ale ja tylko kopię. Nie mieszam się w politykę.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

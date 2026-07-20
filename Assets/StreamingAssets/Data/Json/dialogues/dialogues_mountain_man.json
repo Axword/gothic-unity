@@ -1,0 +1,73 @@
+{
+  "id": "dialog_mountain_man",
+  "rootNodeId": "start",
+  "speaker": "Górski Mężczyzna",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Górski",
+      "text": "Tu na górze ciszej. Tylko niedźwiedzie i wiatr. Czego szukasz tak wysoko?",
+      "choices": [
+        {
+          "text": "Szukam niedźwiedzia.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "bear"
+        },
+        {
+          "text": "Chcę odpocząć.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "rest"
+        },
+        {
+          "text": "Co wiesz o Czarnych Źródłach?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "source"
+        }
+      ]
+    },
+    "bear": {
+      "nodeId": "bear",
+      "speaker": "Górski",
+      "text": "Duży sukinsyn. Na północy. Weź ze sobą coś mocnego. I nie idź sam.",
+      "choices": [
+        {
+          "text": "Idę.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_006" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "rest": {
+      "nodeId": "rest",
+      "speaker": "Górski",
+      "text": "Możesz tu zostać na chwilę. Ale jak zrobi się ciemno — uciekaj.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "source": {
+      "nodeId": "source",
+      "speaker": "Górski",
+      "text": "Złe miejsce. Ludzie tam wchodzą i nie wracają. Albo wracają inni.",
+      "choices": [
+        {
+          "text": "Dzięki za ostrzeżenie.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

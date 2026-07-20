@@ -1,0 +1,60 @@
+{
+  "id": "dialog_new_recruit",
+  "rootNodeId": "start",
+  "speaker": "Nowy Rekrut",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Nowy Rekrut",
+      "text": "Hej! Dopiero co dołączyłem do Nowego Porządku. Chcesz posłuchać jak to jest?",
+      "choices": [
+        {
+          "text": "Opowiedz.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "story"
+        },
+        {
+          "text": "Chcę dołączyć.",
+          "conditions": [],
+          "actions": [
+            { "type": "SetFlag", "flag": "new_recruit_talk" }
+          ],
+          "nextNode": "join"
+        },
+        {
+          "text": "Nie interesuje mnie to.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "story": {
+      "nodeId": "story",
+      "speaker": "Nowy Rekrut",
+      "text": "Mówią, że zmienimy wszystko. Ale ja tylko chcę mieć co jeść. I nie umrzeć.",
+      "choices": [
+        {
+          "text": "Rozumiem cię.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "join": {
+      "nodeId": "join",
+      "speaker": "Nowy Rekrut",
+      "text": "Idź do Płomiennego. On decyduje. Powiedz, że przyszedłeś ode mnie.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

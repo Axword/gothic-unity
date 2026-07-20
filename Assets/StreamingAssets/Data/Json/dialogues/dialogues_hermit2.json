@@ -1,0 +1,115 @@
+{
+  "id": "dialog_hermit_deep",
+  "rootNodeId": "start",
+  "speaker": "Pustelnik",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Pustelnik",
+      "text": "Znowu ty. Świat nie daje spokoju nawet starym kościom. Czego tym razem?",
+      "choices": [
+        {
+          "text": "Co wiesz o Czarnych Źródłach?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "sources"
+        },
+        {
+          "text": "Potrzebuję rady o frakcjach.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "factions"
+        },
+        {
+          "text": "Daj mi coś do walki.",
+          "conditions": [
+            { "type": "HasFlag", "flag": "hermit_trust" }
+          ],
+          "actions": [],
+          "nextNode": "gift"
+        },
+        {
+          "text": "Idę już.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "sources": {
+      "nodeId": "sources",
+      "speaker": "Pustelnik",
+      "text": "To nie woda. To krew ziemi. Dawno temu ktoś coś tu pochował. Teraz coś patrzy z powrotem. Nie pij. Nie dotykaj.",
+      "choices": [
+        {
+          "text": "Co się stanie jeśli wypiję?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "warning"
+        },
+        {
+          "text": "Rozumiem. Dziękuję.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "factions": {
+      "nodeId": "factions",
+      "speaker": "Pustelnik",
+      "text": "Stary Porządek trzyma się żelaza i prawa. Nowy chce zmienić wszystko ogniem. Oba skończą tak samo — w grobie. Wybierz ten, który mniej śmierdzi.",
+      "choices": [
+        {
+          "text": "A ty po której stronie?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "neutral"
+        }
+      ]
+    },
+    "neutral": {
+      "nodeId": "neutral",
+      "speaker": "Pustelnik",
+      "text": "Po stronie tych, co jeszcze oddychają. Idź, zanim i ty zaczniesz patrzeć w ziemię.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [
+            { "type": "SetFlag", "flag": "hermit_trust" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "gift": {
+      "nodeId": "gift",
+      "speaker": "Pustelnik",
+      "text": "Weź to. Ostatni eliksir, jaki zmieszałem. Nie marnuj.",
+      "choices": [
+        {
+          "text": "Dziękuję.",
+          "conditions": [],
+          "actions": [
+            { "type": "GiveItem", "itemId": "item_potion_mana_medium", "count": 1 }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "warning": {
+      "nodeId": "warning",
+      "speaker": "Pustelnik",
+      "text": "Zacznie cię widzieć. A wtedy już nie będziesz sam. Idź.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

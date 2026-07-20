@@ -1,0 +1,29 @@
+{
+  "id": "dialog_kowal_greeting",
+  "rootNodeId": "start",
+  "speaker": "Kowal",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Kowal",
+      "text": "Młot wali, żelazo płonie. Potrzebujesz dobrego ostrza? Albo masz coś do naprawy?",
+      "choices": [
+        {"text": "Chcę kupić dobry miecz.", "conditions": [], "actions": [], "nextNode": "buy"},
+        {"text": "Mam sztabki do sprzedania.", "conditions": [], "actions": [], "nextNode": "sell"},
+        {"text": "Nie teraz.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "buy": {
+      "nodeId": "buy",
+      "speaker": "Kowal",
+      "text": "Mam żelazne i stalowe. Wybierz mądrze - dobry miecz ratuje życie.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "sell": {
+      "nodeId": "sell",
+      "speaker": "Kowal",
+      "text": "Dawaj sztabki. Za każdą dam 12 sztuk złota.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

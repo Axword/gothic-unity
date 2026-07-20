@@ -1,0 +1,29 @@
+{
+  "id": "dialog_scout_greeting",
+  "rootNodeId": "start",
+  "speaker": "Zwiadowca",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Zwiadowca",
+      "text": "Widziałem patrole gildii na północy. Chcesz wiedzieć więcej? Albo może masz coś dla mnie?",
+      "choices": [
+        {"text": "Co widziałeś?", "conditions": [], "actions": [], "nextNode": "intel"},
+        {"text": "Chcę pomóc obozowi.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_NEW_005"}], "nextNode": "help"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "intel": {
+      "nodeId": "intel",
+      "speaker": "Zwiadowca",
+      "text": "Trzech strażników i jeden z mieczem dwuręcznym. Idą w kierunku przełęczy.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "help": {
+      "nodeId": "help",
+      "speaker": "Zwiadowca",
+      "text": "Dobrze. Idź na przełęcz i zrób z nimi porządek. Potem zgłoś się do Drwala.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

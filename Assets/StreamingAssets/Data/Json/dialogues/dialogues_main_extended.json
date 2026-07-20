@@ -1,0 +1,29 @@
+{
+  "id": "dialog_wanderer_intro",
+  "rootNodeId": "start",
+  "speaker": "Wędrowiec",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Wędrowiec",
+      "text": "Obudziłeś się. To nie jest bezpieczne miejsce. Dwie frakcje walczą o tę krainę. Wybierz mądrze.",
+      "choices": [
+        {"text": "Kim jesteś?", "conditions": [], "actions": [], "nextNode": "who"},
+        {"text": "Co to za kraina?", "conditions": [], "actions": [], "nextNode": "where"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [{"type": "StartQuest", "questId": "Q_M_001"}], "nextNode": null}
+      ]
+    },
+    "who": {
+      "nodeId": "who",
+      "speaker": "Wędrowiec",
+      "text": "Nazywam się Wędrowiec. Kiedyś miałem inne imię. Teraz liczy się tylko przetrwanie.",
+      "choices": [{"text": "Rozumiem.", "conditions": [], "actions": [{"type": "StartQuest", "questId": "Q_M_001"}], "nextNode": null}]
+    },
+    "where": {
+      "nodeId": "where",
+      "speaker": "Wędrowiec",
+      "text": "Żelazne Wrota. Dwie osady. Stary porządek i Nowy. Nad tym wszystkim wisi coś gorszego.",
+      "choices": [{"text": "Pokaż mi drogę.", "conditions": [], "actions": [{"type": "StartQuest", "questId": "Q_M_001"}], "nextNode": null}]
+    }
+  }
+}

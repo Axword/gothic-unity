@@ -1,0 +1,12 @@
+{
+  "schedules": [
+    {"npcId": "npc_aldona", "phases": [{"timeRange": {"start": 7, "end": 11}, "locationId": "gildia_hall", "activity": "Work"}, {"timeRange": {"start": 12, "end": 13}, "activity": "Eat"}, {"timeRange": {"start": 18, "end": 21}, "activity": "Idle"}]},
+    {"npcId": "npc_boruk", "phases": [{"timeRange": {"start": 6, "end": 18}, "activity": "Patrol"}, {"timeRange": {"start": 19, "end": 23}, "activity": "Idle"}]},
+    {"npcId": "npc_drwal", "phases": [{"timeRange": {"start": 8, "end": 12}, "activity": "Work"}, {"timeRange": {"start": 13, "end": 15}, "activity": "Social"}, {"timeRange": {"start": 20, "end": 24}, "activity": "Idle"}]},
+    {"npcId": "npc_grom", "phases": [{"timeRange": {"start": 5, "end": 17}, "activity": "Patrol"}, {"timeRange": {"start": 18, "end": 22}, "activity": "Train"}]},
+    {"npcId": "npc_plomienny", "phases": [{"timeRange": {"start": 9, "end": 16}, "activity": "Magic"}, {"timeRange": {"start": 17, "end": 20}, "activity": "Idle"}]},
+    {"npcId": "npc_kosa", "phases": [{"timeRange": {"start": 10, "end": 18}, "activity": "Steal"}, {"timeRange": {"start": 20, "end": 23}, "activity": "Idle"}]},
+    {"npcId": "npc_wanderer", "phases": [{"timeRange": {"start": 0, "end": 24}, "activity": "Travel"}]},
+    {"npcId": "npc_mlynarczyk", "phases": [{"timeRange": {"start": 8, "end": 18}, "activity": "Shop"}]}
+  ]
+}

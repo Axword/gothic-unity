@@ -1,0 +1,92 @@
+{
+  "id": "dialog_tavern_keep2",
+  "rootNodeId": "start",
+  "speaker": "Karczmarz",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Karczmarz",
+      "text": "Witaj w mojej karczmie. Co podać? Piwo czy może coś mocniejszego?",
+      "choices": [
+        {
+          "text": "Daj mi piwo.",
+          "conditions": [],
+          "actions": [
+            { "type": "SpendGold", "amount": 5 },
+            { "type": "GiveItem", "itemId": "item_potion_health_small", "count": 1 }
+          ],
+          "nextNode": "served"
+        },
+        {
+          "text": "Słyszałeś jakieś plotki?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "gossip"
+        },
+        {
+          "text": "Masz pokój na noc?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "room"
+        }
+      ]
+    },
+    "served": {
+      "nodeId": "served",
+      "speaker": "Karczmarz",
+      "text": "Smacznego. I nie rób tu burd.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "gossip": {
+      "nodeId": "gossip",
+      "speaker": "Karczmarz",
+      "text": "Mówią, że Kosa znowu coś ukradł. I że Aldona szykuje coś dużego. Uważaj na siebie.",
+      "choices": [
+        {
+          "text": "Dzięki.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "room": {
+      "nodeId": "room",
+      "speaker": "Karczmarz",
+      "text": "Pokój kosztuje 15 sztuk. I nie pluj na podłogę.",
+      "choices": [
+        {
+          "text": "Biorę.",
+          "conditions": [
+            { "type": "HasGold", "amount": 15 }
+          ],
+          "actions": [
+            { "type": "SpendGold", "amount": 15 },
+            { "type": "SetFlag", "flag": "slept_in_tavern" }
+          ],
+          "nextNode": "rested"
+        }
+      ]
+    },
+    "rested": {
+      "nodeId": "rested",
+      "speaker": "Karczmarz",
+      "text": "Śpij dobrze. Jutro będzie nowy dzień... albo nowy problem.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

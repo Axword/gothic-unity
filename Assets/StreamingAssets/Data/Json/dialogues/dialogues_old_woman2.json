@@ -1,0 +1,94 @@
+{
+  "id": "dialog_old_woman2",
+  "rootNodeId": "start",
+  "speaker": "Stara Kobieta",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Stara Kobieta",
+      "text": "Och, młody człowieku... Świat był kiedyś lepszy. Teraz tylko wilki i żelazo.",
+      "choices": [
+        {
+          "text": "Co się stało z twoją rodziną?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "family"
+        },
+        {
+          "text": "Potrzebuję rady.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "advice"
+        },
+        {
+          "text": "Czy mogę ci jakoś pomóc?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "help"
+        },
+        {
+          "text": "Żegnaj.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "family": {
+      "nodeId": "family",
+      "speaker": "Stara Kobieta",
+      "text": "Syn poszedł z Nowym Porządkiem. Córka została w Kamiennym Brzegu. Ja... zostałam sama z wspomnieniami.",
+      "choices": [
+        {
+          "text": "Przykro mi.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "sad"
+        }
+      ]
+    },
+    "advice": {
+      "nodeId": "advice",
+      "speaker": "Stara Kobieta",
+      "text": "Nie ufaj nikomu, kto obiecuje lepszy świat. Obietnice kończą się na grobie. Weź to zioło — na wypadek gdybyś potrzebował.",
+      "choices": [
+        {
+          "text": "Dziękuję.",
+          "conditions": [],
+          "actions": [
+            { "type": "GiveItem", "itemId": "plant_healing_herb", "count": 2 }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "help": {
+      "nodeId": "help",
+      "speaker": "Stara Kobieta",
+      "text": "Jeśli znajdziesz moją córkę Zosię... powiedz jej, że matka wciąż czeka. I nie wchodź w te wojny.",
+      "choices": [
+        {
+          "text": "Postaram się.",
+          "conditions": [],
+          "actions": [
+            { "type": "SetFlag", "flag": "old_woman_quest" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "sad": {
+      "nodeId": "sad",
+      "speaker": "Stara Kobieta",
+      "text": "Takie jest życie. Idź, zanim i ty zostaniesz sam.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

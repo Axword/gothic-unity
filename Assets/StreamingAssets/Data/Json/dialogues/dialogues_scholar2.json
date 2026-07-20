@@ -1,0 +1,105 @@
+{
+  "id": "dialog_scholar2",
+  "rootNodeId": "start",
+  "speaker": "Uczony",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Uczony",
+      "text": "Wiedza jest jedyną bronią, która nie rdzewieje. Czego szukasz, wędrowcze?",
+      "choices": [
+        {
+          "text": "Chcę wiedzieć więcej o historii Żelaznej Drogi.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "history"
+        },
+        {
+          "text": "Masz książki lub mapy?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "items"
+        },
+        {
+          "text": "Co sądzisz o frakcjach?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "factions"
+        },
+        {
+          "text": "Żegnaj.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "history": {
+      "nodeId": "history",
+      "speaker": "Uczony",
+      "text": "Żelazna Droga kiedyś łączyła królestwa. Teraz łączy tylko groby. Dawno temu ktoś zbudował mosty. Potem przyszli ci, co wolą je palić.",
+      "choices": [
+        {
+          "text": "A kto to był?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "builder"
+        }
+      ]
+    },
+    "builder": {
+      "nodeId": "builder",
+      "speaker": "Uczony",
+      "text": "Mistrzowie kowale i inżynierowie. Ich imiona zaginęły w ogniu. Ale ich dzieło... wciąż stoi w ruinie.",
+      "choices": [
+        {
+          "text": "Dziękuję za lekcję.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "items": {
+      "nodeId": "items",
+      "speaker": "Uczony",
+      "text": "Mam starą mapę. Ale nie oddam jej za darmo. Przynieś mi trzy sztabki żelaza.",
+      "choices": [
+        {
+          "text": "Zgoda.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_004" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "factions": {
+      "nodeId": "factions",
+      "speaker": "Uczony",
+      "text": "Stary Porządek trzyma się tradycji jak tonący deski. Nowy chce wszystko spalić, żeby zbudować na popiołach. Oba zapomną o prawdzie.",
+      "choices": [
+        {
+          "text": "A prawda jest jaka?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "truth"
+        }
+      ]
+    },
+    "truth": {
+      "nodeId": "truth",
+      "speaker": "Uczony",
+      "text": "Że żelazo zawsze wygrywa z ogniem... dopóki ogień nie spali wszystkiego.",
+      "choices": [
+        {
+          "text": "[Odejdź z wiedzą]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "dialog_fisher_greeting",
+  "rootNodeId": "start",
+  "speaker": "Rybak",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Rybak",
+      "text": "Ryby biorą kiepsko odkąd to coś się ruszyło pod bagnem. Masz może coś do jedzenia albo handlu?",
+      "choices": [
+        {"text": "Chcę kupić rybę.", "conditions": [], "actions": [], "nextNode": "buy"},
+        {"text": "Co się dzieje na bagnach?", "conditions": [], "actions": [], "nextNode": "bog"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "buy": {
+      "nodeId": "buy",
+      "speaker": "Rybak",
+      "text": "Za 5 sztuk dam ci świeżą. Albo za wytrych.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "bog": {
+      "nodeId": "bog",
+      "speaker": "Rybak",
+      "text": "Coś tam chrapie w nocy. I światło dziwne. Nie idź tam sam.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "id": "dialog_priest2",
+  "rootNodeId": "start",
+  "speaker": "Ojciec Leon",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Ojciec Leon",
+      "text": "Pokój z tobą, synu. Choć pokój jest tu rzadkością. Czego szukasz u Boga?",
+      "choices": [
+        {
+          "text": "Chcę się wyspowiadać.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "confess"
+        },
+        {
+          "text": "Potrzebuję błogosławieństwa.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "bless"
+        },
+        {
+          "text": "Co sądzisz o wojnie?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "war"
+        },
+        {
+          "text": "Żegnaj, ojcze.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "confess": {
+      "nodeId": "confess",
+      "speaker": "Ojciec Leon",
+      "text": "Grzechy? Wszyscy je mamy. Powiedz, co cię trapi.",
+      "choices": [
+        {
+          "text": "Zabiłem.",
+          "conditions": [],
+          "actions": [
+            { "type": "AddReputation", "faction": "OldOrder", "value": -3 }
+          ],
+          "nextNode": "absolve"
+        }
+      ]
+    },
+    "bless": {
+      "nodeId": "bless",
+      "speaker": "Ojciec Leon",
+      "text": "Niech Bóg chroni twoje kroki. Weź ten mały dar.",
+      "choices": [
+        {
+          "text": "Dziękuję.",
+          "conditions": [],
+          "actions": [
+            { "type": "GiveItem", "itemId": "item_potion_health_small", "count": 1 }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "war": {
+      "nodeId": "war",
+      "speaker": "Ojciec Leon",
+      "text": "Wojna jest karą za pychę ludzi. Stary Porządek i Nowy — obaj zapomnieli o miłosierdziu.",
+      "choices": [
+        {
+          "text": "A co powinienem wybrać?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "choice"
+        }
+      ]
+    },
+    "absolve": {
+      "nodeId": "absolve",
+      "speaker": "Ojciec Leon",
+      "text": "Idź i grzesz więcej nie. Albo przynajmniej nie dawaj się złapać.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "choice": {
+      "nodeId": "choice",
+      "speaker": "Ojciec Leon",
+      "text": "Wybierz mniejsze zło. I pamiętaj, że krew woła o pomstę do nieba.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

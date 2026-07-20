@@ -1,0 +1,29 @@
+{
+  "id": "dialog_aldona_choice",
+  "rootNodeId": "start",
+  "speaker": "Aldona",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Aldona Żelazna",
+      "text": "Słyszałam, że rozmawiałeś z Drwalem. Wybór należy do ciebie, ale pamiętaj — raz wybrana ścieżka nie ma powrotu.",
+      "choices": [
+        {"text": "Chcę dołączyć do Gildii.", "conditions": [{"type": "QuestComplete", "questId": "Q_F_OLD_002"}], "actions": [{"type": "StartQuest", "questId": "Q_M_FINAL_OLD"}, {"type": "SetFlag", "flag": "joined_old_order"}], "nextNode": "old"},
+        {"text": "Wolę Wolnych.", "conditions": [{"type": "QuestComplete", "questId": "Q_F_NEW_002"}], "actions": [{"type": "StartQuest", "questId": "Q_M_FINAL_NEW"}, {"type": "SetFlag", "flag": "joined_new_order"}], "nextNode": "new"},
+        {"text": "Jeszcze nie jestem gotowy.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "old": {
+      "nodeId": "old",
+      "speaker": "Aldona",
+      "text": "Dobrze. Witaj w Gildii Żelaznej Ręki. Od tej chwili jesteś jednym z nas. Epilog czeka.",
+      "choices": [{"text": "[Zakończ]", "conditions": [], "actions": [{"type": "EndDialogue"}], "nextNode": null}]
+    },
+    "new": {
+      "nodeId": "new",
+      "speaker": "Aldona",
+      "text": "Zdrada. Nie zapomnę tego. Idź do swoich... Wolnych.",
+      "choices": [{"text": "[Zakończ]", "conditions": [], "actions": [{"type": "EndDialogue"}], "nextNode": null}]
+    }
+  }
+}

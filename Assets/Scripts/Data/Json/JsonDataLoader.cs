@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using ZelaznaDroga.Core.Utilities;
 
 namespace ZelaznaDroga.Data.Json
 {

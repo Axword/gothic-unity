@@ -1,0 +1,22 @@
+{
+  "id": "dialog_old_woman_greeting",
+  "rootNodeId": "start",
+  "speaker": "Stara Baba",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Stara Baba",
+      "text": "Młody człowieku... uważaj na tych z obozu. I na tych z gildii. Obaj chcą tylko twojej duszy.",
+      "choices": [
+        {"text": "Dziękuję za radę.", "conditions": [], "actions": [], "nextNode": null},
+        {"text": "Co wiesz o zagrożeniu?", "conditions": [], "actions": [], "nextNode": "threat"}
+      ]
+    },
+    "threat": {
+      "nodeId": "threat",
+      "speaker": "Stara Baba",
+      "text": "Słyszałam szepty z Czarnego Źródła. Coś starego się budzi. Lepiej wybierz stronę, zanim będzie za późno.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

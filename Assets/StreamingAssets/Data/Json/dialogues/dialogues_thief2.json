@@ -1,0 +1,96 @@
+{
+  "id": "dialog_thief2",
+  "rootNodeId": "start",
+  "speaker": "Złodziej",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Złodziej",
+      "text": "Ciii... nie krzycz. Szukasz czegoś wartościowego czy tylko kłopotów?",
+      "choices": [
+        {
+          "text": "Szukam zamków do otwarcia.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "lockpicks"
+        },
+        {
+          "text": "Masz coś ukradzionego na sprzedaż?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "fence"
+        },
+        {
+          "text": "Idę zgłosić straży.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "threat"
+        }
+      ]
+    },
+    "lockpicks": {
+      "nodeId": "lockpicks",
+      "speaker": "Złodziej",
+      "text": "Kłódki? Mam wytrychy. Pięć sztuk za jeden. Chcesz?",
+      "choices": [
+        {
+          "text": "Biorę dwa.",
+          "conditions": [
+            { "type": "HasGold", "amount": 10 }
+          ],
+          "actions": [
+            { "type": "SpendGold", "amount": 10 },
+            { "type": "GiveItem", "itemId": "item_lockpick", "count": 2 }
+          ],
+          "nextNode": "deal"
+        }
+      ]
+    },
+    "fence": {
+      "nodeId": "fence",
+      "speaker": "Złodziej",
+      "text": "Mam pierścień i nóż. Ale tylko dla zaufanych. Przynieś mi coś wartościowego.",
+      "choices": [
+        {
+          "text": "Wezmę pierścień.",
+          "conditions": [
+            { "type": "HasGold", "amount": 35 }
+          ],
+          "actions": [
+            { "type": "SpendGold", "amount": 35 },
+            { "type": "GiveItem", "itemId": "item_misc_ring", "count": 1 }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "threat": {
+      "nodeId": "threat",
+      "speaker": "Złodziej",
+      "text": "Nie rób tego. Albo pożałujesz. Idź stąd.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [
+            { "type": "AddCrime", "amount": 5 }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "deal": {
+      "nodeId": "deal",
+      "speaker": "Złodziej",
+      "text": "Dobra. I pamiętaj — nie widziałeś mnie.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "id": "dialog_bandit_leader",
+  "rootNodeId": "start",
+  "speaker": "Wilk - Przywódca Bandy",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Wilk",
+      "text": "Stój! Ta droga należy do nas. Albo zapłacisz haracz, albo oddasz życie.",
+      "choices": [
+        {
+          "text": "Nie dam się okraść.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "fight"
+        },
+        {
+          "text": "Ile chcesz?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "bargain"
+        },
+        {
+          "text": "Pracuję dla Starego Porządku.",
+          "conditions": [
+            { "type": "HasFlag", "flag": "aldona_quest_active" }
+          ],
+          "actions": [],
+          "nextNode": "old_order"
+        },
+        {
+          "text": "Spokojnie, tylko przechodzę.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "leave"
+        }
+      ]
+    },
+    "fight": {
+      "nodeId": "fight",
+      "speaker": "Wilk",
+      "text": "To twój wybór. Chłopaki — do roboty!",
+      "choices": [
+        {
+          "text": "[Przygotuj się do walki]",
+          "conditions": [],
+          "actions": [
+            { "type": "StartCombat", "target": "bandit_leader" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "bargain": {
+      "nodeId": "bargain",
+      "speaker": "Wilk",
+      "text": "Dwadzieścia pięć sztuk. I nie targuj się. Albo oddajesz broń.",
+      "choices": [
+        {
+          "text": "Biorę haracz.",
+          "conditions": [
+            { "type": "HasGold", "amount": 25 }
+          ],
+          "actions": [
+            { "type": "SpendGold", "amount": 25 },
+            { "type": "SetFlag", "flag": "paid_bandits" }
+          ],
+          "nextNode": "paid"
+        },
+        {
+          "text": "Nie dam ci ani grosza.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "fight"
+        }
+      ]
+    },
+    "old_order": {
+      "nodeId": "old_order",
+      "speaker": "Wilk",
+      "text": "Stary Porządek? To znaczy, że jesteś psem Aldony. Tym gorzej dla ciebie.",
+      "choices": [
+        {
+          "text": "[Walcz]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "fight"
+        }
+      ]
+    },
+    "paid": {
+      "nodeId": "paid",
+      "speaker": "Wilk",
+      "text": "Mądry wybór. Idź i nie wracaj. Następnym razem nie będzie tak tanio.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "leave": {
+      "nodeId": "leave",
+      "speaker": "Wilk",
+      "text": "Idź szybko. Zanim zmienię zdanie.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

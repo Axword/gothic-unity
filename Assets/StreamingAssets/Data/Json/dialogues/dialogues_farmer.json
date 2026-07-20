@@ -1,0 +1,22 @@
+{
+  "id": "dialog_farmer_greeting",
+  "rootNodeId": "start",
+  "speaker": "Rolnik Kowalski",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Rolnik Kowalski",
+      "text": "Te przeklęte wilki znowu rozszarpały dwie owce! Pomóż mi, a zapłacę czym mogę.",
+      "choices": [
+        {"text": "Zajmę się tym.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_S_002"}], "nextNode": "thanks"},
+        {"text": "To nie mój problem.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "thanks": {
+      "nodeId": "thanks",
+      "speaker": "Rolnik Kowalski",
+      "text": "Bóg zapłać. Uważaj na kły.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

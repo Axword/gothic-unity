@@ -1,0 +1,29 @@
+{
+  "id": "dialog_rebel1_greeting",
+  "rootNodeId": "start",
+  "speaker": "Rebel1",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Rebel1",
+      "text": "Witaj w obozie. Tu nie ma panów, tylko silniejsi i słabsi. Po której stronie będziesz?",
+      "choices": [
+        {"text": "Po stronie silniejszych.", "conditions": [], "actions": [], "nextNode": "strong"},
+        {"text": "Chcę pomóc słabszym.", "conditions": [], "actions": [], "nextNode": "weak"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "strong": {
+      "nodeId": "strong",
+      "speaker": "Rebel1",
+      "text": "To idź do Drwala. On lubi twardzieli.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "weak": {
+      "nodeId": "weak",
+      "speaker": "Rebel1",
+      "text": "To jesteś w złym miejscu. Tutaj słabi pracują lub giną.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "id": "dialog_kosa2",
+  "rootNodeId": "start",
+  "speaker": "Kosa",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Kosa",
+      "text": "Ty znowu. Co, nie wystarczyło ci ostrzeżenie? Albo szukasz śmierci?",
+      "choices": [
+        {
+          "text": "Potrzebuję pomocy z bandytami.",
+          "conditions": [
+            { "type": "QuestActive", "questId": "Q_S_008" }
+          ],
+          "actions": [],
+          "nextNode": "bandits"
+        },
+        {
+          "text": "Chcę się nauczyć skórowania.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "skinning"
+        },
+        {
+          "text": "Masz coś na sprzedaż?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "trade"
+        },
+        {
+          "text": "Nic. Idę dalej.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "bandits": {
+      "nodeId": "bandits",
+      "speaker": "Kosa",
+      "text": "Bandyci... Ci z przełęczy. Zabij trzech, przynieś mi ich odznaki. Pokażę ci, jak naprawdę ciąć.",
+      "choices": [
+        {
+          "text": "Zrobię to.",
+          "conditions": [],
+          "actions": [
+            { "type": "SetFlag", "flag": "kosa_bandit_quest" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "skinning": {
+      "nodeId": "skinning",
+      "speaker": "Kosa",
+      "text": "Skórowanie to sztuka, nie rzeźnia. Najpierw musisz zabić czysto. Potem nóż pod skórę, jeden ruch. Przynieś mi dwa wilcze skóry, pokażę ci trik.",
+      "choices": [
+        {
+          "text": "Mam skóry.",
+          "conditions": [
+            { "type": "HasItem", "itemId": "item_wolf_pelt", "count": 2 }
+          ],
+          "actions": [
+            { "type": "RemoveItem", "itemId": "item_wolf_pelt", "count": 2 },
+            { "type": "GiveItem", "itemId": "item_lockpick", "count": 2 },
+            { "type": "SetFlag", "flag": "learned_skinning" }
+          ],
+          "nextNode": "taught"
+        },
+        {
+          "text": "Wrócę później.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "taught": {
+      "nodeId": "taught",
+      "speaker": "Kosa",
+      "text": "No proszę. Masz talent do brudu. Teraz idź i nie marnuj skór.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "trade": {
+      "nodeId": "trade",
+      "speaker": "Kosa",
+      "text": "Mam nóż i trochę ziół. Ale za darmo nic nie dam.",
+      "choices": [
+        {
+          "text": "Wezmę nóż.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "buy"
+        }
+      ]
+    },
+    "buy": {
+      "nodeId": "buy",
+      "speaker": "Kosa",
+      "text": "Dwadzieścia pięć sztuk. I ani mniej.",
+      "choices": [
+        {
+          "text": "Biorę.",
+          "conditions": [
+            { "type": "HasGold", "amount": 25 }
+          ],
+          "actions": [
+            { "type": "SpendGold", "amount": 25 },
+            { "type": "GiveItem", "itemId": "item_misc_knife", "count": 1 }
+          ],
+          "nextNode": null
+        },
+        {
+          "text": "Za drogo.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

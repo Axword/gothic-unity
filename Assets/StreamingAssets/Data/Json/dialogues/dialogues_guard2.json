@@ -1,0 +1,29 @@
+{
+  "id": "dialog_guard2_greeting",
+  "rootNodeId": "start",
+  "speaker": "Strażnik Piotr",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Strażnik Piotr",
+      "text": "Nie znam cię. Masz tu kogoś czy po prostu zabłądziłeś do osady?",
+      "choices": [
+        {"text": "Szukam Aldony.", "conditions": [], "actions": [], "nextNode": "aldona"},
+        {"text": "Chcę się zaciągnąć do gildii.", "conditions": [], "actions": [], "nextNode": "recruit"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "aldona": {
+      "nodeId": "aldona",
+      "speaker": "Strażnik Piotr",
+      "text": "Idź prosto do wielkiego budynku. I nie sprawiaj problemów.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "recruit": {
+      "nodeId": "recruit",
+      "speaker": "Strażnik Piotr",
+      "text": "Idź do Boruka. On prowadzi rekrutację. Tylko udowodnij, że jesteś wart.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

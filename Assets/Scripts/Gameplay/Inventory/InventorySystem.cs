@@ -1,7 +1,7 @@
+using ZelaznaDroga.Core.Utilities;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using ZelaznaDroga.Core.Attributes;
 using ZelaznaDroga.Data.Schema;
 
 namespace ZelaznaDroga.Gameplay.Inventory
@@ -12,14 +12,10 @@ namespace ZelaznaDroga.Gameplay.Inventory
     public class InventorySystem : BaseMonoBehaviour
     {
         #region Constants
-
         private const int DEFAULT_CAPACITY = 20;
         private const int GOLD_STACK_LIMIT = 99999;
-
         #endregion
-
         #region Events
-
         public event Action<ItemInstance> OnItemAdded;
         public event Action<ItemInstance> OnItemRemoved;
         public event Action<ItemInstance> OnItemEquipped;
@@ -27,22 +23,13 @@ namespace ZelaznaDroga.Gameplay.Inventory
         public event Action<int> OnGoldChanged;
         public event Action OnInventoryFull;
         public event Action OnInventoryChanged;
-
-        #endregion
-
         #region Inventory
-
         [Header("Inventory Settings")]
         [SerializeField] private int _capacity = DEFAULT_CAPACITY;
         [SerializeField] private int _gold = 0;
-
         private List<ItemInstance> _items = new List<ItemInstance>();
         private Dictionary<string, ItemInstance> _itemsById = new Dictionary<string, ItemInstance>();
-
-        #endregion
-
         #region Equipment
-
         private ItemInstance _equippedWeapon1;
         private ItemInstance _equippedWeapon2;
         private ItemInstance _equippedArmor;
@@ -50,17 +37,12 @@ namespace ZelaznaDroga.Gameplay.Inventory
         private ItemInstance _equippedBoots;
         private ItemInstance _equippedGloves;
         private ItemInstance _equippedAmulet;
-
-        #endregion
-
         #region Properties
-
         public int Gold => _gold;
         public int Capacity => _capacity;
         public int UsedSlots => _items.Count;
         public int FreeSlots => _capacity - _items.Count;
         public bool IsFull => _items.Count >= _capacity;
-
         public IReadOnlyList<ItemInstance> Items => _items;
         public ItemInstance EquippedWeapon1 => _equippedWeapon1;
         public ItemInstance EquippedWeapon2 => _equippedWeapon2;
@@ -69,40 +51,22 @@ namespace ZelaznaDroga.Gameplay.Inventory
         public ItemInstance EquippedBoots => _equippedBoots;
         public ItemInstance EquippedGloves => _equippedGloves;
         public ItemInstance EquippedAmulet => _equippedAmulet;
-
-        #endregion
-
         #region Unity Lifecycle
-
         private void Start()
         {
             ComponentLocator.Register<IInventorySystem>(new InventorySystemInterface(this));
         }
-
         private void OnDestroy()
-        {
             ComponentLocator.Unregister<IInventorySystem>(new InventorySystemInterface(this));
-        }
-
-        #endregion
-
         #region Item Management
-
         /// <summary>
         /// Adds an item to the inventory.
         /// </summary>
         public bool AddItem(string itemId, int count = 1)
-        {
             return AddItem(new ItemInstance { ItemId = itemId, Count = count });
-        }
-
-        /// <summary>
         /// Adds an item instance to the inventory.
-        /// </summary>
         public bool AddItem(ItemInstance item)
-        {
             if (item == null || string.IsNullOrEmpty(item.ItemId)) return false;
-
             // Special handling for gold
             if (item.ItemId == GameConstants.ITEM_GOLD)
             {
@@ -111,25 +75,16 @@ namespace ZelaznaDroga.Gameplay.Inventory
                 OnInventoryChanged?.Invoke();
                 return true;
             }
-
             // Check for existing stackable item
             ItemInstance existing = FindStackableItem(item.ItemId);
             if (existing != null && existing.Data != null && existing.Data.stackable)
-            {
                 existing.Count = Mathf.Min(existing.Count + item.Count, existing.Data.maxStack);
                 OnItemAdded?.Invoke(existing);
-                OnInventoryChanged?.Invoke();
-                return true;
-            }
-
             // Check capacity
             if (IsFull)
-            {
                 OnInventoryFull?.Invoke();
-                Debug.Log($"[Inventory] Cannot add item {_item.ItemId}: Inventory full");
+                Debug.Log($"[Inventory] Cannot add item {item.ItemId}: Inventory full");
                 return false;
-            }
-
             // Add new item
             ItemInstance newItem = item.Clone();
             _items.Add(newItem);
@@ -139,147 +94,53 @@ namespace ZelaznaDroga.Gameplay.Inventory
             EventBus.Publish(new ItemPickupEvent(item.ItemId, item.Count));
             OnInventoryChanged?.Invoke();
             return true;
-        }
-
-        /// <summary>
         /// Removes an item from the inventory.
-        /// </summary>
         public bool RemoveItem(string itemId, int count = 1)
-        {
             return RemoveItem(FindItem(itemId), count);
-        }
-
-        /// <summary>
         /// Removes an item instance from the inventory.
-        /// </summary>
         public bool RemoveItem(ItemInstance item, int count = 1)
-        {
             if (item == null) return false;
-
-            if (item.ItemId == GameConstants.ITEM_GOLD)
-            {
                 _gold = Mathf.Max(0, _gold - count);
                 item.Count -= count;
-                OnGoldChanged?.Invoke(_gold);
-                OnInventoryChanged?.Invoke();
-                return true;
-            }
-
             if (item.Count <= count)
-            {
                 _items.Remove(item);
                 _itemsById.Remove(item.InstanceId);
                 item.Count = 0;
                 OnItemRemoved?.Invoke(item);
-            }
             else
-            {
-                item.Count -= count;
-            }
-
-            OnInventoryChanged?.Invoke();
-            return true;
-        }
-
-        /// <summary>
         /// Checks if player has an item.
-        /// </summary>
         public bool HasItem(string itemId, int count = 1)
-        {
             if (itemId == GameConstants.ITEM_GOLD)
-            {
                 return _gold >= count;
-            }
-
             int total = 0;
             foreach (var item in _items)
-            {
                 if (item.ItemId == itemId)
                 {
                     total += item.Count;
                 }
-            }
             return total >= count;
-        }
-
-        /// <summary>
         /// Gets total count of an item.
-        /// </summary>
         public int GetItemCount(string itemId)
-        {
-            if (itemId == GameConstants.ITEM_GOLD)
-            {
                 return _gold;
-            }
-
-            int total = 0;
-            foreach (var item in _items)
-            {
-                if (item.ItemId == itemId)
-                {
-                    total += item.Count;
-                }
-            }
             return total;
-        }
-
-        /// <summary>
         /// Finds first item with given ID.
-        /// </summary>
         public ItemInstance FindItem(string itemId)
-        {
-            foreach (var item in _items)
-            {
-                if (item.ItemId == itemId)
-                {
                     return item;
-                }
-            }
             return null;
-        }
-
-        /// <summary>
         /// Finds stackable item.
-        /// </summary>
         private ItemInstance FindStackableItem(string itemId)
-        {
-            foreach (var item in _items)
-            {
                 if (item.ItemId == itemId && item.Data != null && item.Data.stackable && item.Count < item.Data.maxStack)
-                {
-                    return item;
-                }
-            }
-            return null;
-        }
-
-        /// <summary>
         /// Clears all items from inventory.
-        /// </summary>
         public void Clear()
-        {
             _items.Clear();
             _itemsById.Clear();
             _gold = 0;
-            OnInventoryChanged?.Invoke();
-        }
-
-        #endregion
-
-        #region Equipment
-
-        /// <summary>
         /// Equips an item.
-        /// </summary>
         public bool EquipItem(ItemInstance item)
-        {
             if (item == null || item.Data == null) return false;
-
             bool success = false;
             ItemInstance previousItem = null;
-
             switch (item.Data.itemType)
-            {
                 case ItemType.Weapon:
                     if (_equippedWeapon1 == null || _equippedWeapon1.Data == null)
                     {
@@ -288,17 +149,12 @@ namespace ZelaznaDroga.Gameplay.Inventory
                         success = true;
                     }
                     else
-                    {
                         previousItem = _equippedWeapon2;
                         _equippedWeapon2 = item;
-                        success = true;
-                    }
                     break;
-
                 case ItemType.Armor:
                     var armorData = item.Data as ArmorData;
                     if (armorData != null)
-                    {
                         switch (armorData.slot)
                         {
                             case ArmorSlot.Body:
@@ -308,61 +164,31 @@ namespace ZelaznaDroga.Gameplay.Inventory
                             case ArmorSlot.Head:
                                 previousItem = _equippedHelmet;
                                 _equippedHelmet = item;
-                                break;
                             case ArmorSlot.Feet:
                                 previousItem = _equippedBoots;
                                 _equippedBoots = item;
-                                break;
                             case ArmorSlot.Hands:
                                 previousItem = _equippedGloves;
                                 _equippedGloves = item;
-                                break;
                         }
-                        success = true;
-                    }
-                    break;
-            }
-
             if (success)
-            {
                 RemoveItem(item);
                 OnItemEquipped?.Invoke(item);
-                OnInventoryChanged?.Invoke();
-
                 if (previousItem != null)
-                {
                     AddItem(previousItem);
-                }
-            }
-
             return success;
-        }
-
-        /// <summary>
         /// Unequips an item to inventory.
-        /// </summary>
         public bool UnequipItem(ItemType type, ArmorSlot? armorSlot = null)
-        {
             ItemInstance item = null;
-
             if (type == ItemType.Weapon)
-            {
                 if (_equippedWeapon1 != null)
-                {
                     item = _equippedWeapon1;
                     _equippedWeapon1 = _equippedWeapon2;
                     _equippedWeapon2 = null;
-                }
                 else if (_equippedWeapon2 != null)
-                {
                     item = _equippedWeapon2;
-                    _equippedWeapon2 = null;
-                }
-            }
             else if (type == ItemType.Armor && armorSlot.HasValue)
-            {
                 switch (armorSlot.Value)
-                {
                     case ArmorSlot.Body:
                         item = _equippedArmor;
                         _equippedArmor = null;
@@ -370,48 +196,24 @@ namespace ZelaznaDroga.Gameplay.Inventory
                     case ArmorSlot.Head:
                         item = _equippedHelmet;
                         _equippedHelmet = null;
-                        break;
                     case ArmorSlot.Feet:
                         item = _equippedBoots;
                         _equippedBoots = null;
-                        break;
                     case ArmorSlot.Hands:
                         item = _equippedGloves;
                         _equippedGloves = null;
-                        break;
-                }
-            }
-
             if (item != null)
-            {
                 AddItem(item);
                 OnItemUnequipped?.Invoke(item);
-                return true;
-            }
-
             return false;
-        }
-
-        /// <summary>
         /// Gets equipped weapon damage range.
-        /// </summary>
         public (int min, int max) GetEquippedWeaponDamage()
-        {
             var weapon = _equippedWeapon1?.Data as WeaponData ?? _equippedWeapon2?.Data as WeaponData;
             if (weapon != null)
-            {
                 return (weapon.damage.min, weapon.damage.max);
-            }
             return (1, 2); // Fists
-        }
-
-        /// <summary>
         /// Gets equipped armor value.
-        /// </summary>
         public int GetTotalArmor()
-        {
-            int total = 0;
-            
             if (_equippedArmor?.Data is ArmorData armor)
                 total += armor.armor.physical;
             if (_equippedHelmet?.Data is ArmorData helmet)
@@ -420,42 +222,18 @@ namespace ZelaznaDroga.Gameplay.Inventory
                 total += boots.armor.physical;
             if (_equippedGloves?.Data is ArmorData gloves)
                 total += gloves.armor.physical;
-
-            return total;
-        }
-
-        #endregion
-
         #region Trading
-
-        /// <summary>
         /// Adds gold.
-        /// </summary>
         public void AddGold(int amount)
-        {
             _gold = Mathf.Min(_gold + amount, GOLD_STACK_LIMIT);
             OnGoldChanged?.Invoke(_gold);
-        }
-
-        /// <summary>
         /// Spends gold if player has enough.
-        /// </summary>
         public bool SpendGold(int amount)
-        {
             if (_gold < amount) return false;
             _gold -= amount;
-            OnGoldChanged?.Invoke(_gold);
-            return true;
-        }
-
-        #endregion
-
         #region Save/Load
-
         public EquipmentSaveData GetEquipmentSaveData()
-        {
             return new EquipmentSaveData
-            {
                 weapon1 = _equippedWeapon1?.ItemId,
                 weapon2 = _equippedWeapon2?.ItemId,
                 armor = _equippedArmor?.ItemId,
@@ -464,108 +242,55 @@ namespace ZelaznaDroga.Gameplay.Inventory
                 gloves = _equippedGloves?.ItemId,
                 amulet = _equippedAmulet?.ItemId
             };
-        }
-
         public List<InventoryItemSave> GetInventorySaveData()
-        {
             var list = new List<InventoryItemSave>();
-            
             if (_gold > 0)
-            {
                 list.Add(new InventoryItemSave { id = GameConstants.ITEM_GOLD, count = _gold });
-            }
-
-            foreach (var item in _items)
-            {
                 list.Add(new InventoryItemSave { id = item.ItemId, count = item.Count });
-            }
-
             return list;
-        }
-
         public void LoadInventorySaveData(List<InventoryItemSave> data)
-        {
             Clear();
-
             foreach (var item in data)
-            {
                 if (item.id == GameConstants.ITEM_GOLD)
-                {
                     _gold = item.count;
-                }
                 else
-                {
                     AddItem(item.id, item.count);
-                }
-            }
-        }
-
         public void LoadEquipmentSaveData(EquipmentSaveData data)
-        {
             // Equipment is loaded by equipping items from inventory
             if (!string.IsNullOrEmpty(data.weapon1))
-            {
                 var item = FindItem(data.weapon1);
                 if (item != null) EquipItem(item);
-            }
             // ... etc
-        }
-
-        #endregion
     }
-
     #region Item Instance
-
-    /// <summary>
     /// Runtime representation of an item in inventory.
-    /// </summary>
     [Serializable]
     public class ItemInstance
-    {
         public string InstanceId { get; set; }
         public string ItemId { get; set; }
         public int Count { get; set; } = 1;
         public bool IsEquipped { get; set; }
-
         // Runtime data (set when loaded from database)
         [NonSerialized] public ItemData Data;
         [NonSerialized] public int CurrentDurability;
-
         public ItemInstance()
-        {
             InstanceId = System.Guid.NewGuid().ToString();
-        }
-
         public ItemInstance(string itemId, int count = 1)
-        {
-            InstanceId = System.Guid.NewGuid().ToString();
             ItemId = itemId;
             Count = count;
-        }
-
         public ItemInstance Clone()
-        {
             return new ItemInstance
-            {
                 InstanceId = System.Guid.NewGuid().ToString(),
                 ItemId = ItemId,
                 Count = Count,
                 Data = Data,
                 CurrentDurability = Data?.durability?.current ?? 0
-            };
-        }
-    }
-
     #endregion
-
     #region Interface
-
     public interface IInventorySystem
-    {
         int Gold { get; }
         bool IsFull { get; }
         int FreeSlots { get; }
-
         bool AddItem(string itemId, int count = 1);
         bool RemoveItem(string itemId, int count = 1);
         bool HasItem(string itemId, int count = 1);
@@ -574,21 +299,13 @@ namespace ZelaznaDroga.Gameplay.Inventory
         bool EquipItem(ItemInstance item);
         bool UnequipItem(ItemType type, ArmorSlot? slot = null);
         bool SpendGold(int amount);
-    }
-
     public class InventorySystemInterface : IInventorySystem
-    {
         private readonly InventorySystem _inventory;
-
         public InventorySystemInterface(InventorySystem inventory)
-        {
             _inventory = inventory;
-        }
-
         public int Gold => _inventory.Gold;
         public bool IsFull => _inventory.IsFull;
         public int FreeSlots => _inventory.FreeSlots;
-
         public bool AddItem(string itemId, int count = 1) => _inventory.AddItem(itemId, count);
         public bool RemoveItem(string itemId, int count = 1) => _inventory.RemoveItem(itemId, count);
         public bool HasItem(string itemId, int count = 1) => _inventory.HasItem(itemId, count);
@@ -597,7 +314,4 @@ namespace ZelaznaDroga.Gameplay.Inventory
         public bool EquipItem(ItemInstance item) => _inventory.EquipItem(item);
         public bool UnequipItem(ItemType type, ArmorSlot? slot = null) => _inventory.UnequipItem(type, slot);
         public bool SpendGold(int amount) => _inventory.SpendGold(amount);
-    }
-
-    #endregion
 }

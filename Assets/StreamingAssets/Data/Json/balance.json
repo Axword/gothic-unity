@@ -1,0 +1,12 @@
+{
+  "balance": {
+    "xpPerLevelBase": 100,
+    "xpScaling": 1.5,
+    "baseHPPerLevel": 10,
+    "learningPointsPerLevel": 1,
+    "crimeWitnessRange": 12,
+    "theftFineMultiplier": 3,
+    "lockpickBreakChance": 0.25,
+    "skinSuccessBase": 0.6
+  }
+}

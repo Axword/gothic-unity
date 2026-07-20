@@ -21,19 +21,19 @@ namespace ZelaznaDroga.Core.Extensions
         /// <summary>
         /// Safely destroys a GameObject or Component.
         /// </summary>
-        public static void SafeDestroy(UnityEngine.Object obj)
+        public static void SafeDestroy(this UnityEngine.Object obj)
         {
             if (obj == null) return;
-            
+
 #if UNITY_EDITOR
             if (!Application.isPlaying)
             {
-                DestroyImmediate(obj);
+                UnityEngine.Object.DestroyImmediate(obj);
             }
             else
 #endif
             {
-                Destroy(obj);
+                UnityEngine.Object.Destroy(obj);
             }
         }
 
@@ -44,7 +44,7 @@ namespace ZelaznaDroga.Core.Extensions
         {
             for (int i = transform.childCount - 1; i >= 0; i--)
             {
-                SafeDestroy(transform.GetChild(i).gameObject);
+                transform.GetChild(i).gameObject.SafeDestroy();
             }
         }
 

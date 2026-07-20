@@ -1,0 +1,94 @@
+{
+  "id": "dialog_forest_hunter",
+  "rootNodeId": "start",
+  "speaker": "Myśliwy z Lasu",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Myśliwy",
+      "text": "Cicho. Wilki tu krążą. Szukasz zwierzyny czy kłopotów?",
+      "choices": [
+        {
+          "text": "Szukam skór.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "pelts"
+        },
+        {
+          "text": "Chcę polować z tobą.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "hunt"
+        },
+        {
+          "text": "Słyszałem o niedźwiedziu.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "bear"
+        },
+        {
+          "text": "Idę swoją drogą.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "pelts": {
+      "nodeId": "pelts",
+      "speaker": "Myśliwy",
+      "text": "Skóry są dobre. Ale wilki są sprytne. Przynieś mi trzy, a nauczę cię jak je obierać szybko.",
+      "choices": [
+        {
+          "text": "Umowa.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_012" }
+          ],
+          "nextNode": "quest_given"
+        }
+      ]
+    },
+    "hunt": {
+      "nodeId": "hunt",
+      "speaker": "Myśliwy",
+      "text": "Dobrze. Ale uważaj na tył. I nie strzelaj do wszystkiego co się rusza.",
+      "choices": [
+        {
+          "text": "Idziemy.",
+          "conditions": [],
+          "actions": [
+            { "type": "SetFlag", "flag": "hunting_with_hunter" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "bear": {
+      "nodeId": "bear",
+      "speaker": "Myśliwy",
+      "text": "Niedźwiedź na północy. Duży i zły. Jeśli chcesz się z nim zmierzyć — lepiej weź ze sobą kogoś. Albo nie wracaj.",
+      "choices": [
+        {
+          "text": "Pójdę sam.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "quest_given": {
+      "nodeId": "quest_given",
+      "speaker": "Myśliwy",
+      "text": "Dobrze. Idź do lasu. Trzy skóry. I pamiętaj — nie daj się zaskoczyć.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

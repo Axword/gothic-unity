@@ -1,0 +1,29 @@
+{
+  "id": "dialog_guard5_greeting",
+  "rootNodeId": "start",
+  "speaker": "Strażnik Jan",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Strażnik Jan",
+      "text": "Nie znam cię. Masz tu kogoś znajomego czy po prostu zabłądziłeś?",
+      "choices": [
+        {"text": "Szukam Aldony.", "conditions": [], "actions": [], "nextNode": "aldona"},
+        {"text": "Chcę się zaciągnąć.", "conditions": [], "actions": [], "nextNode": "recruit"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "aldona": {
+      "nodeId": "aldona",
+      "speaker": "Strażnik Jan",
+      "text": "Idź prosto do wielkiego budynku. I nie kręć się po osadzie.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "recruit": {
+      "nodeId": "recruit",
+      "speaker": "Strażnik Jan",
+      "text": "Idź do Boruka. On prowadzi rekrutację. Tylko udowodnij, że jesteś wart.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

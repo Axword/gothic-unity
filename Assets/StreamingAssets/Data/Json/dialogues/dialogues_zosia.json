@@ -1,0 +1,22 @@
+{
+  "id": "dialog_zosia_greeting",
+  "rootNodeId": "start",
+  "speaker": "Zosia",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Zosia",
+      "text": "Dzień dobry... Te wilki znowu kręcą się przy zagrodzie. Może byś coś z tym zrobił?",
+      "choices": [
+        {"text": "Zajmę się wilkami.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_S_001"}], "nextNode": "thanks"},
+        {"text": "Może później.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "thanks": {
+      "nodeId": "thanks",
+      "speaker": "Zosia",
+      "text": "Będę wdzięczna. Uważaj na siebie.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

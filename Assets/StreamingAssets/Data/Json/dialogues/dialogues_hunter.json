@@ -1,0 +1,29 @@
+{
+  "id": "dialog_hunter_greeting",
+  "rootNodeId": "start",
+  "speaker": "Myśliwy",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Myśliwy",
+      "text": "Dobre żelazo jest teraz droższe niż złoto. Masz coś na handel? Albo chcesz polować ze mną?",
+      "choices": [
+        {"text": "Chcę polować.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_S_004"}], "nextNode": "hunt"},
+        {"text": "Co masz na sprzedaż?", "conditions": [], "actions": [], "nextNode": "shop"},
+        {"text": "Nie teraz.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "hunt": {
+      "nodeId": "hunt",
+      "speaker": "Myśliwy",
+      "text": "Dobrze. Zbierz mi dwie sztabki żelaza z kopalni na północy. Potem pogadamy o łowach.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "shop": {
+      "nodeId": "shop",
+      "speaker": "Myśliwy",
+      "text": "Mam trochę skór i strzał. Za żelazo dam dobrą cenę.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}
