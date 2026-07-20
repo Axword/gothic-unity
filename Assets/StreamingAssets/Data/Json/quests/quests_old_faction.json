@@ -1,0 +1,365 @@
+{
+  "quests": [
+    {
+      "id": "Q_F_OLD_001",
+      "titleKey": "quest_f_old_001_title",
+      "descriptionKey": "quest_f_old_001_desc",
+      "type": "FactionOld",
+      "faction": "OldOrder",
+      "requirements": {
+        "level": 1,
+        "quests": ["Q_M_002"],
+        "flags": ["met_aldona"],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_f_old_001_stage_1",
+          "objectives": [
+            { "type": "Explore", "target": "location_farm_kowalski", "description": "Idź do farmy Kowalskiego" }
+          ],
+          "onComplete": {
+            "addFlags": ["reached_farm"]
+          }
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest_f_old_001_stage_2",
+          "objectives": [
+            { "type": "Kill", "target": "monster_wolf", "count": 3, "description": "Zabij 3 wilki" }
+          ],
+          "onComplete": {
+            "addFlags": ["wolves_killed"]
+          }
+        },
+        {
+          "id": 3,
+          "descriptionKey": "quest_f_old_001_stage_3",
+          "objectives": [
+            { "type": "Collect", "target": "item_wolf_pelt", "count": 3, "itemId": "item_wolf_pelt", "description": "Przynieś dowód (3 wilcze skóry)" }
+          ],
+          "onComplete": {
+            "addFlags": ["brought_proof"]
+          }
+        },
+        {
+          "id": 4,
+          "descriptionKey": "quest_f_old_001_stage_4",
+          "objectives": [
+            { "type": "Talk", "target": "npc_aldona", "description": "Zgłoś się Mistrzyni Aldonie" }
+          ],
+          "onComplete": {
+            "addFlags": ["quest_old_001_complete"],
+            "changeReputation": { "OldOrder": 5 }
+          }
+        }
+      ],
+      "rewards": {
+        "xp": 150,
+        "gold": 50,
+        "items": ["item_iron_sword_01"],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": { "OldOrder": 5 }
+      },
+      "failConditions": [],
+      "parentQuest": null,
+      "nextQuest": "Q_F_OLD_002"
+    },
+    {
+      "id": "Q_F_OLD_002",
+      "titleKey": "quest_f_old_002_title",
+      "descriptionKey": "quest_f_old_002_desc",
+      "type": "FactionOld",
+      "faction": "OldOrder",
+      "requirements": {
+        "level": 3,
+        "quests": ["Q_F_OLD_001"],
+        "flags": ["wolves_killed"],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_f_old_002_stage_1",
+          "objectives": [
+            { "type": "Talk", "target": "npc_boruk", "description": "Porozmawiaj ze Strażnikiem Borukiem" }
+          ],
+          "onComplete": {
+            "addFlags": ["talked_boruk_quest"]
+          }
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest_f_old_002_stage_2",
+          "objectives": [
+            { "type": "Explore", "target": "location_forest_hideout", "description": "Znajdź kryjówkę złodzieja" }
+          ],
+          "onComplete": {
+            "addFlags": ["found_thief_hideout"]
+          }
+        },
+        {
+          "id": 3,
+          "descriptionKey": "quest_f_old_002_stage_3",
+          "objectives": [
+            { "type": "Kill", "target": "npc_bandit_thief", "count": 1, "description": "Pojmaj lub zabij złodzieja" }
+          ],
+          "onComplete": {
+            "addFlags": ["thief_dealt_with"]
+          }
+        },
+        {
+          "id": 4,
+          "descriptionKey": "quest_f_old_002_stage_4",
+          "objectives": [
+            { "type": "Talk", "target": "npc_boruk", "description": "Zwróć złodzieja Borukowi" }
+          ],
+          "onComplete": {
+            "addFlags": ["quest_old_002_complete"],
+            "changeReputation": { "OldOrder": 8 }
+          }
+        }
+      ],
+      "rewards": {
+        "xp": 200,
+        "gold": 80,
+        "items": [],
+        "flags": ["unlock_trainer_combat"],
+        "skillPoints": 0,
+        "reputation": { "OldOrder": 8 }
+      },
+      "failConditions": [],
+      "parentQuest": "Q_F_OLD_001",
+      "nextQuest": "Q_F_OLD_003"
+    },
+    {
+      "id": "Q_F_OLD_003",
+      "titleKey": "quest_f_old_003_title",
+      "descriptionKey": "quest_f_old_003_desc",
+      "type": "FactionOld",
+      "faction": "OldOrder",
+      "requirements": {
+        "level": 3,
+        "quests": ["Q_F_OLD_002"],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_f_old_003_stage_1",
+          "objectives": [
+            { "type": "Talk", "target": "npc_mlynarczyk", "description": "Porozmawiaj z Rzemieślnikiem Młynarczykiem" }
+          ],
+          "onComplete": {
+            "addFlags": ["talked_mlynarczyk"]
+          }
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest_f_old_003_stage_2",
+          "objectives": [
+            { "type": "Collect", "target": "item_iron_ore", "count": 5, "itemId": "item_iron_ore", "description": "Zbierz 5 sztuk rudy" }
+          ],
+          "onComplete": {
+            "addFlags": ["ore_collected"]
+          }
+        },
+        {
+          "id": 3,
+          "descriptionKey": "quest_f_old_003_stage_3",
+          "objectives": [
+            { "type": "Talk", "target": "npc_mlynarczyk", "description": "Dostarcz rudę Młynarczykowi" }
+          ],
+          "onComplete": {
+            "addFlags": ["quest_old_003_complete"],
+            "changeReputation": { "OldOrder": 3 }
+          }
+        }
+      ],
+      "rewards": {
+        "xp": 180,
+        "gold": 60,
+        "items": [],
+        "flags": ["mlynarczyk_discount"],
+        "skillPoints": 0,
+        "reputation": { "OldOrder": 3 }
+      },
+      "failConditions": [],
+      "parentQuest": "Q_F_OLD_002",
+      "nextQuest": "Q_F_OLD_004"
+    },
+    {
+      "id": "Q_F_OLD_004",
+      "titleKey": "quest_f_old_004_title",
+      "descriptionKey": "quest_f_old_004_desc",
+      "type": "FactionOld",
+      "faction": "OldOrder",
+      "requirements": {
+        "level": 5,
+        "quests": ["Q_F_OLD_003"],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_f_old_004_stage_1",
+          "objectives": [
+            { "type": "Talk", "target": "npc_aldona", "description": "Porozmawiaj z Aldoną" }
+          ],
+          "onComplete": {
+            "addFlags": ["aldona_artifact_quest"]
+          }
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest_f_old_004_stage_2",
+          "objectives": [
+            { "type": "Explore", "target": "location_mine_entrance", "description": "Zbadaj wejście do kamieniołomów" }
+          ],
+          "onComplete": {
+            "addFlags": ["explored_mine"]
+          }
+        },
+        {
+          "id": 3,
+          "descriptionKey": "quest_f_old_004_stage_3",
+          "objectives": [
+            { "type": "Collect", "target": "item_ancient_artifact", "count": 1, "itemId": "item_ancient_artifact", "description": "Znajdź artefakt" }
+          ],
+          "onComplete": {
+            "addFlags": ["found_artifact"]
+          }
+        },
+        {
+          "id": 4,
+          "descriptionKey": "quest_f_old_004_stage_4",
+          "objectives": [
+            { "type": "Talk", "target": "npc_aldona", "description": "Przynieś artefakt Aldonie" }
+          ],
+          "onComplete": {
+            "addFlags": ["quest_old_004_complete"],
+            "changeReputation": { "OldOrder": 10 }
+          }
+        }
+      ],
+      "rewards": {
+        "xp": 350,
+        "gold": 100,
+        "items": ["item_chainmail_01"],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": { "OldOrder": 10 }
+      },
+      "failConditions": [],
+      "parentQuest": "Q_F_OLD_003",
+      "nextQuest": "Q_F_OLD_005"
+    },
+    {
+      "id": "Q_F_OLD_005",
+      "titleKey": "quest_f_old_005_title",
+      "descriptionKey": "quest_f_old_005_desc",
+      "type": "FactionOld",
+      "faction": "OldOrder",
+      "requirements": {
+        "level": 7,
+        "quests": ["Q_F_OLD_004"],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_f_old_005_stage_1",
+          "objectives": [
+            { "type": "Talk", "target": "npc_aldona", "description": "Porozmawiaj z Aldoną" }
+          ],
+          "onComplete": {
+            "addFlags": ["aldona_investigation"]
+          }
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest_f_old_005_stage_2",
+          "objectives": [
+            { "type": "Talk", "target": "npc_suspect_1", "count": 3, "description": "Przesłuchaj podejrzanych" }
+          ],
+          "onComplete": {
+            "addFlags": ["suspects_interrogated"]
+          }
+        },
+        {
+          "id": 3,
+          "descriptionKey": "quest_f_old_005_stage_3",
+          "objectives": [
+            { "type": "Kill", "target": "npc_traitors", "count": 1, "description": "Konkluzja (zabij/oskarż)" }
+          ],
+          "onComplete": {
+            "addFlags": ["traitors_dealt"]
+          }
+        }
+      ],
+      "rewards": {
+        "xp": 400,
+        "gold": 150,
+        "items": [],
+        "flags": ["guardian_honor"],
+        "skillPoints": 1,
+        "reputation": { "OldOrder": 15 }
+      },
+      "failConditions": [],
+      "parentQuest": "Q_F_OLD_004",
+      "nextQuest": "Q_F_OLD_FINAL"
+    },
+    {
+      "id": "Q_F_OLD_FINAL",
+      "titleKey": "quest_f_old_final_title",
+      "descriptionKey": "quest_f_old_final_desc",
+      "type": "FactionOld",
+      "faction": "OldOrder",
+      "requirements": {
+        "level": 8,
+        "quests": ["Q_F_OLD_005"],
+        "flags": ["made_choice"],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_f_old_final_stage_1",
+          "objectives": [
+            { "type": "Explore", "target": "location_dwor", "description": "Przyjdź na ceremonię" }
+          ],
+          "onComplete": {
+            "addFlags": ["ceremony_attended"]
+          }
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest_f_old_final_stage_2",
+          "objectives": [
+            { "type": "Interact", "target": "ceremony_choice", "description": "Złóż przysięgę" }
+          ],
+          "onComplete": {
+            "addFlags": ["sworn_to_guild", "guild_member"],
+            "changeReputation": { "OldOrder": 30 }
+          }
+        }
+      ],
+      "rewards": {
+        "xp": 500,
+        "gold": 200,
+        "items": ["item_guild_armor_01"],
+        "flags": ["guild_champion"],
+        "skillPoints": 3,
+        "reputation": { "OldOrder": 30 }
+      },
+      "failConditions": [],
+      "parentQuest": "Q_F_OLD_005",
+      "nextQuest": null
+    }
+  ]
+}

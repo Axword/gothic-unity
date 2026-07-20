@@ -1,0 +1,140 @@
+{
+  "quests": [
+    {
+      "id": "Q_S_001",
+      "titleKey": "quest_s_001_title",
+      "descriptionKey": "quest_s_001_desc",
+      "type": "Side",
+      "faction": "None",
+      "requirements": {
+        "level": 1,
+        "quests": [],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_s_001_stage_1",
+          "objectives": [
+            { "type": "Collect", "target": "item_mushroom", "count": 5, "itemId": "item_mushroom", "description": "Zbierz 5 grzybów" }
+          ],
+          "onComplete": {}
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest_s_001_stage_2",
+          "objectives": [
+            { "type": "Talk", "target": "npc_zosia", "description": "Porozmawiaj z Zosią" }
+          ],
+          "onComplete": {
+            "changeReputation": { "OldOrder": 1 }
+          }
+        }
+      ],
+      "rewards": {
+        "xp": 30,
+        "gold": 20,
+        "items": [],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": null,
+      "nextQuest": null
+    },
+    {
+      "id": "Q_S_002",
+      "titleKey": "quest_s_002_title",
+      "descriptionKey": "quest_s_002_desc",
+      "type": "Side",
+      "faction": "None",
+      "requirements": {
+        "level": 2,
+        "quests": ["Q_M_002"],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_s_002_stage_1",
+          "objectives": [
+            { "type": "Explore", "target": "location_lost_items", "description": "Szukaj zguby w lesie" }
+          ],
+          "onComplete": {}
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest_s_002_stage_2",
+          "objectives": [
+            { "type": "Collect", "target": "item_locket", "count": 1, "itemId": "item_locket", "description": "Znajdź medalion" }
+          ],
+          "onComplete": {}
+        },
+        {
+          "id": 3,
+          "descriptionKey": "quest_s_002_stage_3",
+          "objectives": [
+            { "type": "Talk", "target": "npc_owner", "description": "Zwróć właścicielowi" }
+          ],
+          "onComplete": {}
+        }
+      ],
+      "rewards": {
+        "xp": 50,
+        "gold": 15,
+        "items": [],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": null,
+      "nextQuest": null
+    },
+    {
+      "id": "Q_S_003",
+      "titleKey": "quest_s_003_title",
+      "descriptionKey": "quest_s_003_desc",
+      "type": "Side",
+      "faction": "None",
+      "requirements": {
+        "level": 4,
+        "quests": [],
+        "flags": [],
+        "items": []
+      },
+      "stages": [
+        {
+          "id": 1,
+          "descriptionKey": "quest_s_003_stage_1",
+          "objectives": [
+            { "type": "Explore", "target": "location_farm_attacked", "description": "Zbadaj farmę" }
+          ],
+          "onComplete": {}
+        },
+        {
+          "id": 2,
+          "descriptionKey": "quest_s_003_stage_2",
+          "objectives": [
+            { "type": "Kill", "target": "monster_swamp_beast", "count": 1, "description": "Zabij Błotną Bestię" }
+          ],
+          "onComplete": {}
+        }
+      ],
+      "rewards": {
+        "xp": 200,
+        "gold": 100,
+        "items": ["item_swamp_scale"],
+        "flags": [],
+        "skillPoints": 0,
+        "reputation": {}
+      },
+      "failConditions": [],
+      "parentQuest": null,
+      "nextQuest": null
+    }
+  ]
+}

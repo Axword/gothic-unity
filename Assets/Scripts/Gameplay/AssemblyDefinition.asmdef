@@ -1,0 +1,17 @@
+{
+    "name": "ZelaznaDroga.Gameplay",
+    "rootNamespace": "ZelaznaDroga.Gameplay",
+    "references": [
+        "ZelaznaDroga.Core",
+        "ZelaznaDroga.Data"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
