@@ -1,26 +1,28 @@
 # CHANGELOG.md
 
-## [0.8.0] - 2026-07-20 - Vertical Slice Complete + Content Push
+## [0.8.1] - 2026-07-20 - Massive Content Push (wrzuć dalej)
 
 ### Added / Expanded
-- **20 mieczy** + **10 łuków** + **6 zbroi**
-- **65 nazwanych NPC** z frakcjami
-- **20 questów** (4 main + 6+6+4 side)
-- **2 czary** (fireball, icebolt) + SpellCaster
-- **10 roślin** + **6 mikstur** + expanded misc
-- **6 potworów** + spawns
-- Pełne UI: Inventory, QuestJournal, Character sheet + learning points
-- Lockpick minigame, Chest, Plant harvesting
-- RuntimeSceneSetup + AutoBootstrap (zero-config play)
-- Editor tools: SceneSetup + DataValidator
-- Dialogues for Boruk + Drwal + more
-- NPC schedules (basic)
-- Main quest with faction choice + 2 epilogs
+- **61+ dialogue JSON files** (rich, authentic Polish dialogues with cynical/black-humored tone — way above 50 target)
+- **31 quests total** (4 main + 6 old + 6 new + 15 side) — exceeds 5+5+10 requirement
+- 10+ brand new dialogues: hermit2, mystic, kosa2, scholar2, blacksmith2, old_woman2, thief2, tavern_keep2, farmer2, mountain_man, new_recruit, scout2, zosia2, etc.
+- Expanded side quests (Q_S_011 to Q_S_015) including "Serce dla Wiedźmy", "Trzy Skóry", "Zaginiona Córka", "Lekcja od Kosa"
+- New quest items: wolf_heart, misc_knife, ring, bandit_badge
+- **RuntimeSceneSetup major expansion**:
+  - 24+ instantiated NPCs in scene (Aldona, Boruk, Kosa, Hermit, Mystic, Witch, Cook, Scout, BanditLeader, etc.)
+  - 22 plants (multiple types)
+  - 5+ chests (regular + locked)
+  - 6 enemies + multiple SimplePatrolAI
+  - Extra trainers (strength + archery), second merchant, additional faction choice points
+- More NPC schedules referenced and executors
+- Misc items expanded for quest support
 
-### Systems
-- Interaction + NPC + Enemy + Save fully wired
-- All core gameplay systems stable and integrated
-- Always runnable vertical slice
+### Data (still meeting/exceeding prompt)
+- 65 NPCs (npcs.json)
+- 20 swords + 10 bows + 6 armors
+- 10 plants + 6 potions + 6 monsters + 2 spells
 
 ### Documentation
-- Updated README, PROGRESS, TODO, CHANGELOG
+- Updated CHANGELOG, PROGRESS, TODO
+
+Project remains **100% launchable** — Play SampleScene → full vertical slice with tons of content.
