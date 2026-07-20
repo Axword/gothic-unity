@@ -1,0 +1,29 @@
+{
+  "id": "dialog_mountain_man_greeting",
+  "rootNodeId": "start",
+  "speaker": "Górski Mężczyzna",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Górski Mężczyzna",
+      "text": "Tu na górze jest spokojniej. Niżej tylko krew i kłamstwa. Masz coś z żelaza na handel?",
+      "choices": [
+        {"text": "Chcę sprzedać sztabki.", "conditions": [], "actions": [], "nextNode": "sell"},
+        {"text": "Szukam drogi do Czarnego Źródła.", "conditions": [], "actions": [], "nextNode": "direction"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "sell": {
+      "nodeId": "sell",
+      "speaker": "Górski Mężczyzna",
+      "text": "Za każdą sztabkę dam 15 sztuk. Dobre żelazo jest teraz na wagę złota.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "direction": {
+      "nodeId": "direction",
+      "speaker": "Górski Mężczyzna",
+      "text": "Idź na południe przez bagna. Ale uważaj - tam jest Wiedźma i bestie.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

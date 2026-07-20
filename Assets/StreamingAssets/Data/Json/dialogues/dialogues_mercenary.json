@@ -1,0 +1,29 @@
+{
+  "id": "dialog_mercenary_greeting",
+  "rootNodeId": "start",
+  "speaker": "Najemnik",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Najemnik",
+      "text": "Pieniądze to pieniądze. Gildia płaci, obóz płaci... ja walczę. A ty? Chcesz się zatrudnić czy po prostu pogadać?",
+      "choices": [
+        {"text": "Chcę się zatrudnić.", "conditions": [], "actions": [], "nextNode": "hire"},
+        {"text": "Co wiesz o frakcjach?", "conditions": [], "actions": [], "nextNode": "info"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "hire": {
+      "nodeId": "hire",
+      "speaker": "Najemnik",
+      "text": "Idź do Drwala albo do Boruka. Ja biorę tylko zlecenia na zabijanie.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "info": {
+      "nodeId": "info",
+      "speaker": "Najemnik",
+      "text": "Gildia ma dyscyplinę i mury. Obóz ma wolność i głód. Wybierz co ci pasuje... albo zginiesz między nimi.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

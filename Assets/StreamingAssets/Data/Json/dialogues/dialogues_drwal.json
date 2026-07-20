@@ -1,0 +1,29 @@
+{
+  "id": "dialog_drwal_greeting",
+  "rootNodeId": "start",
+  "speaker": "Drwal",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Drwal",
+      "text": "Ty tam! Nowy? Albo szpieg gildii. Co cię tu sprowadza?",
+      "choices": [
+        {"text": "Chcę dołączyć do Wolnych.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_NEW_001"}], "nextNode": "join"},
+        {"text": "Szukam wolności.", "conditions": [], "actions": [], "nextNode": "freedom"},
+        {"text": "Idę stąd.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "join": {
+      "nodeId": "join",
+      "speaker": "Drwal",
+      "text": "Wolność kosztuje. Zabij jednego z ich strażników i wracaj. Wtedy pogadamy.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "freedom": {
+      "nodeId": "freedom",
+      "speaker": "Drwal",
+      "text": "Wolność? Tu każdy sam o nią walczy. Pokaż, że potrafisz — zacznij od Groma. On nauczy cię strzelać.",
+      "choices": [{"text": "Zrobię to.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_NEW_002"}], "nextNode": null}]
+    }
+  }
+}

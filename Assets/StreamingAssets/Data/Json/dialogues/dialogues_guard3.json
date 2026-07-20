@@ -1,0 +1,29 @@
+{
+  "id": "dialog_guard3_greeting",
+  "rootNodeId": "start",
+  "speaker": "Strażnik Adam",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Strażnik Adam",
+      "text": "Stój! Co tu robisz? Nie wyglądasz na kogoś z gildii. Masz pozwolenie?",
+      "choices": [
+        {"text": "Jestem z Aldoną.", "conditions": [], "actions": [], "nextNode": "aldona"},
+        {"text": "Szukam pracy.", "conditions": [], "actions": [], "nextNode": "work"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "aldona": {
+      "nodeId": "aldona",
+      "speaker": "Strażnik Adam",
+      "text": "W takim razie idź do niej prosto. Nie kręć się po osadzie bez powodu.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "work": {
+      "nodeId": "work",
+      "speaker": "Strażnik Adam",
+      "text": "Praca? Idź do Boruka. On prowadzi rekrutację.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

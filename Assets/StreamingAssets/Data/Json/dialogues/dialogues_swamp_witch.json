@@ -1,0 +1,29 @@
+{
+  "id": "dialog_swamp_witch_greeting",
+  "rootNodeId": "start",
+  "speaker": "Wiedźma",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Wiedźma",
+      "text": "Heh... kolejny głupiec, który wszedł w bagno. Masz coś dla starej Wiedźmy? Albo chcesz, żebym ci coś dała?",
+      "choices": [
+        {"text": "Chcę miksturę.", "conditions": [], "actions": [], "nextNode": "potion"},
+        {"text": "Szukam odpowiedzi.", "conditions": [], "actions": [], "nextNode": "answers"},
+        {"text": "Idę stąd.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "potion": {
+      "nodeId": "potion",
+      "speaker": "Wiedźma",
+      "text": "Za żelazo dam ci coś mocnego. Albo za skórę wilka.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "answers": {
+      "nodeId": "answers",
+      "speaker": "Wiedźma",
+      "text": "Odpowiedzi? Czarne Źródło ma wszystkie odpowiedzi. Tylko nie każdy chce ich słuchać.",
+      "choices": [{"text": "[Odeždź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "trainers": [
+    {
+      "id": "trainer_combat",
+      "nameKey": "trainer_boruk",
+      "npcId": "npc_boruk",
+      "faction": "OldOrder",
+      "skills": [
+        { "skillId": "sword", "maxLevel": 3, "costPerLevel": 1, "requiredLevel": 1 }
+      ]
+    },
+    {
+      "id": "trainer_stealth",
+      "nameKey": "trainer_kosa",
+      "npcId": "npc_kosa",
+      "faction": "NewOrder",
+      "skills": [
+        { "skillId": "stealth", "maxLevel": 3, "costPerLevel": 1 }
+      ]
+    }
+  ]
+}

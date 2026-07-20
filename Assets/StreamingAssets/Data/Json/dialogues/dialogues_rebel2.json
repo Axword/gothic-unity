@@ -1,0 +1,29 @@
+{
+  "id": "dialog_rebel2_greeting",
+  "rootNodeId": "start",
+  "speaker": "Rebel2",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Rebel2",
+      "text": "Nie mamy tu luksusów gildii. Ale mamy wolność. Chcesz zostać czy tylko gapić się na biedaków?",
+      "choices": [
+        {"text": "Chcę zostać.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_NEW_001"}], "nextNode": "stay"},
+        {"text": "Tylko się rozglądam.", "conditions": [], "actions": [], "nextNode": "look"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "stay": {
+      "nodeId": "stay",
+      "speaker": "Rebel2",
+      "text": "To idź do Drwala. On decyduje kto zostaje.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "look": {
+      "nodeId": "look",
+      "speaker": "Rebel2",
+      "text": "Patrz ile chcesz. Tylko nie kradnij.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

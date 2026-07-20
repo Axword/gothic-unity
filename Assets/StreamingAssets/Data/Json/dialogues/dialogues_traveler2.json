@@ -1,0 +1,29 @@
+{
+  "id": "dialog_traveler2_greeting",
+  "rootNodeId": "start",
+  "speaker": "Podróżny2",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Podróżny2",
+      "text": "Nie radzę tu zostawać na długo. Dwa wilki walczą o kość, a my jesteśmy kością.",
+      "choices": [
+        {"text": "Co radzisz?", "conditions": [], "actions": [], "nextNode": "advice"},
+        {"text": "Gdzie idziesz?", "conditions": [], "actions": [], "nextNode": "where"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "advice": {
+      "nodeId": "advice",
+      "speaker": "Podróżny2",
+      "text": "Wybierz stronę i trzymaj się jej. Albo uciekaj daleko. Ale tu nigdzie nie uciekniesz.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "where": {
+      "nodeId": "where",
+      "speaker": "Podróżny2",
+      "text": "Na wschód. Może tam jest lepiej. Chociaż wątpię.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

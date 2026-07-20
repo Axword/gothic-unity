@@ -474,20 +474,30 @@ namespace ZelaznaDroga.Gameplay.Combat
             if (_isBlocking && CheckBlock(attacker.transform.position - transform.position))
             {
                 damage = ReduceBlockedDamage(damage);
-                StopBlock(); // Block is broken
+                StopBlock();
                 Debug.Log($"[Combat] Blocked! Damage reduced to {damage}");
             }
 
-            // Apply armor reduction
             float reduction = _playerStats.CalculateDamageReduction(damage, 0);
             damage = Mathf.FloorToInt(damage * (1 - reduction));
 
             _playerStats.ModifyHealth(-damage);
 
-            // Hit reaction
             _animator?.SetTrigger(GameConstants.ANIM_PARAM_HIT);
 
-            Debug.Log($"[Combat] Took {damage} damage (blocked: {_isBlocking})");
+            // Screen flash / feedback
+            if (Camera.main)
+            {
+                Camera.main.backgroundColor = Color.Lerp(Color.red * 0.3f, Color.black, 0.7f);
+                Invoke(nameof(ResetCamColor), 0.12f);
+            }
+
+            Debug.Log($"[Combat] Took {damage} damage");
+        }
+
+        private void ResetCamColor()
+        {
+            if (Camera.main) Camera.main.backgroundColor = Color.black;
         }
 
         #endregion

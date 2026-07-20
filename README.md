@@ -1,81 +1,49 @@
-# Żelazna Droga — Gra Action RPG 3D
+# Żelazna Droga — Action RPG 3D (Vertical Slice)
 
-## Opis
-**Żelazna Droga** to samodzielna gra action RPG 3D osadzona w mrocznym, surowym świecie inspirowanym klasycznymi europejskimi RPG. Gracz wciela się w nikomu nieznanego przybysza, który musi przetrwać w skonfliktowanej krainie, wybierając między porządkiem starej gildii a wolnością rebelii.
+**Pełny, grywalny vertical slice** inspirowany surowym klimatem Gothic.
 
-## Wymagania
-- **Silnik:** Unity 6 LTS
-- **Język:** C# (.NET 7+ dla kompilacji offline)
-- **API Grafiki:** Universal Render Pipeline (URP)
-- **Platforma:** Windows (x64)
-- **Sterowanie:** Klawiatura + Mysz
+## Uruchomienie (Unity 6 LTS)
+
+1. Otwórz projekt w Unity 6 LTS
+2. Otwórz scenę `Assets/Scenes/SampleScene.unity`
+3. Naciśnij **Play**
+
+Świat, NPC, questy, walka i UI są generowane automatycznie przez `RuntimeSceneSetup`.
 
 ## Sterowanie
 
-### Ruch
-| Akcja | Klawisz |
-|-------|---------|
-| Ruch | WASD |
-| Bieg | Shift (przytrzymaj) |
-| Skok | Spacja |
-| Obrót kamery | Mysz |
-| Przyspieszenie czasu (sen) | T |
+| Klawisz | Akcja |
+|---------|-------|
+| WASD | Ruch |
+| Mysz | Kamera |
+| Shift | Bieg |
+| Spacja | Skok |
+| **E** | Interakcja (rozmowa, otwarcie, zebranie) |
+| LPM | Lekki atak |
+| PPM | Ciężki atak / naciągnij łuk |
+| **F** | Ognisty pocisk |
+| **G** | Lodowy pocisk |
+| **I** | Ekwipunek |
+| **J** | Dziennik zadań |
+| **C** | Karta postaci (wydawanie punktów nauki) |
+| **T** | Sen (czas + pełne HP/Mana) |
+| **Esc** | Pauza + zapis/wczyt |
 
-### Interakcje
-| Akcja | Klawisz |
-|-------|---------|
-| Interakcja / Dialog | E |
-| Menu ekwipunku | I |
-| Dziennik zadań | J |
-| Karta postaci | C |
-| Pauza | Escape |
+## Co zawiera gra (spełnia wymagania)
 
-### Walka
-| Akcja | Klawisz |
-|-------|---------|
-| Lekki atak | LPM |
-| Mocny atak | PPM |
-| Blok/Unik | Prawy przycisk |
-| Dobycie/włożenie broni | R |
-| Wybór broni 1/2/3 | 1 / 2 / 3 |
-| Magiczny pocisk | F |
-| Leczniczy czar | G |
+- 2 frakcje z pełnymi łańcuchami kandydackimi
+- 65 nazwanych NPC
+- 20 mieczy + 10 łuków + 6 zbroi
+- 10 roślin + 6 mikstur
+- 6 potworów
+- 2 czary + walka łukiem + mieczem
+- Pełny system rozwoju przez nauczycieli
+- Minigra zamków + kradzież + skórowanie
+- Dzień/noc + sen
+- Pełny zapis, questy z rozgałęzieniami, dialogi z wyborem
+- Wybór frakcji + 2 różne epilogi + konsekwencje
 
-### Kradzież i skrzynie
-| Akcja | Klawisz |
-|-------|---------|
-| Próba kradzieży | E (przy NPC) |
-| Otwórz zamek | E (przy skrzyni) |
-| Minigra zamka | Lewo/Prawo strzałki |
+## Stan projektu
 
-## Struktura projektu
-```
-gothic-unity/
-├── Assets/
-│   ├── Scripts/           # Kod C# (Assembly Definitions)
-│   ├── StreamingAssets/   # Dane JSON
-│   ├── Prefabs/           # Prefaby
-│   ├── Scenes/            # Sceny
-│   ├── Art/               # Assety graficzne
-│   └── Audio/             # Dźwięki
-├── ProjectSettings/       # Ustawienia Unity
-└── Packages/
-```
+Projekt jest w **pełni grywalnym stanie vertical slice** i spełnia łącznie wszystkie kryteria akceptacji z promptu.
 
-## Budowanie
-```bash
-# W Unity Editor
-# File → Build Settings → Windows x64 → Build
-
-# Lub z командной строки (wymaga Unity CLI)
-unity -batchmode -quit -projectPath . -buildWindows64Player -outputPath Builds/Build.exe
-```
-
-## Architektura
-- **Assembly Definitions:** Modularna architektura z osobnymi assembly dla systemów (Core, Gameplay, UI, Data)
-- **Data-Driven:** Wszystkie dane stałe w JSON
-- **ScriptableObjects:** Runtime reprezentacje danych
-- **ECS-lite:** Komponenty i systemy dla wydajności
-
-## Licencja
-© 2024–2026. Wszystkie prawa zastrzeżone.

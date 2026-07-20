@@ -1,0 +1,29 @@
+{
+  "id": "dialog_thief_greeting",
+  "rootNodeId": "start",
+  "speaker": "Złodziej",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Złodziej",
+      "text": "Ciii... nie wrzeszcz. Chcesz się nauczyć, jak brać cudze bez hałasu?",
+      "choices": [
+        {"text": "Naucz mnie.", "conditions": [], "actions": [{"type":"UnlockTrainer","trainerId":"trainer_stealth"}], "nextNode": "teach"},
+        {"text": "Nie jestem złodziejem.", "conditions": [], "actions": [], "nextNode": "deny"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "teach": {
+      "nodeId": "teach",
+      "speaker": "Złodziej",
+      "text": "Dobra. Pamiętaj - oczy i uszy zawsze otwarte. I nigdy nie bierz tego, czego nie możesz unieść.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "deny": {
+      "nodeId": "deny",
+      "speaker": "Złodziej",
+      "text": "To twoja strata. Jak będziesz chciał... wiesz gdzie mnie znaleźć.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

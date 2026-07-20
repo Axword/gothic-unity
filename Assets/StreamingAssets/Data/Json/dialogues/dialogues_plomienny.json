@@ -1,0 +1,22 @@
+{
+  "id": "dialog_plomienny_greeting",
+  "rootNodeId": "start",
+  "speaker": "Płomienny",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Płomienny",
+      "text": "Czujesz to? Mana w powietrzu... Chcesz nauczyć się rzucać ogień i lód?",
+      "choices": [
+        {"text": "Tak, naucz mnie magii.", "conditions": [], "actions": [{"type": "StartQuest", "questId": "Q_F_NEW_004"}, {"type": "LearnSpell", "spellId": "spell_fireball"}], "nextNode": "learn"},
+        {"text": "Może później.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "learn": {
+      "nodeId": "learn",
+      "speaker": "Płomienny",
+      "text": "Dobrze. Weź ten ogień w dłonie. F - ogień, G - lód. Nie marnuj many na głupstwa.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

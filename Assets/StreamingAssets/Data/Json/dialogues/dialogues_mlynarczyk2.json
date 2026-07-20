@@ -1,0 +1,23 @@
+{
+  "id": "dialog_mlynarczyk_quest_003",
+  "rootNodeId": "start",
+  "speaker": "Młynarczyk",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Młynarczyk",
+      "text": "Witaj, przybyszu. Masz coś na sprzedaż? Albo chcesz coś kupić? Gildia ma dobre ceny... dla swoich.",
+      "choices": [
+        {"text": "Chcę kupić miksturę.", "conditions": [], "actions": [{"type":"GiveItem","itemId":"item_potion_health_small","count":1}], "nextNode": null},
+        {"text": "Sprzedam coś.", "conditions": [], "actions": [], "nextNode": "sell"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "sell": {
+      "nodeId": "sell",
+      "speaker": "Młynarczyk",
+      "text": "Dawaj. Za żelazo dam dobrą cenę. Za skóry też.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

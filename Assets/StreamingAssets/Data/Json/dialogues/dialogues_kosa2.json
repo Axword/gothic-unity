@@ -1,0 +1,29 @@
+{
+  "id": "dialog_kosa_quest_003",
+  "rootNodeId": "start",
+  "speaker": "Kosa",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Kosa",
+      "text": "Ciii... nie krzycz. Chcesz się nauczyć czegoś pożytecznego? Albo zarobić na boku?",
+      "choices": [
+        {"text": "Chcę się nauczyć kradzieży.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_NEW_003"},{"type":"UnlockTrainer","trainerId":"trainer_stealth"}], "nextNode": "teach"},
+        {"text": "Szukam pracy.", "conditions": [], "actions": [], "nextNode": "work"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "teach": {
+      "nodeId": "teach",
+      "speaker": "Kosa",
+      "text": "Dobra. Pamiętaj — nie daj się złapać. Wytrychy są w twoim ekwipunku.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "work": {
+      "nodeId": "work",
+      "speaker": "Kosa",
+      "text": "Praca? Idź do Drwala. Albo... weź ten list z gildii. Tylko nie mów, że ode mnie.",
+      "choices": [{"text": "Wezmę zlecenie.", "conditions": [], "actions": [{"type":"GiveItem","itemId":"item_letter_aldona","count":1}], "nextNode": null}]
+    }
+  }
+}

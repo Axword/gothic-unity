@@ -1,0 +1,29 @@
+{
+  "id": "dialog_new_recruit_greeting",
+  "rootNodeId": "start",
+  "speaker": "Nowy Rekrut",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Nowy Rekrut",
+      "text": "Hej! Jesteś nowy w obozie? Drwal mówi, że wkrótce ruszamy na gildię. Chcesz być częścią tego?",
+      "choices": [
+        {"text": "Chcę dołączyć do walki.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_NEW_001"}], "nextNode": "fight"},
+        {"text": "Nie jestem pewien.", "conditions": [], "actions": [], "nextNode": "doubt"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "fight": {
+      "nodeId": "fight",
+      "speaker": "Nowy Rekrut",
+      "text": "Super! Idź do Drwala. On da ci zadanie.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "doubt": {
+      "nodeId": "doubt",
+      "speaker": "Nowy Rekrut",
+      "text": "Rozumiem. Lepiej być pewnym, zanim się w to wplączesz.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

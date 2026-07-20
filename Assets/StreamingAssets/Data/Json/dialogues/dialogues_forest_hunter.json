@@ -1,0 +1,29 @@
+{
+  "id": "dialog_forest_hunter_greeting",
+  "rootNodeId": "start",
+  "speaker": "Myśliwy z Lasu",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Myśliwy z Lasu",
+      "text": "W lesie jest teraz więcej wilków niż drzew. Masz dobry łuk? Albo chcesz się czegoś nauczyć?",
+      "choices": [
+        {"text": "Naucz mnie polować.", "conditions": [], "actions": [], "nextNode": "train"},
+        {"text": "Co widziałeś ostatnio?", "conditions": [], "actions": [], "nextNode": "sight"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "train": {
+      "nodeId": "train",
+      "speaker": "Myśliwy z Lasu",
+      "text": "Idź z Gromem. On jest najlepszy w tym co robi. Powiedz, że od mnie.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "sight": {
+      "nodeId": "sight",
+      "speaker": "Myśliwy z Lasu",
+      "text": "Widziałem niedźwiedzia wielkości chaty i coś co nie było wilkiem ani człowiekiem.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

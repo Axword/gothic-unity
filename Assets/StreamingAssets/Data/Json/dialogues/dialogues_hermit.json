@@ -1,0 +1,29 @@
+{
+  "id": "dialog_hermit_greeting",
+  "rootNodeId": "start",
+  "speaker": "Pustelnik",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Pustelnik",
+      "text": "Cisza... tu jest cisza. A tam, w dole, tylko hałas i krew. Czego szukasz, wędrowcze?",
+      "choices": [
+        {"text": "Szukam wiedzy o zagrożeniu.", "conditions": [], "actions": [], "nextNode": "knowledge"},
+        {"text": "Chcę tylko odpocząć.", "conditions": [], "actions": [], "nextNode": "rest"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "knowledge": {
+      "nodeId": "knowledge",
+      "speaker": "Pustelnik",
+      "text": "Czarne Źródło to nie zwykła woda. To szczelina. Coś z drugiej strony patrzy. Wybierz stronę, zanim ono wybierze ciebie.",
+      "choices": [{"text": "Dziękuję.", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "rest": {
+      "nodeId": "rest",
+      "speaker": "Pustelnik",
+      "text": "Odpocznij. Ale nie za długo. Świat nie czeka.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

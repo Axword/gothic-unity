@@ -1,0 +1,29 @@
+{
+  "id": "dialog_mystic_greeting",
+  "rootNodeId": "start",
+  "speaker": "Mistyk",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Mistyk",
+      "text": "Widzę w tobie dwie ścieżki... jedną w stali, drugą w cieniu. Którą pójdziesz?",
+      "choices": [
+        {"text": "Chcę się nauczyć magii.", "conditions": [], "actions": [{"type":"UnlockTrainer","trainerId":"trainer_magic"}], "nextNode": "magic"},
+        {"text": "Wolę stal.", "conditions": [], "actions": [], "nextNode": "steel"},
+        {"text": "Idę swoją drogą.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "magic": {
+      "nodeId": "magic",
+      "speaker": "Mistyk",
+      "text": "Wtedy idź do Płomiennego. On nauczy cię dotykać ognia bez spalenia się.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "steel": {
+      "nodeId": "steel",
+      "speaker": "Mistyk",
+      "text": "Stal... to też magia. Tylko inna. Idź do Boruka.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "dialog_blacksmith_greeting",
+  "rootNodeId": "start",
+  "speaker": "Stary Kaczmarek",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Stary Kaczmarek",
+      "text": "Młot wali od świtu. Potrzebujesz stali czy tylko gadasz?",
+      "choices": [
+        {"text": "Chcę kupić stalowy miecz.", "conditions": [], "actions": [], "nextNode": "buy"},
+        {"text": "Mam sztabki do sprzedania.", "conditions": [], "actions": [], "nextNode": "sell"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "buy": {
+      "nodeId": "buy",
+      "speaker": "Stary Kaczmarek",
+      "text": "Stalowy miecz to 120 sztuk. I nie targuj się.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "sell": {
+      "nodeId": "sell",
+      "speaker": "Stary Kaczmarek",
+      "text": "Za sztabkę dam 12 sztuk. Dobre żelazo jest teraz cenniejsze niż złoto.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

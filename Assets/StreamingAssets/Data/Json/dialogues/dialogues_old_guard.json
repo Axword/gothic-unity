@@ -1,0 +1,29 @@
+{
+  "id": "dialog_old_guard_greeting",
+  "rootNodeId": "start",
+  "speaker": "Weteran",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Weteran",
+      "text": "Widziałem już wielu takich jak ty. Przybywasz, chcesz się wybić... a potem giniesz albo zdradzasz. Co ty chcesz?",
+      "choices": [
+        {"text": "Chcę służyć gildii.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_OLD_001"}], "nextNode": "serve"},
+        {"text": "Szukam prawdy o zagrożeniu.", "conditions": [], "actions": [], "nextNode": "truth"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "serve": {
+      "nodeId": "serve",
+      "speaker": "Weteran",
+      "text": "Dobrze. Idź do Aldony. Ale pamiętaj - lojalność się sprawdza krwią.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "truth": {
+      "nodeId": "truth",
+      "speaker": "Weteran",
+      "text": "Prawda? Prawda jest taka, że coś budzi się pod Czarnym Źródłem i my wszyscy będziemy mieli przesrane, niezależnie od frakcji.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

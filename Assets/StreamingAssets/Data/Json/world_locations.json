@@ -1,0 +1,8 @@
+{
+  "locations": [
+    {"id": "location_entrance", "nameKey": "Szarpane Wrota", "scene": "World", "position": {"x": 0, "y": 0, "z": 0}},
+    {"id": "location_kamienny_brzeg", "nameKey": "Kamienny Brzeg", "scene": "World", "position": {"x": -8, "y": 0, "z": 3}},
+    {"id": "location_oboz", "nameKey": "Obóz pod Dębami", "scene": "World", "position": {"x": 12, "y": 0, "z": -6}},
+    {"id": "location_czarne_zrodlo", "nameKey": "Czarne Źródło", "scene": "World", "position": {"x": -18, "y": 0, "z": 14}}
+  ]
+}

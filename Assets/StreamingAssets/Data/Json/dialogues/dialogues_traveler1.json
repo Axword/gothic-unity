@@ -1,0 +1,29 @@
+{
+  "id": "dialog_traveler1_greeting",
+  "rootNodeId": "start",
+  "speaker": "Podróżny1",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Podróżny1",
+      "text": "Przechodzę tędy już od tygodnia. Za każdym razem jest gorzej. Masz coś do jedzenia?",
+      "choices": [
+        {"text": "Mogę dać ci trochę złota.", "conditions": [], "actions": [{"type":"GiveItem","itemId":"gold","count":5}], "nextNode": "thanks"},
+        {"text": "Sam jestem głodny.", "conditions": [], "actions": [], "nextNode": "nothing"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "thanks": {
+      "nodeId": "thanks",
+      "speaker": "Podróżny1",
+      "text": "Dziękuję... Uważaj na siebie. Tutaj nikt nie jest bezpieczny.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "nothing": {
+      "nodeId": "nothing",
+      "speaker": "Podróżny1",
+      "text": "Rozumiem. Wszyscy tu walczymy o przetrwanie.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

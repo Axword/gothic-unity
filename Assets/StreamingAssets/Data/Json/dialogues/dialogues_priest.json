@@ -1,0 +1,29 @@
+{
+  "id": "dialog_priest_greeting",
+  "rootNodeId": "start",
+  "speaker": "Ojciec Leon",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Ojciec Leon",
+      "text": "Niech cię błogosławi Żelazna Ręka. Szukasz oczyszczenia czy zemsty?",
+      "choices": [
+        {"text": "Szukam błogosławieństwa.", "conditions": [], "actions": [], "nextNode": "bless"},
+        {"text": "Chcę pomóc gildii.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_OLD_005"}], "nextNode": "help"},
+        {"text": "Idę swoją drogą.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "bless": {
+      "nodeId": "bless",
+      "speaker": "Ojciec Leon",
+      "text": "Niech twoje ostrze będzie sprawiedliwe, a serce twarde jak stal.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "help": {
+      "nodeId": "help",
+      "speaker": "Ojciec Leon",
+      "text": "Wtedy idź i oczyść tę ziemię z zdrajców. Przynieś dowód ich zdrady.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

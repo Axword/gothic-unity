@@ -1,0 +1,35 @@
+{
+  "id": "dialog_scholar_greeting",
+  "rootNodeId": "start",
+  "speaker": "Uczony",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Uczony",
+      "text": "Interesujące... Przybysz z poza Wrót. Powiedz mi - widziałeś coś niezwykłego w drodze tutaj?",
+      "choices": [
+        {"text": "Widziałem dziwne światło nad bagnem.", "conditions": [], "actions": [], "nextNode": "light"},
+        {"text": "Nic niezwykłego.", "conditions": [], "actions": [], "nextNode": "nothing"},
+        {"text": "Szukam wiedzy.", "conditions": [], "actions": [], "nextNode": "knowledge"}
+      ]
+    },
+    "light": {
+      "nodeId": "light",
+      "speaker": "Uczony",
+      "text": "To może być związane z tym, co się budzi pod Czarnym Źródłem. Muszę to zbadać.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "nothing": {
+      "nodeId": "nothing",
+      "speaker": "Uczony",
+      "text": "Szkoda. Każda informacja jest na wagę złota w tych czasach.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "knowledge": {
+      "nodeId": "knowledge",
+      "speaker": "Uczony",
+      "text": "Wiedza? Wtedy idź do Czarnego Źródła. Ale uważaj - niektórzy wracają stamtąd... inni.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

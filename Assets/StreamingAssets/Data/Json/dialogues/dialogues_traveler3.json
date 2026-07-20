@@ -1,0 +1,29 @@
+{
+  "id": "dialog_traveler3_greeting",
+  "rootNodeId": "start",
+  "speaker": "Podróżny3",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Podróżny3",
+      "text": "Przechodzę tędy już trzeci raz w tym miesiącu. Za każdym razem jest gorzej. Co ty tu robisz?",
+      "choices": [
+        {"text": "Szukam swojej drogi.", "conditions": [], "actions": [], "nextNode": "path"},
+        {"text": "Uciekam przed wojną.", "conditions": [], "actions": [], "nextNode": "war"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "path": {
+      "nodeId": "path",
+      "speaker": "Podróżny3",
+      "text": "Każdy tu szuka. Niewielu znajduje. Uważaj na Czarne Źródło.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "war": {
+      "nodeId": "war",
+      "speaker": "Podróżny3",
+      "text": "Wojna? To nie jest wojna. To tylko dwa wilki walczące o kość. Prawdziwe zagrożenie jest pod ziemią.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

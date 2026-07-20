@@ -1,0 +1,7 @@
+{
+  "spawns": [
+    {"monsterId": "wolf", "location": "las", "count": 4, "respawnTime": 120},
+    {"monsterId": "bandit", "location": "przełęcz", "count": 2, "respawnTime": 300},
+    {"monsterId": "bear", "location": "góry", "count": 1, "respawnTime": 600}
+  ]
+}

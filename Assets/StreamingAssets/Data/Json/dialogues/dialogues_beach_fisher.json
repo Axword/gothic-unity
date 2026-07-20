@@ -1,0 +1,29 @@
+{
+  "id": "dialog_beach_fisher_greeting",
+  "rootNodeId": "start",
+  "speaker": "Rybak z Plaży",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Rybak z Plaży",
+      "text": "Morze tu jest spokojniejsze niż w dole. Ale i tak coś w nim nie gra od jakiegoś czasu.",
+      "choices": [
+        {"text": "Co złapałeś dzisiaj?", "conditions": [], "actions": [], "nextNode": "catch"},
+        {"text": "Co się dzieje z morzem?", "conditions": [], "actions": [], "nextNode": "sea"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "catch": {
+      "nodeId": "catch",
+      "speaker": "Rybak z Plaży",
+      "text": "Kilka dorszy i trochę wodorostów. Chcesz kupić?",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "sea": {
+      "nodeId": "sea",
+      "speaker": "Rybak z Plaży",
+      "text": "Fale przychodzą dziwne. Jakby coś pod spodem odpychało wodę.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

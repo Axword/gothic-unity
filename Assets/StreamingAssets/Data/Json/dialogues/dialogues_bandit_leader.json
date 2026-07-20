@@ -1,0 +1,35 @@
+{
+  "id": "dialog_bandit_greeting",
+  "rootNodeId": "start",
+  "speaker": "Wilk",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Wilk",
+      "text": "No no... nowy przybłęda. Albo chcesz dołączyć do prawdziwych ludzi, albo idź do gildii na łańcuch.",
+      "choices": [
+        {"text": "Chcę dołączyć do was.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_S_003"}], "nextNode": "join"},
+        {"text": "Nie interesuje mnie wasza banda.", "conditions": [], "actions": [], "nextNode": "fight"},
+        {"text": "Co macie na sprzedaż?", "conditions": [], "actions": [], "nextNode": "shop"}
+      ]
+    },
+    "join": {
+      "nodeId": "join",
+      "speaker": "Wilk",
+      "text": "Dobra. Najpierw pokaż, że nie jesteś tchórzem. Przynieś list Aldony.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "fight": {
+      "nodeId": "fight",
+      "speaker": "Wilk",
+      "text": "To twoja strata, głupku.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "shop": {
+      "nodeId": "shop",
+      "speaker": "Wilk",
+      "text": "Mamy dobre rzeczy... za odpowiednią cenę.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

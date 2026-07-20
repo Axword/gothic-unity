@@ -1,0 +1,29 @@
+{
+  "id": "dialog_tavern_keep_greeting",
+  "rootNodeId": "start",
+  "speaker": "Karczmarz",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Karczmarz",
+      "text": "Witaj w Żelaznym Dzbanie. Mamy piwo, plotki i czasem krew na podłodze. Czego się napijesz?",
+      "choices": [
+        {"text": "Chcę coś do picia.", "conditions": [], "actions": [], "nextNode": "drink"},
+        {"text": "Co słychać w krainie?", "conditions": [], "actions": [], "nextNode": "rumors"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "drink": {
+      "nodeId": "drink",
+      "speaker": "Karczmarz",
+      "text": "Za 3 sztuki złota dam ci coś, co zabije ból... na chwilę.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "rumors": {
+      "nodeId": "rumors",
+      "speaker": "Karczmarz",
+      "text": "Mówią, że coś się budzi pod Czarnym Źródłem. I że gildia i obóz szykują się do wielkiej bitwy.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

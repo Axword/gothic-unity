@@ -1,0 +1,22 @@
+{
+  "id": "dialog_miner_greeting",
+  "rootNodeId": "start",
+  "speaker": "Górnik",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Górnik",
+      "text": "Kurwa, znowu zawał. Masz wytrych albo dobry kilof? Potrzebuję pomocy przy sztolni.",
+      "choices": [
+        {"text": "Pomogę ci.", "conditions": [], "actions": [], "nextNode": "help"},
+        {"text": "Nie mam czasu.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "help": {
+      "nodeId": "help",
+      "speaker": "Górnik",
+      "text": "Dzięki. Weź ten kilof i uważaj na stropy. Za robotę dam ci sztabkę.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

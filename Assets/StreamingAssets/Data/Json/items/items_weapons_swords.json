@@ -1,228 +1,24 @@
 {
   "items": [
-    {
-      "id": "item_old_sword_01",
-      "nameKey": "item_old_sword_01_name",
-      "descriptionKey": "item_old_sword_01_desc",
-      "itemType": "Weapon",
-      "subType": "Sword",
-      "baseValue": 15,
-      "weight": 3.0,
-      "iconPath": "Art/Icons/Weapons/old_sword",
-      "modelPath": "Art/Models/Weapons/old_sword",
-      "stackable": false,
-      "damage": {
-        "min": 8,
-        "max": 12,
-        "type": "Slashing"
-      },
-      "requirements": {
-        "strength": 5,
-        "dexterity": 0
-      },
-      "attackSpeed": 1.0,
-      "reach": 1.5,
-      "comboLevels": [1],
-      "durability": {
-        "max": 50,
-        "current": 50
-      }
-    },
-    {
-      "id": "item_iron_sword_01",
-      "nameKey": "item_iron_sword_01_name",
-      "descriptionKey": "item_iron_sword_01_desc",
-      "itemType": "Weapon",
-      "subType": "Sword",
-      "baseValue": 45,
-      "weight": 4.0,
-      "iconPath": "Art/Icons/Weapons/iron_sword",
-      "modelPath": "Art/Models/Weapons/iron_sword",
-      "stackable": false,
-      "damage": {
-        "min": 15,
-        "max": 22,
-        "type": "Slashing"
-      },
-      "requirements": {
-        "strength": 8,
-        "dexterity": 0
-      },
-      "attackSpeed": 1.1,
-      "reach": 1.8,
-      "comboLevels": [1, 2],
-      "durability": {
-        "max": 100,
-        "current": 100
-      }
-    },
-    {
-      "id": "item_steel_sword_01",
-      "nameKey": "item_steel_sword_01_name",
-      "descriptionKey": "item_steel_sword_01_desc",
-      "itemType": "Weapon",
-      "subType": "Sword",
-      "baseValue": 120,
-      "weight": 5.0,
-      "iconPath": "Art/Icons/Weapons/steel_sword",
-      "modelPath": "Art/Models/Weapons/steel_sword",
-      "stackable": false,
-      "damage": {
-        "min": 25,
-        "max": 35,
-        "type": "Slashing"
-      },
-      "requirements": {
-        "strength": 12,
-        "dexterity": 2
-      },
-      "attackSpeed": 1.2,
-      "reach": 2.0,
-      "comboLevels": [1, 2, 3],
-      "durability": {
-        "max": 150,
-        "current": 150
-      }
-    },
-    {
-      "id": "item_steel_sword_02",
-      "nameKey": "item_steel_sword_02_name",
-      "descriptionKey": "item_steel_sword_02_desc",
-      "itemType": "Weapon",
-      "subType": "Sword",
-      "baseValue": 150,
-      "weight": 5.5,
-      "iconPath": "Art/Icons/Weapons/steel_sword_02",
-      "modelPath": "Art/Models/Weapons/steel_sword_02",
-      "stackable": false,
-      "damage": {
-        "min": 30,
-        "max": 42,
-        "type": "Slashing"
-      },
-      "requirements": {
-        "strength": 14,
-        "dexterity": 3
-      },
-      "attackSpeed": 1.3,
-      "reach": 2.2,
-      "comboLevels": [1, 2, 3],
-      "durability": {
-        "max": 180,
-        "current": 180
-      }
-    },
-    {
-      "id": "item_rusty_sword_01",
-      "nameKey": "item_rusty_sword_01_name",
-      "descriptionKey": "item_rusty_sword_01_desc",
-      "itemType": "Weapon",
-      "subType": "Sword",
-      "baseValue": 5,
-      "weight": 2.5,
-      "iconPath": "Art/Icons/Weapons/rusty_sword",
-      "modelPath": "Art/Models/Weapons/rusty_sword",
-      "stackable": false,
-      "damage": {
-        "min": 5,
-        "max": 8,
-        "type": "Slashing"
-      },
-      "requirements": {
-        "strength": 3,
-        "dexterity": 0
-      },
-      "attackSpeed": 0.9,
-      "reach": 1.4,
-      "comboLevels": [1],
-      "durability": {
-        "max": 30,
-        "current": 30
-      }
-    },
-    {
-      "id": "item_guard_sword_01",
-      "nameKey": "item_guard_sword_01_name",
-      "descriptionKey": "item_guard_sword_01_desc",
-      "itemType": "Weapon",
-      "subType": "Sword",
-      "baseValue": 80,
-      "weight": 4.5,
-      "iconPath": "Art/Icons/Weapons/guard_sword",
-      "modelPath": "Art/Models/Weapons/guard_sword",
-      "stackable": false,
-      "damage": {
-        "min": 20,
-        "max": 28,
-        "type": "Slashing"
-      },
-      "requirements": {
-        "strength": 10,
-        "dexterity": 1
-      },
-      "attackSpeed": 1.15,
-      "reach": 1.9,
-      "comboLevels": [1, 2],
-      "durability": {
-        "max": 120,
-        "current": 120
-      }
-    },
-    {
-      "id": "item_berdysz_01",
-      "nameKey": "item_berdysz_01_name",
-      "descriptionKey": "item_berdysz_01_desc",
-      "itemType": "Weapon",
-      "subType": "Sword",
-      "baseValue": 200,
-      "weight": 8.0,
-      "iconPath": "Art/Icons/Weapons/berdysz",
-      "modelPath": "Art/Models/Weapons/berdysz",
-      "stackable": false,
-      "damage": {
-        "min": 40,
-        "max": 55,
-        "type": "Slashing"
-      },
-      "requirements": {
-        "strength": 18,
-        "dexterity": 0
-      },
-      "attackSpeed": 0.8,
-      "reach": 2.5,
-      "comboLevels": [1, 2],
-      "durability": {
-        "max": 200,
-        "current": 200
-      }
-    },
-    {
-      "id": "item_rapier_01",
-      "nameKey": "item_rapier_01_name",
-      "descriptionKey": "item_rapier_01_desc",
-      "itemType": "Weapon",
-      "subType": "Sword",
-      "baseValue": 130,
-      "weight": 2.0,
-      "iconPath": "Art/Icons/Weapons/rapier",
-      "modelPath": "Art/Models/Weapons/rapier",
-      "stackable": false,
-      "damage": {
-        "min": 12,
-        "max": 18,
-        "type": "Piercing"
-      },
-      "requirements": {
-        "strength": 5,
-        "dexterity": 12
-      },
-      "attackSpeed": 1.5,
-      "reach": 1.8,
-      "comboLevels": [1, 2, 3],
-      "durability": {
-        "max": 80,
-        "current": 80
-      }
-    }
+    {"id": "item_old_sword_01", "nameKey": "Stary Miecz", "descriptionKey": "Stary, zardzewiały miecz.", "itemType": "Weapon", "subType": "Sword", "baseValue": 15, "weight": 3.0, "stackable": false, "damage": {"min": 8, "max": 12, "type": "Slashing"}, "requirements": {"strength": 5}, "attackSpeed": 1.0, "reach": 1.5},
+    {"id": "item_iron_sword_01", "nameKey": "Żelazny Miecz", "descriptionKey": "Solidny żelazny miecz.", "itemType": "Weapon", "subType": "Sword", "baseValue": 45, "weight": 4.0, "stackable": false, "damage": {"min": 15, "max": 22, "type": "Slashing"}, "requirements": {"strength": 8}, "attackSpeed": 1.1, "reach": 1.8},
+    {"id": "item_steel_sword_01", "nameKey": "Stalowy Miecz", "descriptionKey": "Dobry stalowy miecz gildii.", "itemType": "Weapon", "subType": "Sword", "baseValue": 120, "weight": 5.0, "stackable": false, "damage": {"min": 25, "max": 35, "type": "Slashing"}, "requirements": {"strength": 12}, "attackSpeed": 1.2, "reach": 2.0},
+    {"id": "item_steel_sword_02", "nameKey": "Ciężki Stalowy Miecz", "descriptionKey": "Cięższy wariant stalowego miecza.", "itemType": "Weapon", "subType": "Sword", "baseValue": 150, "weight": 5.5, "stackable": false, "damage": {"min": 30, "max": 42, "type": "Slashing"}, "requirements": {"strength": 14}, "attackSpeed": 1.3, "reach": 2.2},
+    {"id": "item_rusty_sword_01", "nameKey": "Zardzewiały Miecz", "descriptionKey": "Ledwo trzyma się kupy.", "itemType": "Weapon", "subType": "Sword", "baseValue": 5, "weight": 2.5, "stackable": false, "damage": {"min": 5, "max": 8, "type": "Slashing"}, "requirements": {"strength": 3}, "attackSpeed": 0.9, "reach": 1.4},
+    {"id": "item_guard_sword_01", "nameKey": "Miecz Strażnika", "descriptionKey": "Standardowa broń straży.", "itemType": "Weapon", "subType": "Sword", "baseValue": 80, "weight": 4.5, "stackable": false, "damage": {"min": 20, "max": 28, "type": "Slashing"}, "requirements": {"strength": 10}, "attackSpeed": 1.15, "reach": 1.9},
+    {"id": "item_berdysz_01", "nameKey": "Berdysz", "descriptionKey": "Ciężka broń sieczna wodzów.", "itemType": "Weapon", "subType": "Sword", "baseValue": 200, "weight": 8.0, "stackable": false, "damage": {"min": 40, "max": 55, "type": "Slashing"}, "requirements": {"strength": 18}, "attackSpeed": 0.8, "reach": 2.5},
+    {"id": "item_rapier_01", "nameKey": "Rapier", "descriptionKey": "Lekka, szybka broń.", "itemType": "Weapon", "subType": "Sword", "baseValue": 130, "weight": 2.0, "stackable": false, "damage": {"min": 12, "max": 18, "type": "Piercing"}, "requirements": {"strength": 5, "dexterity": 12}, "attackSpeed": 1.5, "reach": 1.8},
+    {"id": "item_broad_sword_01", "nameKey": "Szeroki Miecz", "descriptionKey": "Szeroki, potężny miecz.", "itemType": "Weapon", "subType": "Sword", "baseValue": 95, "weight": 6.2, "stackable": false, "damage": {"min": 22, "max": 32, "type": "Slashing"}, "requirements": {"strength": 11}, "attackSpeed": 1.0, "reach": 1.7},
+    {"id": "item_short_sword_01", "nameKey": "Krótki Miecz", "descriptionKey": "Lekki miecz do walki w zwarciu.", "itemType": "Weapon", "subType": "Sword", "baseValue": 35, "weight": 2.8, "stackable": false, "damage": {"min": 10, "max": 16, "type": "Slashing"}, "requirements": {"strength": 6}, "attackSpeed": 1.4, "reach": 1.3},
+    {"id": "item_machete_01", "nameKey": "Maczeta", "descriptionKey": "Gruba maczeta do cięcia.", "itemType": "Weapon", "subType": "Sword", "baseValue": 55, "weight": 3.5, "stackable": false, "damage": {"min": 14, "max": 20, "type": "Slashing"}, "requirements": {"strength": 7}, "attackSpeed": 1.25, "reach": 1.6},
+    {"id": "item_cleaver_01", "nameKey": "Tasak", "descriptionKey": "Ciężki tasak rzeźnicki.", "itemType": "Weapon", "subType": "Sword", "baseValue": 70, "weight": 4.8, "stackable": false, "damage": {"min": 18, "max": 26, "type": "Slashing"}, "requirements": {"strength": 9}, "attackSpeed": 1.05, "reach": 1.5},
+    {"id": "item_falchion_01", "nameKey": "Falcjon", "descriptionKey": "Jednosieczny falczion.", "itemType": "Weapon", "subType": "Sword", "baseValue": 88, "weight": 4.2, "stackable": false, "damage": {"min": 19, "max": 27, "type": "Slashing"}, "requirements": {"strength": 9}, "attackSpeed": 1.15, "reach": 1.65},
+    {"id": "item_sabre_01", "nameKey": "Szabla", "descriptionKey": "Lekka szabla jeździecka.", "itemType": "Weapon", "subType": "Sword", "baseValue": 105, "weight": 3.1, "stackable": false, "damage": {"min": 16, "max": 24, "type": "Slashing"}, "requirements": {"strength": 7, "dexterity": 8}, "attackSpeed": 1.35, "reach": 1.7},
+    {"id": "item_two_hander_01", "nameKey": "Dwuręczny Miecz", "descriptionKey": "Potężny dwuręczny miecz.", "itemType": "Weapon", "subType": "Sword", "baseValue": 175, "weight": 7.5, "stackable": false, "damage": {"min": 35, "max": 48, "type": "Slashing"}, "requirements": {"strength": 16}, "attackSpeed": 0.85, "reach": 2.3},
+    {"id": "item_dagger_sword", "nameKey": "Sztylet-Miecz", "descriptionKey": "Krótki, ale ostry.", "itemType": "Weapon", "subType": "Sword", "baseValue": 28, "weight": 1.8, "stackable": false, "damage": {"min": 7, "max": 13, "type": "Piercing"}, "requirements": {"strength": 4, "dexterity": 7}, "attackSpeed": 1.6, "reach": 1.1},
+    {"id": "item_knight_sword", "nameKey": "Miecz Rycerski", "descriptionKey": "Pięknie wykonany miecz.", "itemType": "Weapon", "subType": "Sword", "baseValue": 145, "weight": 5.2, "stackable": false, "damage": {"min": 27, "max": 38, "type": "Slashing"}, "requirements": {"strength": 13}, "attackSpeed": 1.1, "reach": 2.1},
+    {"id": "item_executioner", "nameKey": "Miecz Kata", "descriptionKey": "Ciężki miecz kata.", "itemType": "Weapon", "subType": "Sword", "baseValue": 165, "weight": 9.0, "stackable": false, "damage": {"min": 32, "max": 45, "type": "Slashing"}, "requirements": {"strength": 17}, "attackSpeed": 0.75, "reach": 2.0},
+    {"id": "item_hunting_sword", "nameKey": "Miecz Myśliwski", "descriptionKey": "Lekki miecz do polowań.", "itemType": "Weapon", "subType": "Sword", "baseValue": 62, "weight": 3.3, "stackable": false, "damage": {"min": 13, "max": 21, "type": "Slashing"}, "requirements": {"strength": 7}, "attackSpeed": 1.3, "reach": 1.55},
+    {"id": "item_ancient_blade", "nameKey": "Starożytne Ostrze", "descriptionKey": "Starożytna, tajemnicza broń.", "itemType": "Weapon", "subType": "Sword", "baseValue": 220, "weight": 4.8, "stackable": false, "damage": {"min": 38, "max": 52, "type": "Slashing"}, "requirements": {"strength": 15}, "attackSpeed": 1.0, "reach": 2.0}
   ]
 }

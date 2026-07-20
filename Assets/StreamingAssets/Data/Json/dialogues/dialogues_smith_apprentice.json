@@ -1,0 +1,29 @@
+{
+  "id": "dialog_smith_apprentice_greeting",
+  "rootNodeId": "start",
+  "speaker": "Uczeń Kowala",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Uczeń Kowala",
+      "text": "Mistrz jest w kuźni. Ja tylko sprzątam. Potrzebujesz czegoś? Mogę ci powiedzieć gdzie co jest.",
+      "choices": [
+        {"text": "Gdzie mogę kupić dobry miecz?", "conditions": [], "actions": [], "nextNode": "sword"},
+        {"text": "Co słychać w osadzie?", "conditions": [], "actions": [], "nextNode": "news"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "sword": {
+      "nodeId": "sword",
+      "speaker": "Uczeń Kowala",
+      "text": "U Młynarczyka albo u mistrza. Tylko dobry miecz kosztuje... dużo.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "news": {
+      "nodeId": "news",
+      "speaker": "Uczeń Kowala",
+      "text": "Mówią, że coś się budzi pod Czarnym Źródłem. I że obóz szykuje atak.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

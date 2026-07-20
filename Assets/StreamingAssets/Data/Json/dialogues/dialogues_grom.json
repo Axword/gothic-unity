@@ -1,0 +1,22 @@
+{
+  "id": "dialog_grom_greeting",
+  "rootNodeId": "start",
+  "speaker": "Grom",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Grom",
+      "text": "Łuk w ręku, oko na celu. Chcesz się nauczyć strzelać jak ja?",
+      "choices": [
+        {"text": "Naucz mnie strzelać.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_NEW_002"}], "nextNode": "train"},
+        {"text": "Pokaż mi łuki.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "train": {
+      "nodeId": "train",
+      "speaker": "Grom",
+      "text": "Dobrze. Najpierw zabij kilka wilków. Potem wracaj po lekcję.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

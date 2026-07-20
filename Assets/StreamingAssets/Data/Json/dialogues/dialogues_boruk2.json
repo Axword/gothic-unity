@@ -1,0 +1,22 @@
+{
+  "id": "dialog_boruk_quest_002",
+  "rootNodeId": "start",
+  "speaker": "Boruk",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Boruk",
+      "text": "Chcesz się nauczyć walczyć? Najpierw udowodnij, że jesteś wart mojego czasu. Idź na północ i zabij kilka wilków.",
+      "choices": [
+        {"text": "Zrobię to.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_OLD_002"}], "nextNode": "go"},
+        {"text": "Może później.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "go": {
+      "nodeId": "go",
+      "speaker": "Boruk",
+      "text": "Dobrze. Wracaj kiedy zabijesz co najmniej trzy. Wtedy pogadamy o treningu.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

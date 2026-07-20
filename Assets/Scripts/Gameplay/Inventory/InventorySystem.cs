@@ -126,7 +126,7 @@ namespace ZelaznaDroga.Gameplay.Inventory
             if (IsFull)
             {
                 OnInventoryFull?.Invoke();
-                Debug.Log($"[Inventory] Cannot add item {_item.ItemId}: Inventory full");
+                Debug.Log($"[Inventory] Cannot add item {item.ItemId}: Inventory full");
                 return false;
             }
 

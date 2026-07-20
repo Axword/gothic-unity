@@ -1,0 +1,29 @@
+{
+  "id": "dialog_young_rebel_greeting",
+  "rootNodeId": "start",
+  "speaker": "Młody Buntownik",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Młody Buntownik",
+      "text": "Hej! Ty też jesteś nowy? Drwal mówi, że musimy być twardzi. Chcesz posłuchać jak to jest w obozie?",
+      "choices": [
+        {"text": "Opowiedz mi.", "conditions": [], "actions": [], "nextNode": "story"},
+        {"text": "Chcę dołączyć.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_NEW_001"}], "nextNode": "join"},
+        {"text": "Nie mam czasu.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "story": {
+      "nodeId": "story",
+      "speaker": "Młody Buntownik",
+      "text": "Kiedyś byliśmy niewolnikami gildii. Teraz jesteśmy wolni... ale głodni. Drwal mówi, że wkrótce będzie bitwa.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "join": {
+      "nodeId": "join",
+      "speaker": "Młody Buntownik",
+      "text": "Super! Idź do Drwala. On zdecyduje czy jesteś wart.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

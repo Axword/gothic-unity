@@ -1,0 +1,29 @@
+{
+  "id": "dialog_priest2_greeting",
+  "rootNodeId": "start",
+  "speaker": "Kapłan",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Kapłan",
+      "text": "Niech cię błogosławi Żelazna Ręka. Szukasz oczyszczenia czy zemsty na wrogach?",
+      "choices": [
+        {"text": "Szukam błogosławieństwa.", "conditions": [], "actions": [], "nextNode": "bless"},
+        {"text": "Chcę pomóc gildii w walce.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_OLD_005"}], "nextNode": "fight"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "bless": {
+      "nodeId": "bless",
+      "speaker": "Kapłan",
+      "text": "Niech twoje serce będzie twarde jak stal, a ręka sprawiedliwa.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "fight": {
+      "nodeId": "fight",
+      "speaker": "Kapłan",
+      "text": "Wtedy idź i oczyść tę ziemię. Przynieś dowód zdrady.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}

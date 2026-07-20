@@ -1,0 +1,29 @@
+{
+  "id": "dialog_cook_greeting",
+  "rootNodeId": "start",
+  "speaker": "Kucharz",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Kucharz",
+      "text": "Zupa z korzeni i resztek. Niezła jak na obóz. Chcesz coś zjeść czy pogadać?",
+      "choices": [
+        {"text": "Chcę coś zjeść.", "conditions": [], "actions": [], "nextNode": "food"},
+        {"text": "Co gotujesz dla wodzów?", "conditions": [], "actions": [], "nextNode": "boss"},
+        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+      ]
+    },
+    "food": {
+      "nodeId": "food",
+      "speaker": "Kucharz",
+      "text": "Za 2 sztuki złota dam ci miskę. Albo za wytrych.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    },
+    "boss": {
+      "nodeId": "boss",
+      "speaker": "Kucharz",
+      "text": "Drwal je mięso. Reszta dostaje to co zostaje. Taka jest wolność.",
+      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    }
+  }
+}
