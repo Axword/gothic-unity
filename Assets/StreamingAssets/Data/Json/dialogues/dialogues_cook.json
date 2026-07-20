@@ -6,24 +6,72 @@
     "start": {
       "nodeId": "start",
       "speaker": "Kucharz",
-      "text": "Zupa z korzeni i resztek. Niezła jak na obóz. Chcesz coś zjeść czy pogadać?",
+      "text": "Coś zjeść? Mam gulasz z zeszłego tygodnia. Albo zupa z ziół.",
       "choices": [
-        {"text": "Chcę coś zjeść.", "conditions": [], "actions": [], "nextNode": "food"},
-        {"text": "Co gotujesz dla wodzów?", "conditions": [], "actions": [], "nextNode": "boss"},
-        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+        {
+          "text": "Dam coś do jedzenia.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "food"
+        },
+        {
+          "text": "Potrzebuję przepisów.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "recipe"
+        },
+        {
+          "text": "Masz robotę dla mnie?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "quest"
+        }
       ]
     },
     "food": {
       "nodeId": "food",
       "speaker": "Kucharz",
-      "text": "Za 2 sztuki złota dam ci miskę. Albo za wytrych.",
-      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+      "text": "Weź to. Za darmo, bo wyglądasz na głodnego.",
+      "choices": [
+        {
+          "text": "Dziękuję.",
+          "conditions": [],
+          "actions": [
+            { "type": "GiveItem", "itemId": "item_potion_health_small", "count": 1 }
+          ],
+          "nextNode": null
+        }
+      ]
     },
-    "boss": {
-      "nodeId": "boss",
+    "recipe": {
+      "nodeId": "recipe",
       "speaker": "Kucharz",
-      "text": "Drwal je mięso. Reszta dostaje to co zostaje. Taka jest wolność.",
-      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+      "text": "Przepis na miksturę? Przynieś mi trzy rośliny lecznicze, a ci powiem.",
+      "choices": [
+        {
+          "text": "Zgoda.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_007" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "quest": {
+      "nodeId": "quest",
+      "speaker": "Kucharz",
+      "text": "Idź do lasu i przynieś mi świeże zioła. Zapłacę dobrze.",
+      "choices": [
+        {
+          "text": "Biorę zlecenie.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_007" }
+          ],
+          "nextNode": null
+        }
+      ]
     }
   }
 }

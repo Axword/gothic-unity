@@ -1,0 +1,120 @@
+{
+  "id": "dialog_blacksmith2",
+  "rootNodeId": "start",
+  "speaker": "Kowal",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Kowal",
+      "text": "Młot i ogień. Czego chcesz? Nowy miecz czy może naprawa?",
+      "choices": [
+        {
+          "text": "Chcę kupić miecz.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "buy_sword"
+        },
+        {
+          "text": "Potrzebuję naprawy zbroi.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "repair"
+        },
+        {
+          "text": "Masz jakieś zlecenie?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "quest"
+        },
+        {
+          "text": "Żegnaj.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "buy_sword": {
+      "nodeId": "buy_sword",
+      "speaker": "Kowal",
+      "text": "Mam dobry żelazny. Pięćdziesiąt sztuk. Chcesz?",
+      "choices": [
+        {
+          "text": "Biorę.",
+          "conditions": [
+            { "type": "HasGold", "amount": 50 }
+          ],
+          "actions": [
+            { "type": "SpendGold", "amount": 50 },
+            { "type": "GiveItem", "itemId": "item_iron_sword_01", "count": 1 }
+          ],
+          "nextNode": "sold"
+        },
+        {
+          "text": "Za drogo.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "repair": {
+      "nodeId": "repair",
+      "speaker": "Kowal",
+      "text": "Naprawa zbroi? Dwadzieścia sztuk i gotowe. Ale musisz mieć zbroję.",
+      "choices": [
+        {
+          "text": "Napraw.",
+          "conditions": [
+            { "type": "HasItem", "itemId": "item_leather_armor_01" }
+          ],
+          "actions": [
+            { "type": "SpendGold", "amount": 20 }
+          ],
+          "nextNode": "repaired"
+        }
+      ]
+    },
+    "quest": {
+      "nodeId": "quest",
+      "speaker": "Kowal",
+      "text": "Potrzebuję dwóch sztabek żelaza. Przynieś, a dam ci dobry nóż.",
+      "choices": [
+        {
+          "text": "Zrobię to.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_004" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "sold": {
+      "nodeId": "sold",
+      "speaker": "Kowal",
+      "text": "Dobry wybór. Ten miecz przetrwa więcej niż ty.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "repaired": {
+      "nodeId": "repaired",
+      "speaker": "Kowal",
+      "text": "Gotowe. Teraz nie pęknie tak łatwo.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

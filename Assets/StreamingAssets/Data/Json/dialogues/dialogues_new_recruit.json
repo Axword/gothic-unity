@@ -1,29 +1,60 @@
 {
-  "id": "dialog_new_recruit_greeting",
+  "id": "dialog_new_recruit",
   "rootNodeId": "start",
   "speaker": "Nowy Rekrut",
   "nodes": {
     "start": {
       "nodeId": "start",
       "speaker": "Nowy Rekrut",
-      "text": "Hej! Jesteś nowy w obozie? Drwal mówi, że wkrótce ruszamy na gildię. Chcesz być częścią tego?",
+      "text": "Hej! Dopiero co dołączyłem do Nowego Porządku. Chcesz posłuchać jak to jest?",
       "choices": [
-        {"text": "Chcę dołączyć do walki.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_NEW_001"}], "nextNode": "fight"},
-        {"text": "Nie jestem pewien.", "conditions": [], "actions": [], "nextNode": "doubt"},
-        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+        {
+          "text": "Opowiedz.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "story"
+        },
+        {
+          "text": "Chcę dołączyć.",
+          "conditions": [],
+          "actions": [
+            { "type": "SetFlag", "flag": "new_recruit_talk" }
+          ],
+          "nextNode": "join"
+        },
+        {
+          "text": "Nie interesuje mnie to.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
       ]
     },
-    "fight": {
-      "nodeId": "fight",
+    "story": {
+      "nodeId": "story",
       "speaker": "Nowy Rekrut",
-      "text": "Super! Idź do Drwala. On da ci zadanie.",
-      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+      "text": "Mówią, że zmienimy wszystko. Ale ja tylko chcę mieć co jeść. I nie umrzeć.",
+      "choices": [
+        {
+          "text": "Rozumiem cię.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
     },
-    "doubt": {
-      "nodeId": "doubt",
+    "join": {
+      "nodeId": "join",
       "speaker": "Nowy Rekrut",
-      "text": "Rozumiem. Lepiej być pewnym, zanim się w to wplączesz.",
-      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+      "text": "Idź do Płomiennego. On decyduje. Powiedz, że przyszedłeś ode mnie.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
     }
   }
 }

@@ -101,16 +101,31 @@ namespace ZelaznaDroga.Gameplay
             CreateNPC("NPC_Zosia", new Vector3(1, 0.6f, 4), Color.white, "npc_zosia");
             CreateNPC("NPC_Guard2", new Vector3(-10, 0.6f, 5), Color.gray, "npc_guard2");
             CreateNPC("NPC_Grom", new Vector3(13, 0.6f, -4), new Color(0.5f,0.3f,0.1f), "npc_grom");
+            CreateNPC("NPC_Hermit", new Vector3(-15, 0.6f, 12), new Color(0.6f,0.5f,0.4f), "npc_hermit");
+            CreateNPC("NPC_Hunter", new Vector3(7, 0.6f, 9), new Color(0.3f,0.5f,0.2f), "npc_hunter");
+            CreateNPC("NPC_Scholar", new Vector3(-4, 0.6f, -8), new Color(0.8f,0.7f,0.9f), "npc_scholar");
+            CreateNPC("NPC_Mystic", new Vector3(15, 0.6f, 6), new Color(0.5f,0.2f,0.6f), "npc_mystic");
+            CreateNPC("NPC_Witch", new Vector3(-12, 0.6f, -10), new Color(0.2f,0.1f,0.3f), "npc_swamp_witch");
+            CreateNPC("NPC_Cook", new Vector3(3, 0.6f, -5), new Color(0.9f,0.6f,0.4f), "npc_cook");
+            CreateNPC("NPC_Scout", new Vector3(19, 0.6f, -3), new Color(0.4f,0.6f,0.3f), "npc_scout");
+            CreateNPC("NPC_BanditLeader", new Vector3(22, 0.6f, 2), new Color(0.2f,0.1f,0.05f), "npc_bandit_leader");
+            CreateNPC("NPC_OldWoman", new Vector3(-1, 0.6f, -2), Color.gray, "npc_old_woman");
+            CreateNPC("NPC_Priest", new Vector3(-9, 0.6f, -1), new Color(0.9f,0.85f,0.7f), "npc_priest");
+            CreateNPC("NPC_Blacksmith", new Vector3(5, 0.6f, 1), new Color(0.5f,0.4f,0.35f), "npc_blacksmith");
+            CreateNPC("NPC_Miner", new Vector3(-18, 0.6f, 5), new Color(0.55f,0.45f,0.3f), "npc_miner");
 
-            // Enemies
+            // Enemies - expanded
             CreateEnemy("Wolf1", new Vector3(-5, 0.6f, 6), 35, 8);
             CreateEnemy("Wolf2", new Vector3(-8, 0.6f, 9), 35, 8);
+            CreateEnemy("Wolf3", new Vector3(2, 0.6f, 14), 32, 7);
             CreateEnemy("Bandit", new Vector3(8, 0.6f, -12), 55, 11);
+            CreateEnemy("Bandit2", new Vector3(16, 0.6f, -9), 48, 10);
             CreateEnemy("Bear", new Vector3(-15, 0.6f, 14), 120, 22);
 
-            // Attach better patrol AI to some
+            // Patrol AI
             GameObject.Find("Wolf1")?.AddComponent<ZelaznaDroga.AI.SimplePatrolAI>();
             GameObject.Find("Bandit")?.AddComponent<ZelaznaDroga.AI.SimplePatrolAI>();
+            GameObject.Find("Bandit2")?.AddComponent<ZelaznaDroga.AI.SimplePatrolAI>();
 
             // Add merchant to Mlynarczyk
             var merchant = GameObject.Find("NPC_Mlynarczyk");
@@ -127,19 +142,24 @@ namespace ZelaznaDroga.Gameplay
             var boruk = GameObject.Find("NPC_Boruk");
             if (boruk) boruk.AddComponent<NPCScheduleExecutor>().scheduleId = "npc_boruk_schedule";
 
-            // Chests
+            // Chests - more variety
             CreateChest(new Vector3(2, 0.4f, -3), false, "Chest_Regular");
             CreateChest(new Vector3(-3, 0.4f, 9), true, "Chest_Locked");
+            CreateChest(new Vector3(11, 0.4f, -11), false, "Chest_Woods");
+            CreateChest(new Vector3(-14, 0.4f, 8), true, "Chest_Bandit");
+            CreateChest(new Vector3(18, 0.4f, 5), false, "Chest_Hill");
 
-            // Plants
-            for (int i = 0; i < 12; i++)
+            // Plants - expanded
+            string[] plantTypes = { "plant_healing_herb", "plant_mana_flower", "plant_fireweed", "plant_nightshade", "plant_ironroot" };
+            for (int i = 0; i < 22; i++)
             {
                 var plant = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
                 plant.name = $"Plant_{i}";
-                plant.transform.position = new Vector3(Random.Range(-16f, 18f), 0.3f, Random.Range(-13f, 13f));
+                plant.transform.position = new Vector3(Random.Range(-20f, 22f), 0.3f, Random.Range(-16f, 16f));
                 plant.GetComponent<Renderer>().material.color = Color.green;
                 var p = plant.AddComponent<Plant>();
-                p.plantId = (i % 3 == 0) ? "plant_mana_flower" : "plant_healing_herb";
+                p.plantId = plantTypes[i % plantTypes.Length];
+                p.count = (i % 4 == 0) ? 2 : 1;
             }
 
             // Faction choice points
@@ -155,12 +175,34 @@ namespace ZelaznaDroga.Gameplay
             newC.GetComponent<Renderer>().material.color = new Color(0.3f, 0.7f, 0.3f);
             newC.AddComponent<FactionChoiceTrigger>().faction = "NewOrder";
 
-            // Trainer marker
+            // Additional faction markers
+            var oldC2 = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+            oldC2.name = "Choice_OldOrder2";
+            oldC2.transform.position = new Vector3(-8, 0.5f, -6);
+            oldC2.GetComponent<Renderer>().material.color = new Color(0.7f,0.2f,0.2f);
+            oldC2.AddComponent<FactionChoiceTrigger>().faction = "OldOrder";
+
+            // Trainers
             var trainer = GameObject.CreatePrimitive(PrimitiveType.Cube);
             trainer.name = "Trainer_Boruk";
             trainer.transform.position = new Vector3(-5.5f, 0.6f, 7.5f);
             trainer.GetComponent<Renderer>().material.color = Color.gray;
             trainer.AddComponent<TrainerInteraction>().skill = "strength";
+
+            var trainer2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            trainer2.name = "Trainer_Grom";
+            trainer2.transform.position = new Vector3(11, 0.6f, -1);
+            trainer2.GetComponent<Renderer>().material.color = Color.cyan;
+            var t2 = trainer2.AddComponent<TrainerInteraction>();
+            t2.skill = "archery";
+
+            // Extra merchant
+            var merch2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            merch2.name = "NPC_Merchant2";
+            merch2.transform.position = new Vector3(6, 0.6f, -8);
+            merch2.GetComponent<Renderer>().material.color = new Color(0.6f,0.4f,0.2f);
+            merch2.AddComponent<MerchantShop>();
+            merch2.AddComponent<TradingSystem>();
         }
 
         void CreateNPC(string name, Vector3 pos, Color col, string npcId)

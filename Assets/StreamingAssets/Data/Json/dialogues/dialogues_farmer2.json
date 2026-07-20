@@ -1,0 +1,65 @@
+{
+  "id": "dialog_farmer2",
+  "rootNodeId": "start",
+  "speaker": "Rolnik Kowalski",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Rolnik",
+      "text": "Wilki znowu niszczą mi plony. Masz ochotę pomóc czy tylko gapisz się?",
+      "choices": [
+        {
+          "text": "Zabiję te wilki.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_002" }
+          ],
+          "nextNode": "thanks"
+        },
+        {
+          "text": "Masz coś do sprzedania?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "trade"
+        },
+        {
+          "text": "Trzymaj się.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "thanks": {
+      "nodeId": "thanks",
+      "speaker": "Rolnik",
+      "text": "Dzięki. Przynieś dowód, a zapłacę. I uważaj — one są szybkie.",
+      "choices": [
+        {
+          "text": "[Idź zabić wilki]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "trade": {
+      "nodeId": "trade",
+      "speaker": "Rolnik",
+      "text": "Mam trochę zboża i skór. Ale nie tanio.",
+      "choices": [
+        {
+          "text": "Wezmę zboże.",
+          "conditions": [
+            { "type": "HasGold", "amount": 8 }
+          ],
+          "actions": [
+            { "type": "SpendGold", "amount": 8 },
+            { "type": "GiveItem", "itemId": "item_misc_food", "count": 3 }
+          ],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

@@ -7,6 +7,10 @@
     {"id": "item_iron_ingot", "nameKey": "item_iron_ingot_name", "descriptionKey": "item_iron_ingot_desc", "itemType": "Material", "baseValue": 12, "weight": 1.5, "stackable": true, "maxStack": 20},
     {"id": "item_wolf_pelt", "nameKey": "item_wolf_pelt_name", "descriptionKey": "item_wolf_pelt_desc", "itemType": "Material", "baseValue": 18, "weight": 0.8, "stackable": true},
     {"id": "item_bandit_ear", "nameKey": "item_bandit_ear_name", "descriptionKey": "item_bandit_ear_desc", "itemType": "QuestItem", "baseValue": 0, "weight": 0.1, "stackable": true, "isQuestItem": true},
-    {"id": "item_letter_aldona", "nameKey": "item_letter_aldona_name", "descriptionKey": "item_letter_aldona_desc", "itemType": "QuestItem", "baseValue": 0, "weight": 0.05, "stackable": false, "isQuestItem": true}
+    {"id": "item_letter_aldona", "nameKey": "item_letter_aldona_name", "descriptionKey": "item_letter_aldona_desc", "itemType": "QuestItem", "baseValue": 0, "weight": 0.05, "stackable": false, "isQuestItem": true},
+    {"id": "item_wolf_heart", "nameKey": "item_wolf_heart_name", "descriptionKey": "item_wolf_heart_desc", "itemType": "Material", "baseValue": 25, "weight": 0.6, "stackable": true},
+    {"id": "item_misc_knife", "nameKey": "item_misc_knife_name", "descriptionKey": "item_misc_knife_desc", "itemType": "Misc", "baseValue": 18, "weight": 0.4, "stackable": false},
+    {"id": "item_misc_ring", "nameKey": "item_misc_ring_name", "descriptionKey": "item_misc_ring_desc", "itemType": "Treasure", "baseValue": 45, "weight": 0.05, "stackable": false},
+    {"id": "item_bandit_badge", "nameKey": "item_bandit_badge_name", "descriptionKey": "item_bandit_badge_desc", "itemType": "QuestItem", "baseValue": 0, "weight": 0.05, "stackable": true, "isQuestItem": true}
   ]
 }

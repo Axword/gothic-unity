@@ -1,29 +1,107 @@
 {
-  "id": "dialog_priest2_greeting",
+  "id": "dialog_priest2",
   "rootNodeId": "start",
-  "speaker": "Kapłan",
+  "speaker": "Ojciec Leon",
   "nodes": {
     "start": {
       "nodeId": "start",
-      "speaker": "Kapłan",
-      "text": "Niech cię błogosławi Żelazna Ręka. Szukasz oczyszczenia czy zemsty na wrogach?",
+      "speaker": "Ojciec Leon",
+      "text": "Pokój z tobą, synu. Choć pokój jest tu rzadkością. Czego szukasz u Boga?",
       "choices": [
-        {"text": "Szukam błogosławieństwa.", "conditions": [], "actions": [], "nextNode": "bless"},
-        {"text": "Chcę pomóc gildii w walce.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_F_OLD_005"}], "nextNode": "fight"},
-        {"text": "Idę dalej.", "conditions": [], "actions": [], "nextNode": null}
+        {
+          "text": "Chcę się wyspowiadać.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "confess"
+        },
+        {
+          "text": "Potrzebuję błogosławieństwa.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "bless"
+        },
+        {
+          "text": "Co sądzisz o wojnie?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "war"
+        },
+        {
+          "text": "Żegnaj, ojcze.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "confess": {
+      "nodeId": "confess",
+      "speaker": "Ojciec Leon",
+      "text": "Grzechy? Wszyscy je mamy. Powiedz, co cię trapi.",
+      "choices": [
+        {
+          "text": "Zabiłem.",
+          "conditions": [],
+          "actions": [
+            { "type": "AddReputation", "faction": "OldOrder", "value": -3 }
+          ],
+          "nextNode": "absolve"
+        }
       ]
     },
     "bless": {
       "nodeId": "bless",
-      "speaker": "Kapłan",
-      "text": "Niech twoje serce będzie twarde jak stal, a ręka sprawiedliwa.",
-      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+      "speaker": "Ojciec Leon",
+      "text": "Niech Bóg chroni twoje kroki. Weź ten mały dar.",
+      "choices": [
+        {
+          "text": "Dziękuję.",
+          "conditions": [],
+          "actions": [
+            { "type": "GiveItem", "itemId": "item_potion_health_small", "count": 1 }
+          ],
+          "nextNode": null
+        }
+      ]
     },
-    "fight": {
-      "nodeId": "fight",
-      "speaker": "Kapłan",
-      "text": "Wtedy idź i oczyść tę ziemię. Przynieś dowód zdrady.",
-      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    "war": {
+      "nodeId": "war",
+      "speaker": "Ojciec Leon",
+      "text": "Wojna jest karą za pychę ludzi. Stary Porządek i Nowy — obaj zapomnieli o miłosierdziu.",
+      "choices": [
+        {
+          "text": "A co powinienem wybrać?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "choice"
+        }
+      ]
+    },
+    "absolve": {
+      "nodeId": "absolve",
+      "speaker": "Ojciec Leon",
+      "text": "Idź i grzesz więcej nie. Albo przynajmniej nie dawaj się złapać.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "choice": {
+      "nodeId": "choice",
+      "speaker": "Ojciec Leon",
+      "text": "Wybierz mniejsze zło. I pamiętaj, że krew woła o pomstę do nieba.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
     }
   }
 }

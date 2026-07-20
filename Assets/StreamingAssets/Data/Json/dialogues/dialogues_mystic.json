@@ -1,29 +1,116 @@
 {
   "id": "dialog_mystic_greeting",
   "rootNodeId": "start",
-  "speaker": "Mistyk",
+  "speaker": "Mistik",
   "nodes": {
     "start": {
       "nodeId": "start",
-      "speaker": "Mistyk",
-      "text": "Widzę w tobie dwie ścieżki... jedną w stali, drugą w cieniu. Którą pójdziesz?",
+      "speaker": "Mistik",
+      "text": "Gwiazdy szepczą. A ty... masz w oczach pył z drogi. Czego szukasz w mroku?",
       "choices": [
-        {"text": "Chcę się nauczyć magii.", "conditions": [], "actions": [{"type":"UnlockTrainer","trainerId":"trainer_magic"}], "nextNode": "magic"},
-        {"text": "Wolę stal.", "conditions": [], "actions": [], "nextNode": "steel"},
-        {"text": "Idę swoją drogą.", "conditions": [], "actions": [], "nextNode": null}
+        {
+          "text": "Chcę poznać przyszłość.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "future"
+        },
+        {
+          "text": "Potrzebuję zaklęcia.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "spell"
+        },
+        {
+          "text": "Mam pytania o frakcje.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "factions"
+        },
+        {
+          "text": "Odchodzę.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
       ]
     },
-    "magic": {
-      "nodeId": "magic",
-      "speaker": "Mistyk",
-      "text": "Wtedy idź do Płomiennego. On nauczy cię dotykać ognia bez spalenia się.",
-      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    "future": {
+      "nodeId": "future",
+      "speaker": "Mistik",
+      "text": "Przyszłość? Widzę krew i żelazo. Wybierzesz stronę... a potem pożałujesz. Albo nie. Wszystko jedno.",
+      "choices": [
+        {
+          "text": "A jeśli nie wybiorę?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "neutral"
+        }
+      ]
     },
-    "steel": {
-      "nodeId": "steel",
-      "speaker": "Mistyk",
-      "text": "Stal... to też magia. Tylko inna. Idź do Boruka.",
-      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    "spell": {
+      "nodeId": "spell",
+      "speaker": "Mistik",
+      "text": "Czar? Mogę ci dać jeden. Ale zapłacisz krwią własnej duszy. Albo po prostu złotem. Co wolisz?",
+      "choices": [
+        {
+          "text": "Dam złoto.",
+          "conditions": [
+            { "type": "HasGold", "amount": 40 }
+          ],
+          "actions": [
+            { "type": "SpendGold", "amount": 40 },
+            { "type": "GiveItem", "itemId": "spell_icebolt", "count": 1 }
+          ],
+          "nextNode": "bought"
+        },
+        {
+          "text": "Nie, dziękuję.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "factions": {
+      "nodeId": "factions",
+      "speaker": "Mistik",
+      "text": "Stary Porządek — zimna stal. Nowy — gorący ogień. Oba palą. Wybierz ten, który mniej boli.",
+      "choices": [
+        {
+          "text": "Dziękuję za mądrość.",
+          "conditions": [],
+          "actions": [
+            { "type": "AddReputation", "faction": "Neutral", "value": 3 }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "neutral": {
+      "nodeId": "neutral",
+      "speaker": "Mistik",
+      "text": "Mądry wybór. Albo głupi. Czas pokaże.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "bought": {
+      "nodeId": "bought",
+      "speaker": "Mistik",
+      "text": "Weź. I pamiętaj — lód nie wybacza.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
     }
   }
 }

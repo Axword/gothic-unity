@@ -1,29 +1,145 @@
 {
   "id": "dialog_swamp_witch_greeting",
   "rootNodeId": "start",
-  "speaker": "Wiedźma",
+  "speaker": "Wiedźma z Bagn",
   "nodes": {
     "start": {
       "nodeId": "start",
-      "speaker": "Wiedźma",
-      "text": "Heh... kolejny głupiec, który wszedł w bagno. Masz coś dla starej Wiedźmy? Albo chcesz, żebym ci coś dała?",
+      "speaker": "Wiedźma z Bagn",
+      "text": "Ciii... słyszysz? Bagna mówią. A ty co tu robisz, mały człowieczku?",
       "choices": [
-        {"text": "Chcę miksturę.", "conditions": [], "actions": [], "nextNode": "potion"},
-        {"text": "Szukam odpowiedzi.", "conditions": [], "actions": [], "nextNode": "answers"},
-        {"text": "Idę stąd.", "conditions": [], "actions": [], "nextNode": null}
+        {
+          "text": "Szukam ziół.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "herbs"
+        },
+        {
+          "text": "Chcę nauczyć się magii.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "magic"
+        },
+        {
+          "text": "Słyszałem o tobie.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "rumors"
+        },
+        {
+          "text": "Odchodzę.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
       ]
     },
-    "potion": {
-      "nodeId": "potion",
-      "speaker": "Wiedźma",
-      "text": "Za żelazo dam ci coś mocnego. Albo za skórę wilka.",
-      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+    "herbs": {
+      "nodeId": "herbs",
+      "speaker": "Wiedźma z Bagn",
+      "text": "Zioła? Mam je. Ale cena jest wysoka. Skóra albo krew. Co dasz?",
+      "choices": [
+        {
+          "text": "Mam wilcze skóry.",
+          "conditions": [
+            { "type": "HasItem", "itemId": "item_wolf_pelt", "count": 2 }
+          ],
+          "actions": [
+            { "type": "RemoveItem", "itemId": "item_wolf_pelt", "count": 2 },
+            { "type": "GiveItem", "itemId": "plant_nightshade", "count": 3 }
+          ],
+          "nextNode": "trade_done"
+        },
+        {
+          "text": "Nie mam nic.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "no_trade"
+        }
+      ]
     },
-    "answers": {
-      "nodeId": "answers",
-      "speaker": "Wiedźma",
-      "text": "Odpowiedzi? Czarne Źródło ma wszystkie odpowiedzi. Tylko nie każdy chce ich słuchać.",
-      "choices": [{"text": "[Odeždź]", "conditions": [], "actions": [], "nextNode": null}]
+    "magic": {
+      "nodeId": "magic",
+      "speaker": "Wiedźma z Bagn",
+      "text": "Magia bagn to nie twoje bajki. Ale jeśli przyniesiesz mi serce wilka... pokażę ci jeden trik.",
+      "choices": [
+        {
+          "text": "Zrobię to.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_011" }
+          ],
+          "nextNode": "quest"
+        }
+      ]
+    },
+    "rumors": {
+      "nodeId": "rumors",
+      "speaker": "Wiedźma z Bagn",
+      "text": "Mówią, że jestem potworem. A ja tylko patrzę, jak świat gnije. Chcesz usłyszeć prawdę?",
+      "choices": [
+        {
+          "text": "Tak.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "truth"
+        }
+      ]
+    },
+    "truth": {
+      "nodeId": "truth",
+      "speaker": "Wiedźma z Bagn",
+      "text": "Stary Porządek i Nowy — to jedna i ta sama zgnilizna. Tylko maski inne. Idź i sam zobacz.",
+      "choices": [
+        {
+          "text": "[Odejdź z mroczną wiedzą]",
+          "conditions": [],
+          "actions": [
+            { "type": "SetFlag", "flag": "witch_knowledge" },
+            { "type": "AddReputation", "faction": "Neutral", "value": -5 }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "trade_done": {
+      "nodeId": "trade_done",
+      "speaker": "Wiedźma z Bagn",
+      "text": "Bierz. I nie wracaj, dopóki nie przyniesiesz czegoś ciekawszego.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "quest": {
+      "nodeId": "quest",
+      "speaker": "Wiedźma z Bagn",
+      "text": "Dobra. Serce wilka. Potem wracaj. Bagna będą pamiętać.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "no_trade": {
+      "nodeId": "no_trade",
+      "speaker": "Wiedźma z Bagn",
+      "text": "To wracaj, jak będziesz miał coś więcej niż słowa.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
     }
   }
 }

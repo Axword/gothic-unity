@@ -1,0 +1,75 @@
+{
+  "id": "dialog_scout2",
+  "rootNodeId": "start",
+  "speaker": "Zwiadowca",
+  "nodes": {
+    "start": {
+      "nodeId": "start",
+      "speaker": "Zwiadowca",
+      "text": "Cicho. Wrogowie blisko. Co tu robisz?",
+      "choices": [
+        {
+          "text": "Szukam informacji.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "info"
+        },
+        {
+          "text": "Chcę dołączyć do patrolu.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "patrol"
+        },
+        {
+          "text": "Masz zlecenie?",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "quest"
+        }
+      ]
+    },
+    "info": {
+      "nodeId": "info",
+      "speaker": "Zwiadowca",
+      "text": "Bandyci na wschodzie. Wilki na zachodzie. Frakcje się szykują. Wybierz stronę zanim będzie za późno.",
+      "choices": [
+        {
+          "text": "Dzięki za ostrzeżenie.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
+    },
+    "patrol": {
+      "nodeId": "patrol",
+      "speaker": "Zwiadowca",
+      "text": "Patrol? Dobrze. Ale najpierw udowodnij, że nie jesteś szpiegiem. Zabij dwóch bandytów.",
+      "choices": [
+        {
+          "text": "Zrobię to.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_008" }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "quest": {
+      "nodeId": "quest",
+      "speaker": "Zwiadowca",
+      "text": "Idź na przełęcz i sprawdź co tam się dzieje. Wróć z raportem.",
+      "choices": [
+        {
+          "text": "Idę.",
+          "conditions": [],
+          "actions": [
+            { "type": "StartQuest", "questId": "Q_S_014" }
+          ],
+          "nextNode": null
+        }
+      ]
+    }
+  }
+}

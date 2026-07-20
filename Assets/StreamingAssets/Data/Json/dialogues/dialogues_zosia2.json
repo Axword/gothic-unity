@@ -1,22 +1,102 @@
 {
-  "id": "dialog_zosia_side_001",
+  "id": "dialog_zosia2",
   "rootNodeId": "start",
   "speaker": "Zosia",
   "nodes": {
     "start": {
       "nodeId": "start",
       "speaker": "Zosia",
-      "text": "Te wilki znowu kręcą się przy zagrodzie. Może byś coś z tym zrobił? Zapłacę czym mogę.",
+      "text": "Znowu tu jesteś. Co tym razem? Matka wciąż pyta o mnie?",
       "choices": [
-        {"text": "Zajmę się wilkami.", "conditions": [], "actions": [{"type":"StartQuest","questId":"Q_S_001"}], "nextNode": "thanks"},
-        {"text": "Może później.", "conditions": [], "actions": [], "nextNode": null}
+        {
+          "text": "Twoja matka czeka.",
+          "conditions": [
+            { "type": "HasFlag", "flag": "old_woman_quest" }
+          ],
+          "actions": [],
+          "nextNode": "mother"
+        },
+        {
+          "text": "Potrzebuję ziół.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "herbs"
+        },
+        {
+          "text": "Chcę usłyszeć twoją historię.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": "story"
+        },
+        {
+          "text": "Żegnaj.",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
       ]
     },
-    "thanks": {
-      "nodeId": "thanks",
+    "mother": {
+      "nodeId": "mother",
       "speaker": "Zosia",
-      "text": "Będę wdzięczna. Uważaj na siebie.",
-      "choices": [{"text": "[Odejdź]", "conditions": [], "actions": [], "nextNode": null}]
+      "text": "Powiedz jej, że żyję. Ale nie wrócę. Tutaj jest spokojniej niż w tym całym zamieszaniu.",
+      "choices": [
+        {
+          "text": "Przekażę.",
+          "conditions": [],
+          "actions": [
+            { "type": "SetFlag", "flag": "zosia_message_delivered" },
+            { "type": "GiveItem", "itemId": "item_potion_health_small", "count": 2 }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "herbs": {
+      "nodeId": "herbs",
+      "speaker": "Zosia",
+      "text": "Zioła mam. Ale nie za darmo. Przynieś mi wilczą skórę.",
+      "choices": [
+        {
+          "text": "Mam skórę.",
+          "conditions": [
+            { "type": "HasItem", "itemId": "item_wolf_pelt" }
+          ],
+          "actions": [
+            { "type": "RemoveItem", "itemId": "item_wolf_pelt", "count": 1 },
+            { "type": "GiveItem", "itemId": "plant_fireweed", "count": 3 }
+          ],
+          "nextNode": "trade"
+        }
+      ]
+    },
+    "story": {
+      "nodeId": "story",
+      "speaker": "Zosia",
+      "text": "Ojciec zginął w walce. Brat poszedł z Nowym Porządkiem. Ja zostałam. Nie chcę być pionkiem w ich grze.",
+      "choices": [
+        {
+          "text": "Rozumiem.",
+          "conditions": [],
+          "actions": [
+            { "type": "AddReputation", "faction": "Neutral", "value": 4 }
+          ],
+          "nextNode": null
+        }
+      ]
+    },
+    "trade": {
+      "nodeId": "trade",
+      "speaker": "Zosia",
+      "text": "Bierz. I nie mów matce gdzie mnie znaleźć.",
+      "choices": [
+        {
+          "text": "[Odejdź]",
+          "conditions": [],
+          "actions": [],
+          "nextNode": null
+        }
+      ]
     }
   }
 }
