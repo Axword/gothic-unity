@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using ZelaznaDroga.Core.Attributes;
 using ZelaznaDroga.Core.Utilities;
 
 namespace ZelaznaDroga.Gameplay.Progression
@@ -14,16 +13,13 @@ namespace ZelaznaDroga.Gameplay.Progression
         {
             var stats = ComponentLocator.Get<IPlayerStats>();
             if (stats == null) return;
-
             bool success = stats.SpendLearningPoints(statName, points);
             if (success)
             {
                 Debug.Log($"[Trainer] Trained {statName} +{points}");
             }
             else
-            {
                 Debug.Log("[Trainer] Not enough LP or invalid stat");
-            }
         }
     }
 }

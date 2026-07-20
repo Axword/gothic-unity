@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ZelaznaDroga.Core.Attributes
+namespace ZelaznaDroga.Core.Utilities
 {
     /// <summary>
     /// Base class for all MonoBehaviours in the project.

@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using ZelaznaDroga.Core.Attributes;
 using ZelaznaDroga.Core.Utilities;
 using ZelaznaDroga.Gameplay.World;
 
@@ -13,15 +12,12 @@ namespace ZelaznaDroga.UI.HUD
     {
         public Text wantedText;
         public Text timeText;
-
         private CrimeSystem _crime;
         private TimeManager _time;
-
         private void Start()
         {
             _crime = ComponentLocator.Get<CrimeSystem>();
             _time = FindObjectOfType<TimeManager>();
-
             if (wantedText == null)
             {
                 // Create simple wanted text if not assigned
@@ -37,27 +33,17 @@ namespace ZelaznaDroga.UI.HUD
                 rt.anchoredPosition = new Vector2(-120, -30);
             }
         }
-
         private void Update()
-        {
             if (wantedText)
-            {
                 if (_crime != null && _crime.WantedLevel > 0)
                 {
                     wantedText.text = $"POSZUKIWANY: {_crime.WantedLevel} ★";
                     wantedText.color = Color.Lerp(Color.yellow, Color.red, _crime.WantedLevel / 5f);
                 }
                 else
-                {
                     wantedText.text = "";
-                }
-            }
-
             if (timeText && _time)
-            {
                 int h = _time.CurrentHour;
                 timeText.text = $"{h:00}:00";
-            }
-        }
     }
 }
